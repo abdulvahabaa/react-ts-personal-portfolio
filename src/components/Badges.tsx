@@ -6,14 +6,17 @@ const badges = [
     id: "github-foundations",
     platform: "GitHub",
     title: "GitHub Foundations",
-    image: "https://images.credly.com/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png",
-    profile: "https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url",
+    image:
+      "https://images.credly.com/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png",
+    profile:
+      "https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url",
   },
   {
     id: "ibm-data-analytics",
     platform: "IBM",
     title: "Data Analytics Essentials",
-    image: "https://images.credly.com/size/680x680/images/42f7ca3c-6eb3-47d2-a7f3-3b1093ea1b35/image.png",
+    image:
+      "https://images.credly.com/size/680x680/images/42f7ca3c-6eb3-47d2-a7f3-3b1093ea1b35/image.png",
     profile: "https://www.credly.com/users/dinesh-m-d30/badges#credly",
   },
   {
@@ -48,14 +51,16 @@ const badges = [
     id: "github-shark",
     platform: "GitHub",
     title: "Pull Shark",
-    image: "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png",
+    image:
+      "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png",
     profile: "https://github.com/dineshit27",
   },
   {
     id: "github-arctic",
     platform: "GitHub",
     title: "Arctic Code Vault Contributor",
-    image: "https://github.githubassets.com/assets/starstruck-default--light-a594e2a027e0.png",
+    image:
+      "https://github.githubassets.com/assets/starstruck-default--light-a594e2a027e0.png",
     profile: "https://github.com/dineshit27",
   },
 
@@ -63,7 +68,8 @@ const badges = [
     id: "github-yolo",
     platform: "GitHub",
     title: "YOLO",
-    image: "https://github.githubassets.com/assets/yolo-default-be0bbff04951.png",
+    image:
+      "https://github.githubassets.com/assets/yolo-default-be0bbff04951.png",
     profile: "https://github.com/dineshit27",
   },
 
@@ -71,7 +77,8 @@ const badges = [
     id: "github-pair-extraordinary",
     platform: "GitHub",
     title: "Pair Extraordinary",
-    image: "https://github.githubassets.com/assets/pair-extraordinaire-default-579438a20e01.png",
+    image:
+      "https://github.githubassets.com/assets/pair-extraordinaire-default-579438a20e01.png",
     profile: "https://github.com/dineshit27",
   },
 
@@ -79,25 +86,28 @@ const badges = [
     id: "github-quickdraw",
     platform: "GitHub",
     title: "Quickdraw",
-    image: "https://github.githubassets.com/assets/quickdraw-default--light-8f798b35341a.png",
+    image:
+      "https://github.githubassets.com/assets/quickdraw-default--light-8f798b35341a.png",
     profile: "https://github.com/dineshit27",
   },
   {
     id: "github-galaxy-star",
     platform: "GitHub",
     title: "Galaxy Brain",
-    image: "https://github.githubassets.com/assets/galaxy-brain-default-847262c21056.png",
+    image:
+      "https://github.githubassets.com/assets/galaxy-brain-default-847262c21056.png",
     profile: "https://github.com/dineshit27",
   },
 ];
-
 
 export function Badges() {
   return (
     <SectionBackground>
       <section id="badges">
         <div className="container mx-auto max-w-6xl px-8">
-          <SectionTitle subtitle="Milestones that reflect the journey of continuous growth and mastery.">Coding Badges</SectionTitle>
+          <SectionTitle subtitle="Milestones that reflect the journey of continuous growth and mastery.">
+            Coding Badges
+          </SectionTitle>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 gap-4">
             {badges.map((badge) => (
@@ -122,7 +132,9 @@ export function Badges() {
                 <p className="mt-3 text-sm font-semibold text-gray-900 dark:text-white text-center">
                   {badge.title}
                 </p>
-                <span className="text-sm text-gray-600 dark:text-gray-400">{badge.platform}</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  {badge.platform}
+                </span>
               </a>
             ))}
           </div>

@@ -23,7 +23,6 @@ export function ExperienceCard({
 
       {/* Experience Card */}
       <div className="relative bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
-        
         <div className="relative z-10">
           {/* Header */}
           <div className="flex items-center gap-4">
@@ -31,9 +30,15 @@ export function ExperienceCard({
               <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
-              <p className="text-base text-blue-600 dark:text-blue-400">{company}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{period}</p>
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                {title}
+              </h3>
+              <p className="text-base text-blue-600 dark:text-blue-400">
+                {company}
+              </p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {period}
+              </p>
             </div>
           </div>
 
@@ -41,7 +46,9 @@ export function ExperienceCard({
           <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300">
             {description.split("\n").map((line, index) => (
               <li key={index} className="flex items-start gap-2">
-                <span className="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                <span className="text-blue-600 dark:text-blue-400 font-bold">
+                  •
+                </span>
                 <span>{line}</span>
               </li>
             ))}

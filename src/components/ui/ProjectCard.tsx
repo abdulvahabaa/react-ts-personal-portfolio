@@ -1,6 +1,6 @@
 import { SiGithub } from "react-icons/si";
 import { FaGlobe } from "react-icons/fa";
-import { IconType } from 'react-icons';
+import { IconType } from "react-icons";
 
 interface TechStackItem {
   icon: IconType;
@@ -18,11 +18,18 @@ interface ProjectCardProps {
   techStack: TechStackItem[];
 }
 
-export function ProjectCard({ title, description, image, link, github, isOngoing, techStack }: ProjectCardProps) {
+export function ProjectCard({
+  title,
+  description,
+  image,
+  link,
+  github,
+  isOngoing,
+  techStack,
+}: ProjectCardProps) {
   return (
     <div className="group relative">
       <div className="relative bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:shadow-blue-500/10">
-
         {/* Image */}
         <div className="relative overflow-hidden p-4 pb-0">
           <a href={link} target="_blank" rel="noopener noreferrer">
@@ -32,7 +39,7 @@ export function ProjectCard({ title, description, image, link, github, isOngoing
               className="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
           </a>
-          
+
           {/* Ongoing Process Badge */}
           {isOngoing && (
             <div className="absolute top-6 right-6">
@@ -48,7 +55,9 @@ export function ProjectCard({ title, description, image, link, github, isOngoing
         <div className="p-6">
           {/* Title + Icons */}
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{title}</h3>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+              {title}
+            </h3>
             <div className="flex gap-3">
               {github && (
                 <a
@@ -88,18 +97,18 @@ export function ProjectCard({ title, description, image, link, github, isOngoing
                     <Icon className="w-6 h-6" color={item.color} />
                   </div>
                   {/* Tooltip */}
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs rounded px-2 py-1 
-                        opacity-0 peer-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                  <div
+                    className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs rounded px-2 py-1 
+                        opacity-0 peer-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10"
+                  >
                     {item.name}
                   </div>
                 </div>
               );
             })}
           </div>
-
         </div>
       </div>
     </div>
   );
 }
-

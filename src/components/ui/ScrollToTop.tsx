@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowUp } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { ArrowUp } from "lucide-react";
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,19 +8,20 @@ export function ScrollToTop() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
-      
+
       setIsVisible(scrollTop > 300);
       setScrollProgress(Math.min(scrollPercent, 100));
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -55,11 +56,13 @@ export function ScrollToTop() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeDasharray={`${2 * Math.PI * 20}`}
-              strokeDashoffset={`${2 * Math.PI * 20 * (1 - scrollProgress / 100)}`}
+              strokeDashoffset={`${
+                2 * Math.PI * 20 * (1 - scrollProgress / 100)
+              }`}
               className="transition-all duration-150 ease-out"
             />
           </svg>
-          
+
           <ArrowUp className="w-5 h-5 relative z-10" />
 
           {/* Tooltip */}

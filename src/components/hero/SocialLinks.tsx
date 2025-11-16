@@ -9,7 +9,7 @@ const links = [
     label: 'GitHub',
   },
   {
-    href: 'https://www.linkedin.com/in/m-dinesh-d30/',
+    href: 'https://www.linkedin.com/in/abdulvahabaa/',
     icon: <Linkedin className="w-6 h-6 text-[#0077B5]" />,
     label: 'LinkedIn',
   },
@@ -19,7 +19,7 @@ const links = [
     label: 'Instagram',
   },
   {
-    href: 'https://wa.me/918122129450',
+    href: 'https://wa.me/919747733770',
     icon: <FaWhatsapp className="w-6 h-6 text-[#25D366]" />,
     label: 'WhatsApp',
   },

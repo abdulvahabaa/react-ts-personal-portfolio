@@ -1,5 +1,5 @@
-import React from 'react';
-import { Moon, Sun } from 'lucide-react';
+import React from "react";
+import { Moon, Sun } from "lucide-react";
 
 interface ThemeToggleProps {
   isDark: boolean;
@@ -16,7 +16,7 @@ export function ThemeToggle({ isDark, onToggle }: ThemeToggleProps) {
       <div className="relative w-5 h-5">
         <span
           className={`absolute inset-0 transform transition-transform duration-500 rotate-0 ${
-            isDark ? 'rotate-[360deg]' : '-rotate-[360deg]'
+            isDark ? "rotate-[360deg]" : "-rotate-[360deg]"
           }`}
         >
           {isDark ? (

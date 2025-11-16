@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 export default function HandwritingAnimation() {
-  const name = "M.Dinesh";
+  const name = "Abdul Vahab";
   const controls = useAnimation();
   const drawDuration = 2.8;
 

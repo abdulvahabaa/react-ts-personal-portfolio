@@ -23,7 +23,9 @@ export function BlogCard({ title, brief, coverImage, slug }: BlogCardProps) {
           />
         ) : (
           <div className="w-full h-48 bg-white dark:bg-gray-900 flex items-center justify-center rounded-lg">
-            <span className="text-gray-500 dark:text-gray-400 text-sm">No Image Available</span>
+            <span className="text-gray-500 dark:text-gray-400 text-sm">
+              No Image Available
+            </span>
           </div>
         )}
       </div>

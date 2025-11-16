@@ -71,7 +71,9 @@ export function Achievements() {
     <SectionBackground>
       <section id="achievements">
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
-          <SectionTitle subtitle="Recognitions and awards for outstanding performance and innovation.">Achievements</SectionTitle>
+          <SectionTitle subtitle="Recognitions and awards for outstanding performance and innovation.">
+            Achievements
+          </SectionTitle>
           <div className="w-full">
             <Slider {...settings} className="max-w-6xl mx-auto">
               {achievements.map((ach) => (

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Award, ExternalLink } from 'lucide-react';
+import React from "react";
+import { Award, ExternalLink } from "lucide-react";
 
 interface CertificationCardProps {
   title: string;
@@ -9,7 +9,13 @@ interface CertificationCardProps {
   image: string;
 }
 
-export function CertificationCard({ title, issuer, date, link, image }: CertificationCardProps) {
+export function CertificationCard({
+  title,
+  issuer,
+  date,
+  link,
+  image,
+}: CertificationCardProps) {
   return (
     <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl transition-transform duration-300 overflow-hidden group">
       {/* Background Image */}
@@ -30,7 +36,7 @@ export function CertificationCard({ title, issuer, date, link, image }: Certific
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-sm text-gray-300 mb-1">{issuer}</p>
         <p className="text-sm text-gray-400 mb-4">{date}</p>
-  {/* Verify button removed for Achievements section */}
+        {/* Verify button removed for Achievements section */}
       </div>
     </div>
   );

@@ -52,19 +52,22 @@ const services = [
   {
     icon: Lightbulb, // Using Lightbulb for Graphic Design
     title: "Graphic Design",
-    description: "Creating visually compelling graphics, logos, and branding materials to elevate your business presence.",
+    description:
+      "Creating visually compelling graphics, logos, and branding materials to elevate your business presence.",
     color: "bg-pink-500",
   },
   {
     icon: Code2,
     title: "Web Development",
-    description: "Building responsive and scalable web applications using modern frameworks like React and Node.js.",
+    description:
+      "Building responsive and scalable web applications using modern frameworks like React and Node.js.",
     color: "bg-blue-500",
   },
   {
     icon: null, // We'll handle custom rendering for UI/UX Design
     title: "UI/UX Design",
-    description: "Designing intuitive and engaging user interfaces and experiences for web and mobile platforms.",
+    description:
+      "Designing intuitive and engaging user interfaces and experiences for web and mobile platforms.",
     color: "bg-green-500",
   },
 ];
@@ -74,15 +77,21 @@ export function About() {
     <SectionBackground>
       <section id="about">
         <div className="container mx-auto px-6">
-          <SectionTitle subtitle="Passionate developer building innovative solutions and solving real-world problems.">About Me</SectionTitle>
+          <SectionTitle subtitle="Passionate developer building innovative solutions and solving real-world problems.">
+            About Me
+          </SectionTitle>
 
           {/* Introduction */}
           <div className="max-w-5xl mx-auto mb-10 text-center">
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Hey there! 👋 I'm <span className="text-blue-600 font-semibold">M Dinesh</span>,
-              a B.Tech Information Technology student passionate about building web web applications that solve real-world problems.
-              I've created projects like Aquawatt for monitor the usage of water and electricity.
-              With skills in React, JavaScript, Node.js, and Python, I love exploring new technologies, solving DSA problems and working on AI-powered solutions.
+              Hey there! 👋 I'm{" "}
+              <span className="text-blue-600 font-semibold">M Dinesh</span>, a
+              B.Tech Information Technology student passionate about building
+              web web applications that solve real-world problems. I've created
+              projects like Aquawatt for monitor the usage of water and
+              electricity. With skills in React, JavaScript, Node.js, and
+              Python, I love exploring new technologies, solving DSA problems
+              and working on AI-powered solutions.
             </p>
             <div className="mt-6 flex justify-center">
               <span className="text-sm sm:text-base inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-lg shadow">
@@ -96,7 +105,9 @@ export function About() {
             {aboutSections.map(({ icon: Icon, title, description, color }) => (
               <div key={title} className="relative group">
                 {/* Background Effect */}
-                <div className={`absolute inset-0 ${color} rounded-xl blur-xl opacity-20 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none`} />
+                <div
+                  className={`absolute inset-0 ${color} rounded-xl blur-xl opacity-20 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none`}
+                />
 
                 {/* Card Content */}
                 <div className="relative bg-white dark:bg-gray-900 p-6 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 transform hover:-translate-y-1">
@@ -105,7 +116,9 @@ export function About() {
                     <div className={`p-3 ${color} rounded-lg`}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">{title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                      {title}
+                    </h3>
                   </div>
                   <ul className="text-sm sm:text-base list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-1">
                     {description.map((point, index) => (

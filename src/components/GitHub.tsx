@@ -36,15 +36,18 @@ export function GitHub() {
     const specificRepos = [
       {
         name: "TechnoHacks-Portfolio-Website-MDinesh30",
-        description: "Personal portfolio website built with HTML, CSS, and JavaScript. Features modern design, responsive layout, and dynamic interactions.",
+        description:
+          "Personal portfolio website built with HTML, CSS, and JavaScript. Features modern design, responsive layout, and dynamic interactions.",
         stars: 7,
         forks: 0,
         language: "CSS",
-        html_url: "https://github.com/dineshit27/TechnoHacks-Portfolio-Website-MDinesh30",
+        html_url:
+          "https://github.com/dineshit27/TechnoHacks-Portfolio-Website-MDinesh30",
       },
       {
         name: "DSA-in-JAVA",
-        description: "Data Structures and Algorithms implementation in Java with various problem solutions and algorithms.",
+        description:
+          "Data Structures and Algorithms implementation in Java with various problem solutions and algorithms.",
         stars: 9,
         forks: 1,
         language: "Java",
@@ -52,7 +55,8 @@ export function GitHub() {
       },
       {
         name: "Cognifyz-Data-Analysis",
-        description: "Data analysis project using Python and Jupyter Notebooks for comprehensive data insights and visualization.",
+        description:
+          "Data analysis project using Python and Jupyter Notebooks for comprehensive data insights and visualization.",
         stars: 10,
         forks: 1,
         language: "Jupyter Notebook",
@@ -60,11 +64,14 @@ export function GitHub() {
       },
     ];
     setRepos(specificRepos);
-  }, []); return (
+  }, []);
+  return (
     <SectionBackground>
       <section id="github">
         <div className="container mx-auto max-w-6xl px-8">
-          <SectionTitle subtitle="Code that lives, breathes, and contributes — open source and beyond.">GitHub Contributions</SectionTitle>
+          <SectionTitle subtitle="Code that lives, breathes, and contributes — open source and beyond.">
+            GitHub Contributions
+          </SectionTitle>
 
           {/* Contribution Graph */}
           {/* <div className="mb-10 flex flex-col items-center">
@@ -119,20 +126,26 @@ export function GitHub() {
                   className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-blue-600"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{user.name}</h3>
-                  <p className="text-gray-600 dark:text-gray-400">@{user.login}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    {user.name}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    @{user.login}
+                  </p>
                 </div>
               </div>
-
               {/* Bio & Stats */}
               <p className="hidden md:block text-gray-700 dark:text-gray-300 flex-1 text-center md:text-left mx-6">
                 {user.bio}
               </p>
-
               {/* Followers, Repos, Profile Link */}
               <div className="flex flex-wrap items-center justify-center md:justify-start space-x-4 md:space-x-6 text-gray-600 dark:text-gray-400 mt-4 md:mt-0">
-                <span className="flex items-center gap-1 text-sm">👥 {user.followers} Followers</span>
-                <span className="flex items-center gap-1 text-sm">📦 {user.public_repos} Repos</span>
+                <span className="flex items-center gap-1 text-sm">
+                  👥 {user.followers} Followers
+                </span>
+                <span className="flex items-center gap-1 text-sm">
+                  📦 {user.public_repos} Repos
+                </span>
                 <a
                   href={user.html_url}
                   target="_blank"
@@ -141,7 +154,8 @@ export function GitHub() {
                 >
                   <Github className="w-5 h-5" /> View Profile
                 </a>
-              </div>                    </div>
+              </div>{" "}
+            </div>
           )}
         </div>
       </section>

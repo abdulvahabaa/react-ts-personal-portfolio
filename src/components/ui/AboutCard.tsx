@@ -1,5 +1,5 @@
-import React from 'react';
-import { LucideIcon } from 'lucide-react';
+import React from "react";
+import { LucideIcon } from "lucide-react";
 
 interface AboutCardProps {
   icon: LucideIcon;
@@ -8,7 +8,12 @@ interface AboutCardProps {
   color: string;
 }
 
-export function AboutCard({ icon: Icon, title, description, color }: AboutCardProps) {
+export function AboutCard({
+  icon: Icon,
+  title,
+  description,
+  color,
+}: AboutCardProps) {
   return (
     <div className="relative group">
       {/* Gradient Background */}
@@ -21,7 +26,9 @@ export function AboutCard({ icon: Icon, title, description, color }: AboutCardPr
           <div className={`p-3 ${color} rounded-lg`}>
             <Icon className="w-6 h-6 text-white" />
           </div>
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">{title}</h3>
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
         </div>
         <p className="text-gray-600 dark:text-gray-300">{description}</p>
       </div>

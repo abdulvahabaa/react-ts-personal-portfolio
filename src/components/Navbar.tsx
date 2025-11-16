@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
-import { Link } from './Link';
-import { useTheme } from '../hooks/useTheme';
-import { ThemeToggle } from './ui/ThemeToggle';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { Link } from "./Link";
+import { useTheme } from "../hooks/useTheme";
+import { ThemeToggle } from "./ui/ThemeToggle";
+import { motion } from "framer-motion";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
   const { isDark, setIsDark } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll("section");
     const observer = new IntersectionObserver(
       (entries) => {
         const visibleSection = entries.find((entry) => entry.isIntersecting);
@@ -38,24 +38,28 @@ export function Navbar() {
   };
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#services', label: 'Services' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#github', label: 'GitHub' },
-    { href: '#leetcode', label: 'Leetcode' },
-    { href: '#badges', label: 'Badges' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#certifications', label: 'Certifications' },
-    { href: '#education', label: 'Education' },
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#services", label: "Services" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#github", label: "GitHub" },
+    { href: "#leetcode", label: "Leetcode" },
+    { href: "#badges", label: "Badges" },
+    { href: "#experience", label: "Experience" },
+    { href: "#certifications", label: "Certifications" },
+    { href: "#education", label: "Education" },
   ];
 
   return (
     <>
       <nav
         className={`fixed top-2 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-6xl rounded-2xl
-                    ${isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md outline outline-1 outline-blue-600' : 'bg-transparent'}`}
+                    ${
+                      isScrolled
+                        ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md outline outline-1 outline-blue-600"
+                        : "bg-transparent"
+                    }`}
       >
         <div className="flex items-center justify-between h-12 px-4">
           {/* Logo */}
@@ -76,7 +80,7 @@ export function Navbar() {
                   <motion.div
                     layoutId="underline"
                     className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-600 dark:bg-blue-400"
-                    transition={{ type: 'spring', stiffness: 500, damping: 20 }} // Faster animation
+                    transition={{ type: "spring", stiffness: 500, damping: 20 }} // Faster animation
                   />
                 )}
               </Link>
@@ -100,7 +104,11 @@ export function Navbar() {
               className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
             </button>
           </div>
         </div>

@@ -10,7 +10,9 @@ export function Blogs() {
     <SectionBackground>
       <section id="blogs">
         <div className="container mx-auto px-8">
-          <SectionTitle subtitle="Sharing what I learn, so others can build faster and smarter.">Latest Blogs</SectionTitle>
+          <SectionTitle subtitle="Sharing what I learn, so others can build faster and smarter.">
+            Latest Blogs
+          </SectionTitle>
 
           {loading ? (
             <p className="text-center text-gray-500 dark:text-gray-400">
