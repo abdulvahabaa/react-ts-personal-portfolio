@@ -1,8 +1,11 @@
 @import "tailwindcss";
+@import "tailwindcss" layer(base);
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Dark theme */
 :root {
-  color-scheme: dark;
+  /* color-scheme: dark; */
+   color-scheme: light dark;
 }
 
 /* Base styles */
