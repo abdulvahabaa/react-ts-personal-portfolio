@@ -74,10 +74,10 @@ export function GitHub() {
           </SectionTitle>
 
           {/* Contribution Graph */}
-          {/* <div className="mb-10 flex flex-col items-center">
+          <div className="mb-10 flex flex-col items-center">
             <div className="w-full p-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
               <GitHubCalendar
-                username="deepakmodi-io"
+                username="abdulvahabaa"
                 blockSize={14.6}
                 blockMargin={5}
                 colorScheme="light"
@@ -86,7 +86,7 @@ export function GitHub() {
                 }}
               />
             </div>
-          </div> */}
+          </div>
 
           {/* Top Repositories */}
           <div className="mx-auto max-w-6xl grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
