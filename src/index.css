@@ -1,52 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* Dark theme */
 :root {
   color-scheme: dark;
 }
 
-/* Optimize animations and transitions */
-@layer base {
-  html {
-    scroll-behavior: smooth;
-    -webkit-tap-highlight-color: transparent;
-  }
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
 
-  body {
-    @apply antialiased;
-    text-rendering: optimizeLegibility;
-  }
+body {
+  text-rendering: optimizeLegibility;
+}
 
-  /* Reduce motion if user prefers it */
-  @media (prefers-reduced-motion: reduce) {
-    * {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-@layer utilities {
-  .bg-grid-pattern {
-    @apply [background-size:24px_24px] [background-image:linear-gradient(to_right,#6366f1_1px,transparent_1px),linear-gradient(to_bottom,#6366f1_1px,transparent_1px)];
-  }
-
-  .animate-fade-in {
-    @apply motion-safe:animate-[fade-in_1s_ease-out_forwards];
-  }
-
-  .animate-gradient {
-    @apply bg-[length:200%_auto] motion-safe:animate-[gradient_8s_linear_infinite];
-  }
-
-  .animate-wave {
-    @apply motion-safe:animate-[wave_2s_ease-in-out_infinite];
-  }
+/* Custom utilities — Tailwind v4 version */
+.bg-grid-pattern {
+  background-size: 24px 24px;
+  background-image: linear-gradient(to right, #6366f1 1px, transparent 1px),
+    linear-gradient(to bottom, #6366f1 1px, transparent 1px);
 }
 
+/* Custom animations (Tailwind v4 uses raw CSS keyframes) */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -107,11 +93,25 @@
   }
 }
 
-.animate-floating {
-  @apply motion-safe:animate-[floating_4s_ease-in-out_infinite];
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
 }
 
-/* Optimize mobile performance */
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient 8s linear infinite;
+}
+
+.animate-wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+.animate-floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* Mobile optimizations */
 html,
 body {
   overflow-x: hidden;
@@ -120,12 +120,11 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Optimize images and transitions */
 img {
-  @apply transform-gpu;
+  transform: translateZ(0); /* GPU boost */
 }
 
 .transition-transform,
 .transition-all {
-  @apply transform-gpu;
+  transform: translateZ(0);
 }
