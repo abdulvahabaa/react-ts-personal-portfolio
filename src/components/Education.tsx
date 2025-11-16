@@ -1,25 +1,25 @@
-import { SectionTitle } from "./ui/SectionTitle";
-import { SectionBackground } from "./ui/SectionBackground";
-import { EducationCard } from "./ui/EducationCard";
+import { SectionTitle } from './ui/SectionTitle';
+import { SectionBackground } from './ui/SectionBackground';
+import { EducationCard } from './ui/EducationCard';
 
 const education = [
   {
-    degree: "B.Tech in Information Technology",
-    institution: "Sri Sairam Institution of Technology, Chennai",
-    period: "2023 - 2027",
-    score: "78%",
+    degree: 'B.Tech in Information Technology',
+    institution: 'Sri Sairam Institution of Technology, Chennai',
+    period: '2023 - 2027',
+    score: '78%',
   },
   {
-    degree: "Senior Secondary (XII)",
-    institution: "St.Mary Matriculation Higher Secondary School",
-    period: "2022 - 2023",
-    score: "74%",
+    degree: 'Senior Secondary (XII)',
+    institution: 'St.Mary Matriculation Higher Secondary School',
+    period: '2022 - 2023',
+    score: '74%',
   },
   {
-    degree: "Secondary (X)",
-    institution: "New Prince Matriculation Higher Secondary School",
-    period: "2020 - 2021",
-    score: "NULL",
+    degree: 'Secondary (X)',
+    institution: 'New Prince Matriculation Higher Secondary School',
+    period: '2020 - 2021',
+    score: 'NULL',
   },
 ];
 

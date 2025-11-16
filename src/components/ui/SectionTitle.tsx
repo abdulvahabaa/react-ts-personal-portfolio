@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface SectionTitleProps {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ interface SectionTitleProps {
 export function SectionTitle({
   children,
   subtitle,
-  className = "",
+  className = '',
 }: SectionTitleProps) {
   return (
     <div className={`mb-10 relative ${className}`}>
@@ -25,7 +25,7 @@ export function SectionTitle({
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl font-medium">
             {subtitle}
           </p>
-        )}{" "}
+        )}{' '}
         {/* Decorative elements */}
         <div className="flex items-center space-x-2 mt-2">
           <div className="h-px w-16 bg-gradient-to-r from-transparent via-blue-600 dark:via-blue-400 to-transparent"></div>

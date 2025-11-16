@@ -1,5 +1,5 @@
-import React from "react";
-import { Award, ExternalLink } from "lucide-react";
+import React from 'react';
+import { Award, ExternalLink } from 'lucide-react';
 
 interface CertificationCardProps {
   title: string;

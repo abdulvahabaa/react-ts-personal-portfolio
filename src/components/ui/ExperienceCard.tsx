@@ -1,5 +1,5 @@
-import React from "react";
-import { Briefcase } from "lucide-react";
+import React from 'react';
+import { Briefcase } from 'lucide-react';
 
 interface ExperienceCardProps {
   title: string;
@@ -44,7 +44,7 @@ export function ExperienceCard({
 
           {/* Description (Custom Blue Bullets) */}
           <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300">
-            {description.split("\n").map((line, index) => (
+            {description.split('\n').map((line, index) => (
               <li key={index} className="flex items-start gap-2">
                 <span className="text-blue-600 dark:text-blue-400 font-bold">
                   •

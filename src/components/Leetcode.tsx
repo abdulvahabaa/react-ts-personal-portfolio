@@ -1,6 +1,6 @@
-import { SectionTitle } from "./ui/SectionTitle";
-import { SectionBackground } from "./ui/SectionBackground";
-import { SiLeetcode } from "react-icons/si";
+import { SectionTitle } from './ui/SectionTitle';
+import { SectionBackground } from './ui/SectionBackground';
+import { SiLeetcode } from 'react-icons/si';
 
 export function Leetcode() {
   return (

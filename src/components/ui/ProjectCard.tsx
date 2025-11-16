@@ -1,6 +1,6 @@
-import { SiGithub } from "react-icons/si";
-import { FaGlobe } from "react-icons/fa";
-import { IconType } from "react-icons";
+import { SiGithub } from 'react-icons/si';
+import { FaGlobe } from 'react-icons/fa';
+import { IconType } from 'react-icons';
 
 interface TechStackItem {
   icon: IconType;

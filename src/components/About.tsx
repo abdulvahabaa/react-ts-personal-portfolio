@@ -1,49 +1,49 @@
-import { User2, Code2, Lightbulb, LayoutDashboard } from "lucide-react";
-import { GoGoal } from "react-icons/go";
-import { SiFigma } from "react-icons/si";
-import { SectionTitle } from "./ui/SectionTitle";
-import { SectionBackground } from "./ui/SectionBackground";
+import { User2, Code2, Lightbulb, LayoutDashboard } from 'lucide-react';
+import { GoGoal } from 'react-icons/go';
+import { SiFigma } from 'react-icons/si';
+import { SectionTitle } from './ui/SectionTitle';
+import { SectionBackground } from './ui/SectionBackground';
 
 const aboutSections = [
   {
     icon: User2,
-    title: "Who I Am",
+    title: 'Who I Am',
     description: [
-      "A web developer having interest in software engineering.",
-      "Enjoy solving problems and building scalable applications.",
-      "Always learning new technologies to improve my skills.",
+      'A web developer having interest in software engineering.',
+      'Enjoy solving problems and building scalable applications.',
+      'Always learning new technologies to improve my skills.',
     ],
-    color: "bg-blue-600",
+    color: 'bg-blue-600',
   },
   {
     icon: Code2,
-    title: "What I Do",
+    title: 'What I Do',
     description: [
-      "Develop high-performance web apps using modern tech stacks.",
-      "Solve algorithmic problems and optimize code efficiency.",
-      "Contribute to open-source and follow industry trends.",
+      'Develop high-performance web apps using modern tech stacks.',
+      'Solve algorithmic problems and optimize code efficiency.',
+      'Contribute to open-source and follow industry trends.',
     ],
-    color: "bg-purple-600",
+    color: 'bg-purple-600',
   },
   {
     icon: GoGoal,
-    title: "My Goals",
+    title: 'My Goals',
     description: [
-      "Build tech products that solve real-world challenges at scale.",
-      "Advance as a web developer with modern frameworks.",
-      "Grow the dev community through open-source contributions.",
+      'Build tech products that solve real-world challenges at scale.',
+      'Advance as a web developer with modern frameworks.',
+      'Grow the dev community through open-source contributions.',
     ],
-    color: "bg-green-600",
+    color: 'bg-green-600',
   },
   {
     icon: Lightbulb,
-    title: "My Philosophy",
+    title: 'My Philosophy',
     description: [
-      "Technology should simplify lives, not complicate them.",
-      "Great software solves problems, not just writes code.",
-      "Continuous learning keeps you ahead in tech.",
+      'Technology should simplify lives, not complicate them.',
+      'Great software solves problems, not just writes code.',
+      'Continuous learning keeps you ahead in tech.',
     ],
-    color: "bg-orange-600",
+    color: 'bg-orange-600',
   },
 ];
 
@@ -51,24 +51,24 @@ const aboutSections = [
 const services = [
   {
     icon: Lightbulb, // Using Lightbulb for Graphic Design
-    title: "Graphic Design",
+    title: 'Graphic Design',
     description:
-      "Creating visually compelling graphics, logos, and branding materials to elevate your business presence.",
-    color: "bg-pink-500",
+      'Creating visually compelling graphics, logos, and branding materials to elevate your business presence.',
+    color: 'bg-pink-500',
   },
   {
     icon: Code2,
-    title: "Web Development",
+    title: 'Web Development',
     description:
-      "Building responsive and scalable web applications using modern frameworks like React and Node.js.",
-    color: "bg-blue-500",
+      'Building responsive and scalable web applications using modern frameworks like React and Node.js.',
+    color: 'bg-blue-500',
   },
   {
     icon: null, // We'll handle custom rendering for UI/UX Design
-    title: "UI/UX Design",
+    title: 'UI/UX Design',
     description:
-      "Designing intuitive and engaging user interfaces and experiences for web and mobile platforms.",
-    color: "bg-green-500",
+      'Designing intuitive and engaging user interfaces and experiences for web and mobile platforms.',
+    color: 'bg-green-500',
   },
 ];
 
@@ -84,7 +84,7 @@ export function About() {
           {/* Introduction */}
           <div className="max-w-5xl mx-auto mb-10 text-center">
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Hey there! 👋 I'm{" "}
+              Hey there! 👋 I'm{' '}
               <span className="text-blue-600 font-semibold">M Dinesh</span>, a
               B.Tech Information Technology student passionate about building
               web web applications that solve real-world problems. I've created

@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "./Link";
-import { SocialLinks } from "./hero/SocialLinks";
-import { FaReact } from "react-icons/fa";
-import { SiVite } from "react-icons/si";
+import React from 'react';
+import { Link } from './Link';
+import { SocialLinks } from './hero/SocialLinks';
+import { FaReact } from 'react-icons/fa';
+import { SiVite } from 'react-icons/si';
 
 interface FooterLinkProps {
   href: string;
@@ -24,17 +24,17 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const links = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#github", label: "GitHub" },
-    { href: "#leetcode", label: "Leetcode" },
-    { href: "#badges", label: "Badges" },
-    { href: "#experience", label: "Experience" },
-    { href: "#certifications", label: "Certifications" },
-    { href: "#education", label: "Education" },
-    { href: "#contact", label: "Contact" },
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#github', label: 'GitHub' },
+    { href: '#leetcode', label: 'Leetcode' },
+    { href: '#badges', label: 'Badges' },
+    { href: '#experience', label: 'Experience' },
+    { href: '#certifications', label: 'Certifications' },
+    { href: '#education', label: 'Education' },
+    { href: '#contact', label: 'Contact' },
   ];
 
   return (
@@ -59,7 +59,7 @@ export function Footer() {
           <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
             <p>© {currentYear} M Dinesh. All rights reserved.</p>
             <p className="flex items-center justify-center gap-2">
-              Built with{" "}
+              Built with{' '}
               <FaReact className="w-6 h-6 text-blue-500 animate-spin" /> using
               <SiVite className="w-6 h-6 text-yellow-500 animate-pulse" />
             </p>

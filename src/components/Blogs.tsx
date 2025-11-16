@@ -1,7 +1,7 @@
-import { useBlogs } from "../hooks/useBlogs";
-import { BlogCard } from "./ui/BlogCard";
-import { SectionTitle } from "./ui/SectionTitle";
-import { SectionBackground } from "./ui/SectionBackground";
+import { useBlogs } from '../hooks/useBlogs';
+import { BlogCard } from './ui/BlogCard';
+import { SectionTitle } from './ui/SectionTitle';
+import { SectionBackground } from './ui/SectionBackground';
 
 export function Blogs() {
   const { blogs, loading } = useBlogs();
@@ -21,7 +21,7 @@ export function Blogs() {
           ) : (
             <>
               <div className="max-w-6xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {blogs.map((blog) => (
+                {blogs.map(blog => (
                   <BlogCard key={blog.slug} {...blog} />
                 ))}
               </div>

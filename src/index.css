@@ -1,11 +1,11 @@
-@import "tailwindcss";
-@import "tailwindcss" layer(base);
+@import 'tailwindcss';
+@import 'tailwindcss' layer(base);
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Dark theme */
 :root {
   /* color-scheme: dark; */
-   color-scheme: light dark;
+  color-scheme: light dark;
 }
 
 /* Base styles */
@@ -31,7 +31,8 @@ body {
 /* Custom utilities — Tailwind v4 version */
 .bg-grid-pattern {
   background-size: 24px 24px;
-  background-image: linear-gradient(to right, #6366f1 1px, transparent 1px),
+  background-image:
+    linear-gradient(to right, #6366f1 1px, transparent 1px),
     linear-gradient(to bottom, #6366f1 1px, transparent 1px);
 }
 

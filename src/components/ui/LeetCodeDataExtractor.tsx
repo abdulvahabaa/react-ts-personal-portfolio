@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 interface ContributionData {
   date: string;
@@ -12,9 +12,9 @@ interface LeetCodeDataExtractorProps {
 export function LeetCodeDataExtractor({
   onDataExtracted,
 }: LeetCodeDataExtractorProps) {
-  const [username, setUsername] = useState("Dinesh_coder30");
+  const [username, setUsername] = useState('Dinesh_coder30');
   const [isExtracting, setIsExtracting] = useState(false);
-  const [manualData, setManualData] = useState("");
+  const [manualData, setManualData] = useState('');
   const [showManualInput, setShowManualInput] = useState(false);
 
   const extractFromLeetCode = async () => {
@@ -28,7 +28,7 @@ export function LeetCodeDataExtractor({
 
       if (response.ok) {
         const data = await response.json();
-        console.log("LeetCode API Data:", data);
+        console.log('LeetCode API Data:', data);
 
         // This API doesn't provide submission history, but we can use it for stats
         alert(
@@ -36,11 +36,11 @@ export function LeetCodeDataExtractor({
         );
         setShowManualInput(true);
       } else {
-        throw new Error("Profile not found");
+        throw new Error('Profile not found');
       }
     } catch (error) {
-      console.error("Error extracting data:", error);
-      alert("Could not automatically fetch data. Please use manual input.");
+      console.error('Error extracting data:', error);
+      alert('Could not automatically fetch data. Please use manual input.');
       setShowManualInput(true);
     } finally {
       setIsExtracting(false);
@@ -49,11 +49,11 @@ export function LeetCodeDataExtractor({
 
   const processManualData = () => {
     try {
-      const lines = manualData.trim().split("\n");
+      const lines = manualData.trim().split('\n');
       const data: ContributionData[] = [];
 
-      lines.forEach((line) => {
-        const [date, count] = line.split(",").map((s) => s.trim());
+      lines.forEach(line => {
+        const [date, count] = line.split(',').map(s => s.trim());
         if (date && count && !isNaN(Number(count))) {
           data.push({
             date: date,
@@ -66,10 +66,10 @@ export function LeetCodeDataExtractor({
         onDataExtracted(data);
         alert(`Successfully processed ${data.length} submission records!`);
       } else {
-        alert("No valid data found. Please check the format.");
+        alert('No valid data found. Please check the format.');
       }
     } catch (error) {
-      alert("Error processing data. Please check the format.");
+      alert('Error processing data. Please check the format.');
     }
   };
 
@@ -89,7 +89,7 @@ export function LeetCodeDataExtractor({
             <input
               type="text"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={e => setUsername(e.target.value)}
               className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
               placeholder="Enter your LeetCode username"
             />
@@ -98,7 +98,7 @@ export function LeetCodeDataExtractor({
               disabled={isExtracting}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
             >
-              {isExtracting ? "Extracting..." : "Extract Data"}
+              {isExtracting ? 'Extracting...' : 'Extract Data'}
             </button>
           </div>
         </div>
@@ -109,7 +109,7 @@ export function LeetCodeDataExtractor({
             onClick={() => setShowManualInput(!showManualInput)}
             className="text-blue-600 dark:text-blue-400 hover:underline"
           >
-            {showManualInput ? "Hide" : "Show"} Manual Input
+            {showManualInput ? 'Hide' : 'Show'} Manual Input
           </button>
 
           {showManualInput && (
@@ -119,7 +119,7 @@ export function LeetCodeDataExtractor({
               </label>
               <textarea
                 value={manualData}
-                onChange={(e) => setManualData(e.target.value)}
+                onChange={e => setManualData(e.target.value)}
                 className="w-full h-32 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
                 placeholder={`2024-01-15, 2
 2024-01-16, 1

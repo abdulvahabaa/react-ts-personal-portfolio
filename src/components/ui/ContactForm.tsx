@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { User, Mail } from "lucide-react";
-import { LuMessageSquareShare } from "react-icons/lu";
-import { FaRegCommentDots } from "react-icons/fa";
+import React, { useState } from 'react';
+import { User, Mail } from 'lucide-react';
+import { LuMessageSquareShare } from 'react-icons/lu';
+import { FaRegCommentDots } from 'react-icons/fa';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const [status, setStatus] = useState<
-    "idle" | "submitting" | "success" | "error"
-  >("idle");
-  const [errorMessage, setErrorMessage] = useState("");
+    'idle' | 'submitting' | 'success' | 'error'
+  >('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -26,29 +26,29 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent default form submission
-    setStatus("submitting");
-    setErrorMessage("");
+    setStatus('submitting');
+    setErrorMessage('');
 
     try {
-      const response = await fetch("https://formspree.io/f/mblyelen", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch('https://formspree.io/f/mblyelen', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "" }); // Reset the form
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' }); // Reset the form
       } else {
         const errorData = await response.json();
         setErrorMessage(
-          errorData.error || "Something went wrong. Please try again."
+          errorData.error || 'Something went wrong. Please try again.'
         );
-        setStatus("error");
+        setStatus('error');
       }
     } catch (error) {
-      setErrorMessage("An unexpected error occurred. Please try again.");
-      setStatus("error");
+      setErrorMessage('An unexpected error occurred. Please try again.');
+      setStatus('error');
     }
   };
 
@@ -123,26 +123,26 @@ export function ContactForm() {
       {/* Submit Button */}
       <button
         type="submit"
-        disabled={status === "submitting"}
+        disabled={status === 'submitting'}
         className={`w-full py-3 px-6 rounded-lg flex items-center justify-center gap-2 ${
-          status === "submitting"
-            ? "bg-blue-400"
-            : "bg-blue-600 hover:bg-blue-700 text-white"
+          status === 'submitting'
+            ? 'bg-blue-400'
+            : 'bg-blue-600 hover:bg-blue-700 text-white'
         }`}
       >
-        {status === "submitting" ? "Sending..." : "Send Message"}
-        {status !== "submitting" && (
+        {status === 'submitting' ? 'Sending...' : 'Send Message'}
+        {status !== 'submitting' && (
           <LuMessageSquareShare className="w-5 h-5" />
         )}
       </button>
 
       {/* Status Messages */}
-      {status === "success" && (
+      {status === 'success' && (
         <p className="text-green-600 text-center mt-4">
           Message sent successfully!
         </p>
       )}
-      {status === "error" && (
+      {status === 'error' && (
         <p className="text-red-600 text-center mt-4">{errorMessage}</p>
       )}
     </form>

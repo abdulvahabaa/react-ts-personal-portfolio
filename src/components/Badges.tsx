@@ -1,102 +1,102 @@
-import { SectionTitle } from "./ui/SectionTitle";
-import { SectionBackground } from "./ui/SectionBackground";
+import { SectionTitle } from './ui/SectionTitle';
+import { SectionBackground } from './ui/SectionBackground';
 
 const badges = [
   {
-    id: "github-foundations",
-    platform: "GitHub",
-    title: "GitHub Foundations",
+    id: 'github-foundations',
+    platform: 'GitHub',
+    title: 'GitHub Foundations',
     image:
-      "https://images.credly.com/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png",
+      'https://images.credly.com/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png',
     profile:
-      "https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url",
+      'https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url',
   },
   {
-    id: "ibm-data-analytics",
-    platform: "IBM",
-    title: "Data Analytics Essentials",
+    id: 'ibm-data-analytics',
+    platform: 'IBM',
+    title: 'Data Analytics Essentials',
     image:
-      "https://images.credly.com/size/680x680/images/42f7ca3c-6eb3-47d2-a7f3-3b1093ea1b35/image.png",
-    profile: "https://www.credly.com/users/dinesh-m-d30/badges#credly",
+      'https://images.credly.com/size/680x680/images/42f7ca3c-6eb3-47d2-a7f3-3b1093ea1b35/image.png',
+    profile: 'https://www.credly.com/users/dinesh-m-d30/badges#credly',
   },
   {
-    id: "leetcode-50",
-    platform: "LeetCode",
-    title: "50 Days Badge 2025",
-    image: "https://assets.leetcode.com/static_assets/others/2550.gif",
-    profile: "https://leetcode.com/u/Dinesh_coder30/",
+    id: 'leetcode-50',
+    platform: 'LeetCode',
+    title: '50 Days Badge 2025',
+    image: 'https://assets.leetcode.com/static_assets/others/2550.gif',
+    profile: 'https://leetcode.com/u/Dinesh_coder30/',
   },
   {
-    id: "leetcode-100",
-    platform: "LeetCode",
-    title: "100 Days Badge 2025",
-    image: "https://assets.leetcode.com/static_assets/others/25100.gif",
-    profile: "https://leetcode.com/u/Dinesh_coder30/",
+    id: 'leetcode-100',
+    platform: 'LeetCode',
+    title: '100 Days Badge 2025',
+    image: 'https://assets.leetcode.com/static_assets/others/25100.gif',
+    profile: 'https://leetcode.com/u/Dinesh_coder30/',
   },
   {
-    id: "leetcode-top-sql-50",
-    platform: "LeetCode",
-    title: "Top SQL 50",
-    image: "https://assets.leetcode.com/static_assets/others/Top_SQL_50.gif",
-    profile: "https://leetcode.com/u/Dinesh_coder30/",
+    id: 'leetcode-top-sql-50',
+    platform: 'LeetCode',
+    title: 'Top SQL 50',
+    image: 'https://assets.leetcode.com/static_assets/others/Top_SQL_50.gif',
+    profile: 'https://leetcode.com/u/Dinesh_coder30/',
   },
   {
-    id: "leetcode-leetcode-75",
-    platform: "LeetCode",
-    title: "LeetCode 75",
-    image: "https://assets.leetcode.com/static_assets/others/LeetCode_75.gif",
-    profile: "https://leetcode.com/u/Dinesh_coder30/",
+    id: 'leetcode-leetcode-75',
+    platform: 'LeetCode',
+    title: 'LeetCode 75',
+    image: 'https://assets.leetcode.com/static_assets/others/LeetCode_75.gif',
+    profile: 'https://leetcode.com/u/Dinesh_coder30/',
   },
   {
-    id: "github-shark",
-    platform: "GitHub",
-    title: "Pull Shark",
+    id: 'github-shark',
+    platform: 'GitHub',
+    title: 'Pull Shark',
     image:
-      "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png",
-    profile: "https://github.com/dineshit27",
+      'https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png',
+    profile: 'https://github.com/dineshit27',
   },
   {
-    id: "github-arctic",
-    platform: "GitHub",
-    title: "Arctic Code Vault Contributor",
+    id: 'github-arctic',
+    platform: 'GitHub',
+    title: 'Arctic Code Vault Contributor',
     image:
-      "https://github.githubassets.com/assets/starstruck-default--light-a594e2a027e0.png",
-    profile: "https://github.com/dineshit27",
+      'https://github.githubassets.com/assets/starstruck-default--light-a594e2a027e0.png',
+    profile: 'https://github.com/dineshit27',
   },
 
   {
-    id: "github-yolo",
-    platform: "GitHub",
-    title: "YOLO",
+    id: 'github-yolo',
+    platform: 'GitHub',
+    title: 'YOLO',
     image:
-      "https://github.githubassets.com/assets/yolo-default-be0bbff04951.png",
-    profile: "https://github.com/dineshit27",
+      'https://github.githubassets.com/assets/yolo-default-be0bbff04951.png',
+    profile: 'https://github.com/dineshit27',
   },
 
   {
-    id: "github-pair-extraordinary",
-    platform: "GitHub",
-    title: "Pair Extraordinary",
+    id: 'github-pair-extraordinary',
+    platform: 'GitHub',
+    title: 'Pair Extraordinary',
     image:
-      "https://github.githubassets.com/assets/pair-extraordinaire-default-579438a20e01.png",
-    profile: "https://github.com/dineshit27",
+      'https://github.githubassets.com/assets/pair-extraordinaire-default-579438a20e01.png',
+    profile: 'https://github.com/dineshit27',
   },
 
   {
-    id: "github-quickdraw",
-    platform: "GitHub",
-    title: "Quickdraw",
+    id: 'github-quickdraw',
+    platform: 'GitHub',
+    title: 'Quickdraw',
     image:
-      "https://github.githubassets.com/assets/quickdraw-default--light-8f798b35341a.png",
-    profile: "https://github.com/dineshit27",
+      'https://github.githubassets.com/assets/quickdraw-default--light-8f798b35341a.png',
+    profile: 'https://github.com/dineshit27',
   },
   {
-    id: "github-galaxy-star",
-    platform: "GitHub",
-    title: "Galaxy Brain",
+    id: 'github-galaxy-star',
+    platform: 'GitHub',
+    title: 'Galaxy Brain',
     image:
-      "https://github.githubassets.com/assets/galaxy-brain-default-847262c21056.png",
-    profile: "https://github.com/dineshit27",
+      'https://github.githubassets.com/assets/galaxy-brain-default-847262c21056.png',
+    profile: 'https://github.com/dineshit27',
   },
 ];
 
@@ -110,7 +110,7 @@ export function Badges() {
           </SectionTitle>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 gap-4">
-            {badges.map((badge) => (
+            {badges.map(badge => (
               <a
                 key={badge.id}
                 href={badge.profile}

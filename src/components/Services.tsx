@@ -1,31 +1,31 @@
-import { LayoutDashboard, Lightbulb, Code2 } from "lucide-react";
-import { SectionTitle } from "./ui/SectionTitle";
-import { SectionBackground } from "./ui/SectionBackground";
+import { LayoutDashboard, Lightbulb, Code2 } from 'lucide-react';
+import { SectionTitle } from './ui/SectionTitle';
+import { SectionBackground } from './ui/SectionBackground';
 
 const services = [
   {
     icon: Lightbulb,
-    title: "Graphic Design",
+    title: 'Graphic Design',
     description:
-      "Creating visually compelling graphics, logos, and branding materials to elevate your business presence.",
-    color: "bg-pink-500",
-    image: "/assets/gd.jpg",
+      'Creating visually compelling graphics, logos, and branding materials to elevate your business presence.',
+    color: 'bg-pink-500',
+    image: '/assets/gd.jpg',
   },
   {
     icon: Code2,
-    title: "Web Development",
+    title: 'Web Development',
     description:
-      "Building responsive and scalable web applications using modern frameworks like React and Node.js.",
-    color: "bg-blue-500",
-    image: "/assets/web dev.jpg",
+      'Building responsive and scalable web applications using modern frameworks like React and Node.js.',
+    color: 'bg-blue-500',
+    image: '/assets/web dev.jpg',
   },
   {
     icon: LayoutDashboard,
-    title: "UI/UX Design",
+    title: 'UI/UX Design',
     description:
-      "Designing intuitive and engaging user interfaces and experiences for web and mobile platforms.",
-    color: "bg-green-500",
-    image: "/assets/uiux.jpg",
+      'Designing intuitive and engaging user interfaces and experiences for web and mobile platforms.',
+    color: 'bg-green-500',
+    image: '/assets/uiux.jpg',
   },
 ];
 

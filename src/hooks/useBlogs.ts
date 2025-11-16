@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-const HASHNODE_API = "https://gql.hashnode.com/";
-const USERNAME = "deepakmodi"; // Hashnode username
+const HASHNODE_API = 'https://gql.hashnode.com/';
+const USERNAME = 'deepakmodi'; // Hashnode username
 
 interface Blog {
   title: string;
@@ -43,8 +43,8 @@ export function useBlogs() {
 
       try {
         const response = await fetch(HASHNODE_API, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ query }),
         });
 
@@ -64,12 +64,12 @@ export function useBlogs() {
 
           setBlogs(formattedBlogs);
         } else {
-          console.error("No blogs found in API response");
+          console.error('No blogs found in API response');
         }
 
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching blogs:", error);
+        console.error('Error fetching blogs:', error);
         setLoading(false);
       }
     };

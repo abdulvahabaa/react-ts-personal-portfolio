@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import GitHubCalendar from "react-github-calendar";
-import { SectionTitle } from "./ui/SectionTitle";
-import { SectionBackground } from "./ui/SectionBackground";
-import { Github } from "lucide-react";
+import { useState, useEffect } from 'react';
+import GitHubCalendar from 'react-github-calendar';
+import { SectionTitle } from './ui/SectionTitle';
+import { SectionBackground } from './ui/SectionBackground';
+import { Github } from 'lucide-react';
 
 interface Repo {
   name: string;
@@ -28,39 +28,39 @@ export function GitHub() {
   const [user, setUser] = useState<UserProfile | null>(null);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/dineshit27")
-      .then((response) => response.json())
+    fetch('https://api.github.com/users/dineshit27')
+      .then(response => response.json())
       .then((data: UserProfile) => setUser(data));
 
     // Set specific repositories
     const specificRepos = [
       {
-        name: "TechnoHacks-Portfolio-Website-MDinesh30",
+        name: 'TechnoHacks-Portfolio-Website-MDinesh30',
         description:
-          "Personal portfolio website built with HTML, CSS, and JavaScript. Features modern design, responsive layout, and dynamic interactions.",
+          'Personal portfolio website built with HTML, CSS, and JavaScript. Features modern design, responsive layout, and dynamic interactions.',
         stars: 7,
         forks: 0,
-        language: "CSS",
+        language: 'CSS',
         html_url:
-          "https://github.com/dineshit27/TechnoHacks-Portfolio-Website-MDinesh30",
+          'https://github.com/dineshit27/TechnoHacks-Portfolio-Website-MDinesh30',
       },
       {
-        name: "DSA-in-JAVA",
+        name: 'DSA-in-JAVA',
         description:
-          "Data Structures and Algorithms implementation in Java with various problem solutions and algorithms.",
+          'Data Structures and Algorithms implementation in Java with various problem solutions and algorithms.',
         stars: 9,
         forks: 1,
-        language: "Java",
-        html_url: "https://github.com/dineshit27/DSA-in-JAVA",
+        language: 'Java',
+        html_url: 'https://github.com/dineshit27/DSA-in-JAVA',
       },
       {
-        name: "Cognifyz-Data-Analysis",
+        name: 'Cognifyz-Data-Analysis',
         description:
-          "Data analysis project using Python and Jupyter Notebooks for comprehensive data insights and visualization.",
+          'Data analysis project using Python and Jupyter Notebooks for comprehensive data insights and visualization.',
         stars: 10,
         forks: 1,
-        language: "Jupyter Notebook",
-        html_url: "https://github.com/dineshit27/Cognifyz-Data-Analysis",
+        language: 'Jupyter Notebook',
+        html_url: 'https://github.com/dineshit27/Cognifyz-Data-Analysis',
       },
     ];
     setRepos(specificRepos);
@@ -90,7 +90,7 @@ export function GitHub() {
 
           {/* Top Repositories */}
           <div className="mx-auto max-w-6xl grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
-            {repos.map((repo) => (
+            {repos.map(repo => (
               <a
                 key={repo.name}
                 href={repo.html_url}
@@ -154,7 +154,7 @@ export function GitHub() {
                 >
                   <Github className="w-5 h-5" /> View Profile
                 </a>
-              </div>{" "}
+              </div>{' '}
             </div>
           )}
         </div>

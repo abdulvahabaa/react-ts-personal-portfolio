@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 export function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -6,7 +6,7 @@ export function CustomCursor() {
 
   useEffect(() => {
     // Check for touch devices only once
-    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
 
     if (isTouchDevice) {
       setShowCursor(false);
@@ -18,8 +18,8 @@ export function CustomCursor() {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    document.addEventListener("mousemove", handleMouseMove);
-    return () => document.removeEventListener("mousemove", handleMouseMove);
+    document.addEventListener('mousemove', handleMouseMove);
+    return () => document.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   if (!showCursor) return null;
@@ -32,13 +32,13 @@ export function CustomCursor() {
         style={{
           left: position.x - 300,
           top: position.y - 300,
-          width: "600px",
-          height: "600px",
+          width: '600px',
+          height: '600px',
           background:
-            "radial-gradient(circle, rgba(29, 78, 216, 0.6) 0%, rgba(29, 78, 216, 0.5) 25%, rgba(29, 78, 216, 0.3) 50%, rgba(29, 78, 216, 0.15) 75%, transparent 100%)",
-          borderRadius: "50% 40% 60% 30%",
-          filter: "blur(60px)",
-          transform: "scale(1.2)",
+            'radial-gradient(circle, rgba(29, 78, 216, 0.6) 0%, rgba(29, 78, 216, 0.5) 25%, rgba(29, 78, 216, 0.3) 50%, rgba(29, 78, 216, 0.15) 75%, transparent 100%)',
+          borderRadius: '50% 40% 60% 30%',
+          filter: 'blur(60px)',
+          transform: 'scale(1.2)',
         }}
       />
 

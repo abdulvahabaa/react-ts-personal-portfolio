@@ -1,8 +1,8 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
 
 export default function HandwritingAnimation() {
-  const name = "Abdul Vahab";
+  const name = 'Abdul Vahab';
   const controls = useAnimation();
   const drawDuration = 2.8;
 
@@ -11,7 +11,7 @@ export default function HandwritingAnimation() {
       await new Promise(resolve => setTimeout(resolve, drawDuration * 1000));
       controls.start({
         fillOpacity: 1,
-        transition: { duration: 0.8, ease: "easeInOut" },
+        transition: { duration: 0.8, ease: 'easeInOut' },
       });
     };
     sequence();
@@ -51,11 +51,14 @@ export default function HandwritingAnimation() {
       >
         <defs>
           <clipPath id="clip-path-draw">
-            <motion.rect 
-              x="0" y="0" width="1000" height="250"
+            <motion.rect
+              x="0"
+              y="0"
+              width="1000"
+              height="250"
               initial={{ width: 0 }}
               animate={{ width: 1000 }}
-              transition={{ duration: drawDuration, ease: "easeInOut" }}
+              transition={{ duration: drawDuration, ease: 'easeInOut' }}
             />
           </clipPath>
         </defs>
@@ -79,5 +82,3 @@ export default function HandwritingAnimation() {
     </div>
   );
 }
-
-

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface SectionBackgroundProps {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ interface SectionBackgroundProps {
 
 export function SectionBackground({
   children,
-  className = "",
+  className = '',
 }: SectionBackgroundProps) {
   return (
     <div

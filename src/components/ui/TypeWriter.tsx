@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 interface TypeWriterProps {
   words: string[];
@@ -14,7 +14,7 @@ export function TypeWriter({
   gradient = true,
 }: TypeWriterProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("|"); // Start with the cursor
+  const [currentText, setCurrentText] = useState('|'); // Start with the cursor
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export function TypeWriter({
         if (!isDeleting) {
           // Typing Effect
           if (currentText.length < word.length + 1) {
-            setCurrentText(word.slice(0, currentText.length) + "|"); // Keep the cursor at the end
+            setCurrentText(word.slice(0, currentText.length) + '|'); // Keep the cursor at the end
           } else {
             // Pause before deleting (slightly shorter pause for fluidity)
             setTimeout(() => setIsDeleting(true), 1000);
@@ -33,10 +33,10 @@ export function TypeWriter({
         } else {
           // Deleting Effect
           if (currentText.length > 1) {
-            setCurrentText(word.slice(0, currentText.length - 2) + "|"); // Keep the cursor at the end
+            setCurrentText(word.slice(0, currentText.length - 2) + '|'); // Keep the cursor at the end
           } else {
             setIsDeleting(false);
-            setCurrentWordIndex((prev) =>
+            setCurrentWordIndex(prev =>
               infinite
                 ? (prev + 1) % words.length
                 : Math.min(prev + 1, words.length - 1)
@@ -54,8 +54,8 @@ export function TypeWriter({
     <span
       className={`relative font-semibold ${
         gradient
-          ? "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
-          : "text-blue-600 dark:text-blue-400"
+          ? 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent'
+          : 'text-blue-600 dark:text-blue-400'
       }`}
     >
       <span className="whitespace-nowrap">{currentText}</span>

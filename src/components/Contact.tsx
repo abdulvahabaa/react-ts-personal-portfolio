@@ -1,7 +1,7 @@
-import { SectionTitle } from "./ui/SectionTitle";
-import { SectionBackground } from "./ui/SectionBackground";
-import { ContactForm } from "./ui/ContactForm";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { SectionTitle } from './ui/SectionTitle';
+import { SectionBackground } from './ui/SectionBackground';
+import { ContactForm } from './ui/ContactForm';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export function Contact() {
   return (
