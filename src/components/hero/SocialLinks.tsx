@@ -1,21 +1,25 @@
-import { Github, Linkedin, Instagram } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
+import {
+  FaWhatsapp,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+} from 'react-icons/fa';
 
 const links = [
   {
-    href: 'https://github.com/dineshit27',
-    icon: <Github className="w-6 h-6 text-gray-900 dark:text-white" />,
+    href: 'https://github.com/abdulvahabaa',
+    icon: <FaGithub className="w-6 h-6 text-gray-900 dark:text-white" />,
     label: 'GitHub',
   },
   {
     href: 'https://www.linkedin.com/in/abdulvahabaa/',
-    icon: <Linkedin className="w-6 h-6 text-[#0077B5]" />,
+    icon: <FaLinkedin className="w-6 h-6 text-[#0077B5]" />,
     label: 'LinkedIn',
   },
   {
-    href: 'https://www.instagram.com/_dinx_pvt_430',
-    icon: <Instagram className="w-6 h-6 text-[#E1306C]" />,
+    href: 'https://www.instagram.com/abubakthiyar',
+    icon: <FaInstagram className="w-6 h-6 text-[#E1306C]" />,
     label: 'Instagram',
   },
   {
@@ -24,7 +28,7 @@ const links = [
     label: 'WhatsApp',
   },
   {
-    href: 'mailto:m.dinesh.it27@gmail.com',
+    href: 'mailto:abdulvahabaa.official@gmail.com',
     icon: <FaEnvelope className="w-6 h-6 text-[#D44638]" />,
     label: 'Gmail',
   },

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { Link } from './Link';
 import { TypeWriter } from './ui/TypeWriter';
@@ -9,9 +8,9 @@ import { ActionButtons } from './hero/ActionButtons';
 export function Hero() {
   const roles = [
     'Full Stack Developer',
-    'UI/UX Designer',
     'Freelance Web Devloper',
-    'Code Enthusiast',
+    'UI/UX Designer',
+    'Tech Enthusiast',
     'Digital Content Creator',
   ];
 
@@ -21,7 +20,7 @@ export function Hero() {
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
       {/* Animated background with particles */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-slate-100/60 to-blue-50/60 dark:from-black dark:via-gray-950/60 dark:to-slate-950/60">
+      <div className="absolute inset-0 bg-linear-to-br from-gray-50 via-slate-100/60 to-blue-50/60 dark:from-black dark:via-gray-950/60 dark:to-slate-950/60">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.08]" />
         {/* Animated gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/30 dark:bg-blue-600/30 rounded-full blur-3xl animate-pulse" />
@@ -33,14 +32,14 @@ export function Hero() {
           {/* Left Column - Content */}
           <div className="flex flex-col items-center justify-center text-center space-y-4 order-2 md:order-1">
             <div className="space-y-2">
-              <div className="inline-block bg-blue-100 dark:bg-blue-900/50 backdrop-blur-sm text-blue-600 dark:text-blue-300 text-sm font-medium px-4 py-2 rounded-full">
+              <div className="inline-block bg-blue-100 dark:bg-blue-900/50 backdrop-blur-sm text-blue-600 dark:text-blue-500 text-sm font-medium px-4 py-2 rounded-full">
                 Hey!{' '}
                 <span className="inline-block origin-[70%_70%] animate-wave">
                   👋
                 </span>{' '}
                 I'm
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
+              <h1 className="text-4xl lg:text-6xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
                 Abdul Vahab A A
               </h1>
               <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
@@ -61,17 +60,17 @@ export function Hero() {
             <div className="absolute w-20 h-20 bg-green-500 top-4 right-4 rounded-full animate-floating delay-300" />
             <div className="absolute w-20 h-20 bg-yellow-500 bottom-4 left-4 rounded-full animate-floating delay-450" />
 
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute inset-0 bg-linear-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
             <img
               src="/assets/profile.png"
-              alt="M Dinesh"
+              alt="Abdul Vahab A A"
               className="relative w-full max-w-lg mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-[-1rem] left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
           <Link href="#about" className="p-2">
             <ArrowDown className="w-6 h-6 text-gray-600 dark:text-gray-300" />
           </Link>

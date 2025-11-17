@@ -6,22 +6,29 @@ import {
   SiCss3,
   SiJavascript,
   SiReact,
-  SiRedux,
   SiMongodb,
   SiGit,
   SiGithub,
   SiVercel,
-  SiBootstrap,
-  SiMysql,
-  SiNetlify,
-  SiCanva,
   SiFigma,
   SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+  SiExpress,
+  SiGraphql,
+  SiPostgresql,
+  SiPrisma,
+  SiDjango,
+  SiPython,
+  SiDocker,
+  SiRedis,
+  SiPostman,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+  SiAdobexd,
 } from 'react-icons/si';
-import { FaNodeJs, FaPython, FaJava, FaAws, FaMicrosoft } from 'react-icons/fa';
-import { VscVscode } from 'react-icons/vsc';
-import { IoLogoFirebase } from 'react-icons/io5';
-import { BiBarChartAlt2, BiBrain } from 'react-icons/bi';
+import { FaNodeJs, FaAws } from 'react-icons/fa';
+import { VscVscode, VscTerminalPowershell } from 'react-icons/vsc';
 
 const skills = [
   {
@@ -39,8 +46,21 @@ const skills = [
   {
     name: 'JavaScript',
     icon: SiJavascript,
-    color: '#ffd600',
+    color: '#f7df1e',
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+  },
+  {
+    name: 'TypeScript',
+    icon: SiTypescript,
+    color: '#3178c6',
+    url: 'https://www.typescriptlang.org/',
+  },
+  { name: 'React', icon: SiReact, color: '#61dafb', url: 'https://react.dev/' },
+  {
+    name: 'Next.js',
+    icon: SiNextdotjs,
+    color: '#',
+    url: 'https://nextjs.org/',
   },
   {
     name: 'Tailwind CSS',
@@ -49,29 +69,34 @@ const skills = [
     url: 'https://tailwindcss.com/',
   },
   {
-    name: 'Bootstrap',
-    icon: SiBootstrap,
-    color: '#7952b3',
-    url: 'https://getbootstrap.com/',
-  },
-  {
-    name: 'MySQL',
-    icon: SiMysql,
-    color: '#4479a1',
-    url: 'https://www.mysql.com/',
-  },
-  { name: 'React', icon: SiReact, color: '#61dafb', url: 'https://react.dev/' },
-  {
-    name: 'Redux',
-    icon: SiRedux,
-    color: '#764abc',
-    url: 'https://redux.js.org/',
-  },
-  {
     name: 'Node.js',
     icon: FaNodeJs,
     color: '#68a063',
     url: 'https://nodejs.org/',
+  },
+  {
+    name: 'Express.js',
+    icon: SiExpress,
+    color: '#68a063',
+    url: 'https://expressjs.com/',
+  },
+  {
+    name: 'GraphQL',
+    icon: SiGraphql,
+    color: '#e535ab',
+    url: 'https://graphql.org/',
+  },
+  {
+    name: 'Python',
+    icon: SiPython,
+    color: '#306998',
+    url: 'https://www.python.org/',
+  },
+  {
+    name: 'Django',
+    icon: SiDjango,
+    color: '#306998',
+    url: 'https://www.djangoproject.com/',
   },
   {
     name: 'MongoDB',
@@ -80,22 +105,30 @@ const skills = [
     url: 'https://www.mongodb.com/',
   },
   {
-    name: 'Firebase',
-    icon: IoLogoFirebase,
-    color: '#ffca28',
-    url: 'https://firebase.google.com/',
+    name: 'PostgreSQL',
+    icon: SiPostgresql,
+    color: '#336791',
+    url: 'https://www.postgresql.org/',
   },
   {
-    name: 'Java',
-    icon: FaJava,
-    color: '#f7b731',
-    url: 'https://www.java.com/',
+    name: 'Prisma',
+    icon: SiPrisma,
+    color: '#186997',
+    url: 'https://www.prisma.io/',
+  },
+  { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
+  { name: 'GitHub', icon: SiGithub, color: '# ', url: 'https://github.com/' },
+  {
+    name: 'Docker',
+    icon: SiDocker,
+    color: '#007acc',
+    url: 'https://www.docker.com/',
   },
   {
-    name: 'Python',
-    icon: FaPython,
-    color: '#306998',
-    url: 'https://www.python.org/',
+    name: 'Redis',
+    icon: SiRedis,
+    color: '#dc382d',
+    url: 'https://redis.io/',
   },
   {
     name: 'AWS',
@@ -104,49 +137,47 @@ const skills = [
     url: 'https://aws.amazon.com/',
   },
   {
+    name: 'PowerShell',
+    icon: VscTerminalPowershell,
+    color: '#',
+    url: 'https://docs.microsoft.com/en-us/powershell/',
+  },
+  {
+    name: 'Postman',
+    icon: SiPostman,
+    color: '#ff6c37',
+    url: 'https://www.postman.com/',
+  },
+  {
     name: 'VS Code',
     icon: VscVscode,
     color: '#007acc',
     url: 'https://code.visualstudio.com/',
   },
-  {
-    name: 'Cursor IDE',
-    icon: BiBrain,
-    color: '#00d4aa',
-    url: 'https://cursor.sh/',
-  },
-  { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
-  { name: 'GitHub', icon: SiGithub, color: '# ', url: 'https://github.com/' },
   { name: 'Vercel', icon: SiVercel, color: '#', url: 'https://vercel.com/' },
-  {
-    name: 'Netlify',
-    icon: SiNetlify,
-    color: '#00c7b7',
-    url: 'https://www.netlify.com/',
-  },
-  {
-    name: 'Excel',
-    icon: FaMicrosoft,
-    color: '#217346',
-    url: 'https://www.microsoft.com/en-us/microsoft-365/excel',
-  },
-  {
-    name: 'PowerBI',
-    icon: BiBarChartAlt2,
-    color: '#f2c811',
-    url: 'https://powerbi.microsoft.com/',
-  },
-  {
-    name: 'Canva',
-    icon: SiCanva,
-    color: '#00c4cc',
-    url: 'https://www.canva.com/',
-  },
   {
     name: 'Figma',
     icon: SiFigma,
     color: '#f24e1e',
     url: 'https://www.figma.com/',
+  },
+  {
+    name: 'Photoshop',
+    icon: SiAdobephotoshop,
+    color: '#007acc',
+    url: 'https://www.adobe.com/products/photoshop.html',
+  },
+  {
+    name: 'Illustrator',
+    icon: SiAdobeillustrator,
+    color: '#ff9900',
+    url: 'https://www.adobe.com/products/illustrator.html',
+  },
+  {
+    name: 'Adobe XD',
+    icon: SiAdobexd,
+    color: '#e535ab',
+    url: 'https://www.adobe.com/products/xd.html',
   },
 ];
 

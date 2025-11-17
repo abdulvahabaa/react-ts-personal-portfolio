@@ -1,4 +1,3 @@
-import React from 'react';
 import { FileText, Mail } from 'lucide-react';
 import { Link } from '../Link';
 

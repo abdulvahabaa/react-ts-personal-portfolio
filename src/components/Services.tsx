@@ -1,31 +1,31 @@
-import { LayoutDashboard, Lightbulb, Code2 } from 'lucide-react';
+import { Code2, Lightbulb, MonitorPlay } from 'lucide-react';
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 
 const services = [
-  {
-    icon: Lightbulb,
-    title: 'Graphic Design',
-    description:
-      'Creating visually compelling graphics, logos, and branding materials to elevate your business presence.',
-    color: 'bg-pink-500',
-    image: '/assets/gd.jpg',
-  },
   {
     icon: Code2,
     title: 'Web Development',
     description:
       'Building responsive and scalable web applications using modern frameworks like React and Node.js.',
     color: 'bg-blue-500',
-    image: '/assets/web dev.jpg',
+    image: '/assets/web dev.png',
   },
   {
-    icon: LayoutDashboard,
-    title: 'UI/UX Design',
+    icon: MonitorPlay,
+    title: 'Web Development Training',
     description:
-      'Designing intuitive and engaging user interfaces and experiences for web and mobile platforms.',
-    color: 'bg-green-500',
-    image: '/assets/uiux.jpg',
+      'Providing MERN and Django tutoring, YouTube lessons, and professional training at G-TECH',
+    color: 'bg-purple-500',
+    image: '/assets/training.png',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Graphic Design',
+    description:
+      'Creating visually compelling graphics, logos, and branding materials to elevate your business presence.',
+    color: 'bg-yellow-500',
+    image: '/assets/graphic design.png',
   },
 ];
 
@@ -52,7 +52,7 @@ export function Services() {
                         <img
                           src={image}
                           alt={title}
-                          className="w-full aspect-[1/1] object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                          className="w-full aaspect-square object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
                         />
                       </div>
                     )}
