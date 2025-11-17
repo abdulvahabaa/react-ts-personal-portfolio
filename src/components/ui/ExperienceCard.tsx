@@ -1,4 +1,3 @@
-import React from 'react';
 import { Briefcase } from 'lucide-react';
 
 interface ExperienceCardProps {
@@ -19,7 +18,7 @@ export function ExperienceCard({
   return (
     <div className="relative group pl-6 sm:pl-10">
       {/* Timeline Dot */}
-      <div className="absolute left-[-16px] top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-gray-200 dark:border-gray-800"></div>
+      <div className="absolute -left-4 top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-gray-200 dark:border-gray-800"></div>
 
       {/* Experience Card */}
       <div className="relative bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
@@ -59,7 +58,23 @@ export function ExperienceCard({
             {skills.map((skill, index) => (
               <span
                 key={index}
-                className="px-3 py-1 text-sm font-medium bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full"
+                className="
+        px-3 py-0.5 text-sm font-medium
+        rounded-full cursor-pointer select-none
+        transition-colors duration-150
+
+        /* Light mode base */
+        bg-[#F1F8FF] text-[#0366D6] border border-[#0366D6]/30
+
+        /* Dark mode base */
+        dark:bg-[#13233A] dark:text-[#539BF5] dark:border-[#539BF5]/30
+
+        /* Light mode hover */
+        hover:bg-[#DAEAFE] hover:text-[#0366D6] hover:border-[#0366D6]
+
+        /* Dark mode hover — blue bg + white text */
+        dark:hover:bg-[#1F6FEB] dark:hover:text-white dark:hover:border-[#1F6FEB]
+      "
               >
                 {skill}
               </span>

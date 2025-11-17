@@ -4,51 +4,60 @@ import { ExperienceCard } from './ui/ExperienceCard';
 
 const experiences = [
   {
-    title: 'Frontend Developer Intern',
-    company: 'Makos Infotech pvt ltd',
-    period: 'Jun 2025 - Jul 2025',
-    description: `Developed and maintained dynamic web applications using the Frontend frameworks for seamless user experience. 
-    Designed and developed a real-time interactive website that significantly increased user engagement by 40%. 
-    Implemented responsive web design principles, ensuring an optimal mobile-friendly user experience.`,
+    title: 'Full Stack Developer & Trainer',
+    company: 'G-Tec Computer Education, Irinjalakuda',
+    period: 'Jul 2025 – Present',
+    description: `Conduct hands-on training sessions in full-stack development for 360+ engineering students. 
+    Develop and maintain the institute’s official website, improving performance and usability. 
+    Built a student task management application to streamline assignment submissions and reduce manual workload by 40%.`,
     skills: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'Schema.org',
       'React.js',
-      'Bootstrap',
-      'Git and GitHub',
+      'Node.js',
+      'Express.js',
+      'PostgreSQL',
+      'MongoDB',
+      'TypeScript',
+      'AWS',
+      'Git & GitHub',
+      'Training & Mentorship',
     ],
   },
   {
-    title: 'Web Design and Development Intern',
-    company: 'TechnoHacks Edutech Solution',
-    period: 'Apr 2025 - May 2025',
-    description: `Led a dedicated team of 4 developers in designing and built responsive E-commerce platform. 
-    Successfully launched a responsive modern personal portfolio webste, hotel room booking website . 
-    Mentored and guided 4 junior developers in modern web web technologies and best coding practices.`,
+    title: 'Freelance Full Stack Web Developer',
+    company: 'Upwork & Codyinger',
+    period: 'Nov 2024 – Present',
+    description: `Delivered 7+ full-stack projects including business websites and modern web applications with 78% client satisfaction. 
+    Built scalable solutions with cloud integration using modern frameworks and backend technologies. 
+    Managed full project cycles from architecture and development to deployment and long-term client support.`,
     skills: [
-      'HTML',
-      'CSS',
-      'JavaScript',
+      'Next.js',
+      'TypeScript',
       'React.js',
-      'Git and GitHub',
-      'Netlify',
-      'Team Leadership',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'PostgreSQL',
+      'Cloud Integrations',
+      'Client Communication',
     ],
   },
   {
-    title: 'Freelance Designer',
-    company: 'Remote work',
-    period: 'Dec 2024 - Present',
-    description: `Delivered 20+ client projects (logos, UI/UX, mockups, social media graphics) with 75% client satisfaction and improved engagement. Managed end-to-end design workflows, from concept to final deliverables, under tight deadlines.`,
+    title: 'Junior Software Engineer',
+    company: 'Estro Tech Robotics and Innovations Pvt. Ltd',
+    period: 'Aug 2023 – Aug 2024',
+    description: `Developed and optimized backend services using Node.js, Express.js, and TypeScript. 
+    Improved testing efficiency using Playwright and Jest, achieving 90% test coverage. 
+    Managed AWS Lambda-based serverless infrastructure, improving scalability and reducing operational costs by 30%.`,
     skills: [
-      'Canva Pro',
-      'Figma',
-      'Pinterest',
-      'Capcut Editor',
-      'Leonardo AI',
-      'Teamwork',
+      'Node.js',
+      'Express.js',
+      'TypeScript',
+      'MongoDB',
+      'AWS Lambda',
+      'API Development',
+      'Jest',
+      'Playwright',
+      'Serverless Architecture',
     ],
   },
 ];
@@ -58,7 +67,7 @@ export function Experience() {
     <SectionBackground>
       <section id="experience">
         <div className="container mx-auto px-8">
-          <SectionTitle subtitle="From classrooms to codebases — applying knowledge where it matters most.">
+          <SectionTitle subtitle="Where engineering, teaching, and real-world problem-solving come together.">
             Experience
           </SectionTitle>
           <div className="relative border-l-2 border-blue-600 dark:border-blue-500 max-w-5xl mx-auto space-y-10">

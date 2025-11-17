@@ -1,5 +1,4 @@
-import React from 'react';
-import { Award, ExternalLink } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 interface CertificationCardProps {
   title: string;
@@ -13,7 +12,6 @@ export function CertificationCard({
   title,
   issuer,
   date,
-  link,
   image,
 }: CertificationCardProps) {
   return (

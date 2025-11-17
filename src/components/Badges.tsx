@@ -2,51 +2,53 @@ import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 
 const badges = [
-  {
-    id: 'github-foundations',
-    platform: 'GitHub',
-    title: 'GitHub Foundations',
-    image:
-      'https://images.credly.com/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png',
-    profile:
-      'https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url',
-  },
-  {
-    id: 'ibm-data-analytics',
-    platform: 'IBM',
-    title: 'Data Analytics Essentials',
-    image:
-      'https://images.credly.com/size/680x680/images/42f7ca3c-6eb3-47d2-a7f3-3b1093ea1b35/image.png',
-    profile: 'https://www.credly.com/users/dinesh-m-d30/badges#credly',
-  },
-  {
-    id: 'leetcode-50',
-    platform: 'LeetCode',
-    title: '50 Days Badge 2025',
-    image: 'https://assets.leetcode.com/static_assets/others/2550.gif',
-    profile: 'https://leetcode.com/u/Dinesh_coder30/',
-  },
-  {
-    id: 'leetcode-100',
-    platform: 'LeetCode',
-    title: '100 Days Badge 2025',
-    image: 'https://assets.leetcode.com/static_assets/others/25100.gif',
-    profile: 'https://leetcode.com/u/Dinesh_coder30/',
-  },
-  {
-    id: 'leetcode-top-sql-50',
-    platform: 'LeetCode',
-    title: 'Top SQL 50',
-    image: 'https://assets.leetcode.com/static_assets/others/Top_SQL_50.gif',
-    profile: 'https://leetcode.com/u/Dinesh_coder30/',
-  },
-  {
-    id: 'leetcode-leetcode-75',
-    platform: 'LeetCode',
-    title: 'LeetCode 75',
-    image: 'https://assets.leetcode.com/static_assets/others/LeetCode_75.gif',
-    profile: 'https://leetcode.com/u/Dinesh_coder30/',
-  },
+  // {
+  //   id: 'Certified-Ethical-Hacker',
+  //   platform: 'EC-Council',
+  //   title: 'Certified Ethical Hacker',
+  //   image:
+  //     'https://images.credly.com/images/48f5eb79-9936-4d2b-8a6f-4b7c4b9af3e0/ceh.png', // CEH badge image
+  //   profile:
+  //     'https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url',
+  // },
+
+  // {
+  //   id: 'github-foundations',
+  //   platform: 'GitHub',
+  //   title: 'GitHub Foundations',
+  //   image:
+  //     'https://images.credly.com/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png',
+  //   profile:
+  //     'https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url',
+  // },
+  // {
+  //   id: 'leetcode-50',
+  //   platform: 'LeetCode',
+  //   title: '50 Days Badge 2025',
+  //   image: 'https://assets.leetcode.com/static_assets/others/2550.gif',
+  //   profile: 'https://leetcode.com/u/abdulvahabaa/',
+  // },
+  // {
+  //   id: 'leetcode-100',
+  //   platform: 'LeetCode',
+  //   title: '100 Days Badge 2025',
+  //   image: 'https://assets.leetcode.com/static_assets/others/25100.gif',
+  //   profile: 'https://leetcode.com/u/abdulvahabaa/',
+  // },
+  // {
+  //   id: 'leetcode-top-sql-50',
+  //   platform: 'LeetCode',
+  //   title: 'Top SQL 50',
+  //   image: 'https://assets.leetcode.com/static_assets/others/Top_SQL_50.gif',
+  //   profile: 'https://leetcode.com/u/abdulvahabaa/',
+  // },
+  // {
+  //   id: 'leetcode-leetcode-75',
+  //   platform: 'LeetCode',
+  //   title: 'LeetCode 75',
+  //   image: 'https://assets.leetcode.com/static_assets/others/LeetCode_75.gif',
+  //   profile: 'https://leetcode.com/u/abdulvahabaa/',
+  // },
   {
     id: 'github-shark',
     platform: 'GitHub',
@@ -81,7 +83,6 @@ const badges = [
       'https://github.githubassets.com/assets/pair-extraordinaire-default-579438a20e01.png',
     profile: 'https://github.com/dineshit27',
   },
-
   {
     id: 'github-quickdraw',
     platform: 'GitHub',
@@ -90,14 +91,14 @@ const badges = [
       'https://github.githubassets.com/assets/quickdraw-default--light-8f798b35341a.png',
     profile: 'https://github.com/dineshit27',
   },
-  {
-    id: 'github-galaxy-star',
-    platform: 'GitHub',
-    title: 'Galaxy Brain',
-    image:
-      'https://github.githubassets.com/assets/galaxy-brain-default-847262c21056.png',
-    profile: 'https://github.com/dineshit27',
-  },
+  // {
+  //   id: 'github-galaxy-star',
+  //   platform: 'GitHub',
+  //   title: 'Galaxy Brain',
+  //   image:
+  //     'https://github.githubassets.com/assets/galaxy-brain-default-847262c21056.png',
+  //   profile: 'https://github.com/dineshit27',
+  // },
 ];
 
 export function Badges() {
@@ -119,7 +120,7 @@ export function Badges() {
                 className="relative group flex flex-col items-center justify-center p-5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
               >
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-20 rounded-xl blur-lg transition-all duration-300" />
+                <div className="absolute inset-0 bg-linear-to-br from-blue-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-20 rounded-xl blur-lg transition-all duration-300" />
 
                 {/* Badge Image */}
                 <img
