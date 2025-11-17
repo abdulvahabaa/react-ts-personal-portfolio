@@ -4,6 +4,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaInstagram,
+  FaYoutube,
 } from 'react-icons/fa';
 
 const links = [
@@ -18,8 +19,13 @@ const links = [
     label: 'LinkedIn',
   },
   {
+    href: 'https://www.youtube.com/@eldoradotechie',
+    icon: <FaYoutube className="w-6 h-6 text-[#FF0000]" />,
+    label: 'YouTube',
+  },
+  {
     href: 'https://www.instagram.com/abubakthiyar',
-    icon: <FaInstagram className="w-6 h-6 text-[#E1306C]" />,
+    icon: <FaInstagram className="w-6 h-6 text-[#E4405F]" />,
     label: 'Instagram',
   },
   {
@@ -29,7 +35,7 @@ const links = [
   },
   {
     href: 'mailto:abdulvahabaa.official@gmail.com',
-    icon: <FaEnvelope className="w-6 h-6 text-[#D44638]" />,
+    icon: <FaEnvelope className="w-6 h-6 text-[#D14836]" />,
     label: 'Gmail',
   },
 ];
@@ -46,7 +52,7 @@ export function SocialLinks() {
           aria-label={label}
           className="group relative p-3 bg-white dark:bg-gray-900 rounded-lg hover:scale-110 transform transition-transform duration-300 border border-gray-200 dark:border-gray-800"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+          <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
           <div>{icon}</div>
         </a>
       ))}
