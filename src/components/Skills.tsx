@@ -26,6 +26,7 @@ import {
   SiAdobephotoshop,
   SiAdobeillustrator,
   SiAdobexd,
+  SiAdobepremierepro,
 } from 'react-icons/si';
 import { FaNodeJs, FaAws } from 'react-icons/fa';
 import { VscVscode, VscTerminalPowershell } from 'react-icons/vsc';
@@ -81,22 +82,22 @@ const skills = [
     url: 'https://expressjs.com/',
   },
   {
-    name: 'GraphQL',
-    icon: SiGraphql,
-    color: '#e535ab',
-    url: 'https://graphql.org/',
-  },
-  {
     name: 'Python',
     icon: SiPython,
-    color: '#306998',
+    color: '#3776ab',
     url: 'https://www.python.org/',
   },
   {
     name: 'Django',
     icon: SiDjango,
-    color: '#306998',
+    color: '#092e20',
     url: 'https://www.djangoproject.com/',
+  },
+  {
+    name: 'GraphQL',
+    icon: SiGraphql,
+    color: '#e535ab',
+    url: 'https://graphql.org/',
   },
   {
     name: 'MongoDB',
@@ -113,16 +114,8 @@ const skills = [
   {
     name: 'Prisma',
     icon: SiPrisma,
-    color: '#186997',
+    color: '#2d3748',
     url: 'https://www.prisma.io/',
-  },
-  { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
-  { name: 'GitHub', icon: SiGithub, color: '# ', url: 'https://github.com/' },
-  {
-    name: 'Docker',
-    icon: SiDocker,
-    color: '#007acc',
-    url: 'https://www.docker.com/',
   },
   {
     name: 'Redis',
@@ -130,17 +123,26 @@ const skills = [
     color: '#dc382d',
     url: 'https://redis.io/',
   },
+  { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
+  { name: 'GitHub', icon: SiGithub, color: '# ', url: 'https://github.com/' },
+  {
+    name: 'Docker',
+    icon: SiDocker,
+    color: '#2496ed',
+    url: 'https://www.docker.com/',
+  },
   {
     name: 'AWS',
     icon: FaAws,
     color: '#ff9900',
     url: 'https://aws.amazon.com/',
   },
+  { name: 'Vercel', icon: SiVercel, color: '#', url: 'https://vercel.com/' },
   {
-    name: 'PowerShell',
-    icon: VscTerminalPowershell,
-    color: '#',
-    url: 'https://docs.microsoft.com/en-us/powershell/',
+    name: 'VS Code',
+    icon: VscVscode,
+    color: '#007acc',
+    url: 'https://code.visualstudio.com/',
   },
   {
     name: 'Postman',
@@ -149,12 +151,11 @@ const skills = [
     url: 'https://www.postman.com/',
   },
   {
-    name: 'VS Code',
-    icon: VscVscode,
-    color: '#007acc',
-    url: 'https://code.visualstudio.com/',
+    name: 'PowerShell',
+    icon: VscTerminalPowershell,
+    color: '#5391FE',
+    url: 'https://docs.microsoft.com/en-us/powershell/',
   },
-  { name: 'Vercel', icon: SiVercel, color: '#', url: 'https://vercel.com/' },
   {
     name: 'Figma',
     icon: SiFigma,
@@ -164,20 +165,26 @@ const skills = [
   {
     name: 'Photoshop',
     icon: SiAdobephotoshop,
-    color: '#007acc',
+    color: '#31A8FF',
     url: 'https://www.adobe.com/products/photoshop.html',
   },
   {
     name: 'Illustrator',
     icon: SiAdobeillustrator,
-    color: '#ff9900',
+    color: '#FF9A00',
     url: 'https://www.adobe.com/products/illustrator.html',
   },
   {
     name: 'Adobe XD',
     icon: SiAdobexd,
-    color: '#e535ab',
+    color: '#FF61F6',
     url: 'https://www.adobe.com/products/xd.html',
+  },
+  {
+    name: 'Premiere Pro',
+    icon: SiAdobepremierepro,
+    color: '#9999FF',
+    url: 'https://www.adobe.com/products/premiere.html',
   },
 ];
 

@@ -16,7 +16,7 @@ export function Leetcode() {
             <div className="flex justify-center">
               <div className="relative w-full max-w-md">
                 <img
-                  src="https://leetcard.jacoblin.cool/Dinesh_coder30?theme=dark&font=Arapey&ext=activity"
+                  src="https://leetcard.jacoblin.cool/abdulvahabaa?theme=dark&font=Arapey&ext=activity"
                   alt="LeetCode Stats Card"
                   title="LeetCode Stats Card"
                   className="w-full h-auto rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -45,7 +45,7 @@ export function Leetcode() {
               {/* LeetCode Profile Button */}
               <div className="mt-6 flex justify-center lg:justify-start">
                 <a
-                  href="https://leetcode.com/u/Dinesh_coder30/"
+                  href="https://leetcode.com/u/abdulvahabaa/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 transition-all"

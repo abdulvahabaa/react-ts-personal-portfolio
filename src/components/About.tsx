@@ -1,6 +1,5 @@
-import { User2, Code2, Lightbulb, LayoutDashboard } from 'lucide-react';
+import { User2, Code2, Lightbulb } from 'lucide-react';
 import { GoGoal } from 'react-icons/go';
-import { SiFigma } from 'react-icons/si';
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 
@@ -47,31 +46,6 @@ const aboutSections = [
   },
 ];
 
-// Sample services data
-const services = [
-  {
-    icon: Lightbulb, // Using Lightbulb for Graphic Design
-    title: 'Graphic Design',
-    description:
-      'Creating visually compelling graphics, logos, and branding materials to elevate your business presence.',
-    color: 'bg-pink-500',
-  },
-  {
-    icon: Code2,
-    title: 'Web Development',
-    description:
-      'Building responsive and scalable web applications using modern frameworks like React and Node.js.',
-    color: 'bg-blue-500',
-  },
-  {
-    icon: null, // We'll handle custom rendering for UI/UX Design
-    title: 'UI/UX Design',
-    description:
-      'Designing intuitive and engaging user interfaces and experiences for web and mobile platforms.',
-    color: 'bg-green-500',
-  },
-];
-
 export function About() {
   return (
     <SectionBackground>
@@ -85,8 +59,8 @@ export function About() {
           <div className="max-w-5xl mx-auto mb-10 text-center">
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Hey there! 👋 I'm{' '}
-              <span className="text-blue-600 font-semibold">M Dinesh</span>, a
-              B.Tech Information Technology student passionate about building
+              <span className="text-blue-600 font-semibold">Abdul Vahab</span>,
+              a B.Tech Information Technology student passionate about building
               web web applications that solve real-world problems. I've created
               projects like Aquawatt for monitor the usage of water and
               electricity. With skills in React, JavaScript, Node.js, and

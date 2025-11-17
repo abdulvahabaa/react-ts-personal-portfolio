@@ -12,7 +12,7 @@ interface LeetCodeDataExtractorProps {
 export function LeetCodeDataExtractor({
   onDataExtracted,
 }: LeetCodeDataExtractorProps) {
-  const [username, setUsername] = useState('Dinesh_coder30');
+  const [username, setUsername] = useState('abdulvahabaa');
   const [isExtracting, setIsExtracting] = useState(false);
   const [manualData, setManualData] = useState('');
   const [showManualInput, setShowManualInput] = useState(false);

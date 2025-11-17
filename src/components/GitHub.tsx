@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import GitHubCalendar from 'react-github-calendar';
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
-import { Github } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 
 interface Repo {
   name: string;
@@ -23,48 +23,48 @@ interface UserProfile {
   html_url: string;
 }
 
+const SPECIFIC_REPOS: Repo[] = [
+  {
+    name: 'TechnoHacks-Portfolio-Website-MDinesh30',
+    description:
+      'Personal portfolio website built with HTML, CSS, and JavaScript. Features modern design, responsive layout, and dynamic interactions.',
+    stars: 7,
+    forks: 0,
+    language: 'CSS',
+    html_url:
+      'https://github.com/dineshit27/TechnoHacks-Portfolio-Website-MDinesh30',
+  },
+  {
+    name: 'DSA-in-JAVA',
+    description:
+      'Data Structures and Algorithms implemented in Java with multiple solved problems.',
+    stars: 9,
+    forks: 1,
+    language: 'Java',
+    html_url: 'https://github.com/dineshit27/DSA-in-JAVA',
+  },
+  {
+    name: 'Cognifyz-Data-Analysis',
+    description:
+      'Data analysis project using Python and Jupyter Notebooks for insights and visualizations.',
+    stars: 10,
+    forks: 1,
+    language: 'Jupyter Notebook',
+    html_url: 'https://github.com/dineshit27/Cognifyz-Data-Analysis',
+  },
+];
+
 export function GitHub() {
-  const [repos, setRepos] = useState<Repo[]>([]);
+  const [repos] = useState<Repo[]>(SPECIFIC_REPOS);
   const [user, setUser] = useState<UserProfile | null>(null);
 
   useEffect(() => {
-    fetch('https://api.github.com/users/dineshit27')
-      .then(response => response.json())
-      .then((data: UserProfile) => setUser(data));
-
-    // Set specific repositories
-    const specificRepos = [
-      {
-        name: 'TechnoHacks-Portfolio-Website-MDinesh30',
-        description:
-          'Personal portfolio website built with HTML, CSS, and JavaScript. Features modern design, responsive layout, and dynamic interactions.',
-        stars: 7,
-        forks: 0,
-        language: 'CSS',
-        html_url:
-          'https://github.com/dineshit27/TechnoHacks-Portfolio-Website-MDinesh30',
-      },
-      {
-        name: 'DSA-in-JAVA',
-        description:
-          'Data Structures and Algorithms implementation in Java with various problem solutions and algorithms.',
-        stars: 9,
-        forks: 1,
-        language: 'Java',
-        html_url: 'https://github.com/dineshit27/DSA-in-JAVA',
-      },
-      {
-        name: 'Cognifyz-Data-Analysis',
-        description:
-          'Data analysis project using Python and Jupyter Notebooks for comprehensive data insights and visualization.',
-        stars: 10,
-        forks: 1,
-        language: 'Jupyter Notebook',
-        html_url: 'https://github.com/dineshit27/Cognifyz-Data-Analysis',
-      },
-    ];
-    setRepos(specificRepos);
+    fetch('https://api.github.com/users/abdulvahabaa')
+      .then(res => res.json())
+      .then((data: UserProfile) => setUser(data))
+      .catch(() => {});
   }, []);
+
   return (
     <SectionBackground>
       <section id="github">
@@ -140,11 +140,13 @@ export function GitHub() {
                   </p>
                 </div>
               </div>
-              {/* Bio & Stats */}
+
+              {/* Bio */}
               <p className="hidden md:block text-gray-700 dark:text-gray-300 flex-1 text-center md:text-left mx-6">
                 {user.bio}
               </p>
-              {/* Followers, Repos, Profile Link */}
+
+              {/* Stats */}
               <div className="flex flex-wrap items-center justify-center md:justify-start space-x-4 md:space-x-6 text-gray-600 dark:text-gray-400 mt-4 md:mt-0">
                 <span className="flex items-center gap-1 text-sm">
                   👥 {user.followers} Followers
@@ -152,15 +154,16 @@ export function GitHub() {
                 <span className="flex items-center gap-1 text-sm">
                   📦 {user.public_repos} Repos
                 </span>
+
                 <a
                   href={user.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full md:w-auto text-center flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 transition-all mt-3 md:mt-0"
                 >
-                  <Github className="w-5 h-5" /> View Profile
+                  <FaGithub className="w-5 h-5" /> View Profile
                 </a>
-              </div>{' '}
+              </div>
             </div>
           )}
         </div>
