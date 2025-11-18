@@ -2,6 +2,7 @@ import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { ContactForm } from './ui/ContactForm';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6';
+import ContactCards from './ui/ContactCard';
 
 export function Contact() {
   return (
@@ -54,7 +55,8 @@ export function Contact() {
 
             {/* Right Column: Contact Form */}
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-              <ContactForm />
+              {/* <ContactForm /> */}
+              <ContactCards/>
             </div>
           </div>
         </div>

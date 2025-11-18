@@ -8,37 +8,21 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const certifications = [
   {
-    title: 'Getting Started with Full Stack Java Development',
-    issuer: 'Simplilearn',
-    date: 'Jun 2025',
+    title: 'Certified Ethical Hacker',
+    issuer: 'EC-Council',
+    date: 'Nov 2021',
     link: '',
     image:
-      'https://certificates.simplicdn.net/share/8471483_88334081750001691860.png',
+      '/assets/certificates/CEH.png',
   },
-  // {
-  //   title: 'From Excel to Power BI',
-  //   issuer: 'Coursera with Knowledge Accelerators',
-  //   date: 'Jun 2024',
-  //   link: 'https://www.coursera.org/account/accomplishments/verify/7CVTB2GB5XPT',
-  //   image:
-  //     'https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~7CVTB2GB5XPT/CERTIFICATE_LANDING_PAGE~7CVTB2GB5XPT.jpeg',
-  // },
-  // {
-  //   title: 'Learn to code with AI',
-  //   issuer: 'Coursera with Scrimba',
-  //   date: 'Jun 2024',
-  //   link: 'https://www.coursera.org/account/accomplishments/verify/YXGD3SSRF892',
-  //   image:
-  //     'https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~YXGD3SSRF892/CERTIFICATE_LANDING_PAGE~YXGD3SSRF892.jpeg',
-  // },
-  // {
-  //   title: 'TCS iON Career Edge - Young Professional',
-  //   issuer: 'TCS iON',
-  //   date: 'May 2024',
-  //   link: 'https://www.coursera.org/account/accomplishments/verify/YXGD3SSRF892',
-  //   image:
-  //     'https://media.licdn.com/dms/image/v2/D562DAQHt2uofVD994Q/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1737889449669?e=1755709200&v=beta&t=bpNz3W6_JdbqgByQtc9JjIhTz8znltkCJtc0FZPBXSI',
-  // },
+  {
+    title: 'MERN Stack Developer',
+    issuer: 'Brototype',
+    date: 'Aug 2023',
+    link: '',
+    image:
+      '/assets/certificates/CEH.png',
+  },
 ];
 
 export function Certifications() {
