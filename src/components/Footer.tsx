@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from './Link';
 import { SocialLinks } from './hero/SocialLinks';
-import { FaReact } from 'react-icons/fa';
+import { FaReact } from 'react-icons/fa6';
 import { SiVite } from 'react-icons/si';
 
 interface FooterLinkProps {

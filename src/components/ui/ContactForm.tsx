@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { User, Mail } from 'lucide-react';
 import { LuMessageSquareShare } from 'react-icons/lu';
-import { FaRegCommentDots } from 'react-icons/fa';
+import { FaRegCommentDots } from 'react-icons/fa6';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({

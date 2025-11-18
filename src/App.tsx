@@ -33,7 +33,7 @@ function App() {
           <About />
           <Services />
           <Skills />
-          <Achievements />
+          {/* <Achievements /> */}
           <Projects />
           <GitHub />
           <Leetcode />

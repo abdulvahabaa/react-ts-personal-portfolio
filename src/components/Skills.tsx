@@ -28,7 +28,7 @@ import {
   SiAdobexd,
   SiAdobepremierepro,
 } from 'react-icons/si';
-import { FaNodeJs, FaAws } from 'react-icons/fa';
+import { FaNodeJs, FaAws } from 'react-icons/fa6';
 import { VscVscode, VscTerminalPowershell } from 'react-icons/vsc';
 
 const skills = [

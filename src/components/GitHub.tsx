@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import GitHubCalendar from 'react-github-calendar';
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa6';
 
 interface Repo {
   name: string;
@@ -25,32 +25,32 @@ interface UserProfile {
 
 const SPECIFIC_REPOS: Repo[] = [
   {
-    name: 'TechnoHacks-Portfolio-Website-MDinesh30',
+    name: 'Node-Mongoose-JWT-APIs-TS',
     description:
-      'Personal portfolio website built with HTML, CSS, and JavaScript. Features modern design, responsive layout, and dynamic interactions.',
-    stars: 7,
+      'Production-grade REST API built with Node.js, TypeScript, Express, MongoDB, Redis and Docker. Includes Jest, Supertest, test Coverage and Docker Compose.',
+    stars: 4,
     forks: 0,
-    language: 'CSS',
+    language: 'Node.js, TypeScript',
     html_url:
-      'https://github.com/dineshit27/TechnoHacks-Portfolio-Website-MDinesh30',
+      'https://github.com/abdulvahabaa/Node-Mongoose-JWT-APIs-TS',
   },
   {
-    name: 'DSA-in-JAVA',
+    name: 'react-ts-personal-portfolio',
     description:
-      'Data Structures and Algorithms implemented in Java with multiple solved problems.',
+      'My personal developer portfolio built with React and TypeScript. Features a component-driven architecture, optimized performance, and modern UI design principles.',
     stars: 9,
     forks: 1,
-    language: 'Java',
-    html_url: 'https://github.com/dineshit27/DSA-in-JAVA',
+    language: 'React.js, TypeScript',
+    html_url: 'https://github.com/abdulvahabaa/react-ts-personal-portfolio',
   },
   {
-    name: 'Cognifyz-Data-Analysis',
+    name: 'modern-portfolio',
     description:
-      'Data analysis project using Python and Jupyter Notebooks for insights and visualizations.',
+      'This is a modern developer portfolio. Designed with a clean UI/UX, smooth animations, and dynamic content. it is fully responsive and optimized for performance.',
     stars: 10,
     forks: 1,
-    language: 'Jupyter Notebook',
-    html_url: 'https://github.com/dineshit27/Cognifyz-Data-Analysis',
+    language: 'Next.js, TypeScript',
+    html_url: 'https://github.com/abdulvahabaa/modern-portfolio',
   },
 ];
 

@@ -36,7 +36,7 @@ export function Leetcode() {
                 technical interviews.
               </p>
               <p className="text-center lg:text-left text-lg text-gray-600 dark:text-gray-300">
-                I've completed hundreds of problems across a variety of topics,
+                I've completed problems across a variety of topics,
                 including arrays, trees, graphs, and dynamic programming. My
                 goal is to keep improving and stay consistent in learning and
                 solving new problems daily.

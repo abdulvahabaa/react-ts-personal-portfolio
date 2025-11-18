@@ -1,5 +1,5 @@
 import { SiGithub } from 'react-icons/si';
-import { FaGlobe } from 'react-icons/fa';
+import { FaGlobe } from 'react-icons/fa6';
 import { IconType } from 'react-icons';
 
 interface TechStackItem {

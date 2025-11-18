@@ -5,7 +5,7 @@ import {
   FaLinkedin,
   FaInstagram,
   FaYoutube,
-} from 'react-icons/fa';
+} from 'react-icons/fa6';
 
 const links = [
   {

@@ -1,7 +1,7 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { ContactForm } from './ui/ContactForm';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6';
 
 export function Contact() {
   return (
@@ -25,29 +25,29 @@ export function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:m.dinesh.it27@gmail.com"
+                  href="mailto:abdulvahabaa.official@gmail.com"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  <Mail className="w-6 h-6" />
-                  <span>m.dinesh.it27@gmail.com</span>
+                  <FaEnvelope className="w-6 h-6" />
+                  <span>abdulvahabaa.official@gmail.com</span>
                 </a>
                 <a
-                  href="https://github.com/dineshit27"
+                  href="https://github.com/abdulvahabaa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  <Github className="w-6 h-6" />
-                  <span>github.com/dineshit27</span>
+                  <FaGithub className="w-6 h-6" />
+                  <span>github.com/abdulvahabaa</span>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/m-dinesh-d30"
+                  href="https://www.linkedin.com/in/abdulvahabaa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  <Linkedin className="w-6 h-6" />
-                  <span>linkedin.com/m-dinesh-d30</span>
+                  <FaLinkedin className="w-6 h-6" />
+                  <span>linkedin.com/in/abdulvahabaa</span>
                 </a>
               </div>
             </div>
