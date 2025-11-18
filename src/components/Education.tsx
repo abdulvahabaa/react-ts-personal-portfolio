@@ -4,22 +4,28 @@ import { EducationCard } from './ui/EducationCard';
 
 const education = [
   {
-    degree: 'B.Tech in Information Technology',
-    institution: 'Sri Sairam Institution of Technology, Chennai',
-    period: '2023 - 2027',
-    score: '78%',
+    degree: 'Bachelor of Computer Applications (BCA)',
+    institution: 'Sreenarayanaguru Open University',
+    period: 'Jul 2025 – Expected Apr 2028',
+    score: "Ongoing",
   },
   {
-    degree: 'Senior Secondary (XII)',
-    institution: 'St.Mary Matriculation Higher Secondary School',
-    period: '2022 - 2023',
-    score: '74%',
+    degree: 'Full Stack Development (MERN)',
+    institution: 'Brototype',
+    period: 'Jul 2022 – Aug 2023',
+    score: "",
   },
   {
-    degree: 'Secondary (X)',
-    institution: 'New Prince Matriculation Higher Secondary School',
-    period: '2020 - 2021',
-    score: 'NULL',
+    degree: 'Senior Secondary (Plus Two)',
+    institution: 'National Institute of Open Schooling',
+    period: 'Jul 2014 – Mar 2015',
+    score: "80%",
+  },
+  {
+    degree: 'Secondary (SSLC)',
+    institution: `St. Antony's Higher Secondary School Moorkanad`,
+    period: 'Jul 2007 – Mar 2008',
+    score: "80%",
   },
 ];
 

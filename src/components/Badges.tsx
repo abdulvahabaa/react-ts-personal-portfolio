@@ -2,15 +2,15 @@ import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 
 const badges = [
-  // {
-  //   id: 'Certified-Ethical-Hacker',
-  //   platform: 'EC-Council',
-  //   title: 'Certified Ethical Hacker',
-  //   image:
-  //     'https://images.credly.com/images/48f5eb79-9936-4d2b-8a6f-4b7c4b9af3e0/ceh.png', // CEH badge image
-  //   profile:
-  //     'https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url',
-  // },
+  {
+    id: 'Certified-Ethical-Hacker',
+    platform: 'EC-Council',
+    title: 'Certified Ethical Hacker',
+    image:
+      '/assets/logos/CEH_2E345519D3F7.png',
+    profile:
+      'https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url',
+  },
 
   // {
   //   id: 'github-foundations',
@@ -55,15 +55,15 @@ const badges = [
     title: 'Pull Shark',
     image:
       'https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png',
-    profile: 'https://github.com/dineshit27',
+    profile: 'https://github.com/abdulvahabaaa',
   },
   {
     id: 'github-arctic',
     platform: 'GitHub',
-    title: 'Arctic Code Vault Contributor',
+    title: 'Starstruck',
     image:
       'https://github.githubassets.com/assets/starstruck-default--light-a594e2a027e0.png',
-    profile: 'https://github.com/dineshit27',
+    profile: 'https://github.com/abdulvahabaaa',
   },
 
   {
@@ -72,7 +72,7 @@ const badges = [
     title: 'YOLO',
     image:
       'https://github.githubassets.com/assets/yolo-default-be0bbff04951.png',
-    profile: 'https://github.com/dineshit27',
+    profile: 'https://github.com/abdulvahabaaa',
   },
 
   {
@@ -81,7 +81,7 @@ const badges = [
     title: 'Pair Extraordinary',
     image:
       'https://github.githubassets.com/assets/pair-extraordinaire-default-579438a20e01.png',
-    profile: 'https://github.com/dineshit27',
+    profile: 'https://github.com/abdulvahabaaa',
   },
   {
     id: 'github-quickdraw',
@@ -89,7 +89,7 @@ const badges = [
     title: 'Quickdraw',
     image:
       'https://github.githubassets.com/assets/quickdraw-default--light-8f798b35341a.png',
-    profile: 'https://github.com/dineshit27',
+    profile: 'https://github.com/abdulvahabaaa',
   },
   // {
   //   id: 'github-galaxy-star',
@@ -97,7 +97,7 @@ const badges = [
   //   title: 'Galaxy Brain',
   //   image:
   //     'https://github.githubassets.com/assets/galaxy-brain-default-847262c21056.png',
-  //   profile: 'https://github.com/dineshit27',
+  //   profile: 'https://github.com/abdulvahabaaa',
   // },
 ];
 

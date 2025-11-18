@@ -1,4 +1,3 @@
-import React from 'react';
 import { GraduationCap, Calendar, Award } from 'lucide-react';
 
 interface EducationCardProps {
@@ -51,7 +50,7 @@ export function EducationCard({
 
       {/* Timeline Connector (Hidden for Last Card) */}
       {!isLast && (
-        <div className="absolute left-[38px] bottom-0 w-[2px] h-10 bg-blue-300 dark:bg-blue-700 transform translate-y-full" />
+        <div className="absolute left-[38px] bottom-0 w-0.5 h-10 bg-blue-300 dark:bg-blue-700 transform translate-y-full" />
       )}
     </div>
   );
