@@ -56,7 +56,7 @@ export default function ContactCards() {
               </div> */}
               <button
                 onClick={handleCopyEmail}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 text-sm"
+                className="w-full flex items-center gap-2 px-3 py-2 rounded-md text-sm sm:text-base text-blue-600 dark:text-blue-400 hover:text-white hover:bg-blue-600 dark:hover:bg-blue-400 border-2 border-blue-600 transition-transform duration-300 transform hover:scale-105 justify-center"
               >
                 {copied ? (
                   <>
@@ -92,7 +92,7 @@ export default function ContactCards() {
               </div> */}
               <button
                 onClick={handleWhatsAppClick}
-                className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 text-sm"
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
               >
                 <FaWhatsapp className="w-4 h-4" />
                 Open WhatsApp

@@ -1,7 +1,9 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
-import { ContactForm } from './ui/ContactForm';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6';
+// import { ContactForm } from './ui/ContactForm';
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, } from 'react-icons/fa6';
+import { SiLeetcode } from 'react-icons/si';
+import {Phone} from 'lucide-react'
 import ContactCards from './ui/ContactCard';
 
 export function Contact() {
@@ -49,6 +51,33 @@ export function Contact() {
                 >
                   <FaLinkedin className="w-6 h-6" />
                   <span>linkedin.com/in/abdulvahabaa</span>
+                </a>
+                <a
+                  href="https://www.leetcode.com/in/u/abdulvahabaa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  <SiLeetcode className="w-6 h-6" />
+                  <span>leetcode.com/in/u/abdulvahabaa/</span>
+                </a>
+                <a
+                  href="tel:+919747733770"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  <Phone className="w-6 h-6" />
+                  <span>+91 9747733770</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/abdulvahabaa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  <FaInstagram className="w-6 h-6" />
+                  <span>instagram.com/abdulvahabaa</span>
                 </a>
               </div>
             </div>
