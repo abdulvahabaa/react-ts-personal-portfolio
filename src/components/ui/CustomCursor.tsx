@@ -139,13 +139,14 @@ export function CustomCursor() {
     const pos = { x: 0, y: 0 };
     let lines: Line[] = [];
 
+
     // ====================================
     // CUSTOMIZATION SETTINGS
     // ====================================
     const E = {
       friction: 0.5,      // How quickly the trails slow down (0-1, lower = slower)
       trails: 20,         // Number of trail lines (more = denser effect)
-      size: 45,           // Number of points per trail (more = longer trails) - reduced to 2/3
+      size: 30,           // Number of points per trail (more = longer trails) - reduced for smaller size
       dampening: 0.25,    // How much trails follow each other (0-1)
       tension: 0.98,      // How tight the curves are (0-1, higher = tighter)
     };
