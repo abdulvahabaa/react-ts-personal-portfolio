@@ -1,7 +1,7 @@
-import { useBlogs } from '../hooks/useBlogs';
-import { BlogCard } from './ui/BlogCard';
-import { SectionTitle } from './ui/SectionTitle';
-import { SectionBackground } from './ui/SectionBackground';
+import { useBlogs } from "../hooks/useBlogs";
+import { BlogCard } from "./ui/BlogCard";
+import { SectionTitle } from "./ui/SectionTitle";
+import { SectionBackground } from "./ui/SectionBackground";
 
 export function Blogs() {
   const { blogs, loading } = useBlogs();
@@ -10,9 +10,7 @@ export function Blogs() {
     <SectionBackground>
       <section id="blogs">
         <div className="container mx-auto px-8">
-          <SectionTitle subtitle="Sharing what I learn, so others can build faster and smarter.">
-            Latest Blogs
-          </SectionTitle>
+          <SectionTitle subtitle="I write about the cool stuff I discover while coding - maybe you'll find it useful too!">Latest Blogs</SectionTitle>
 
           {loading ? (
             <p className="text-center text-gray-500 dark:text-gray-400">
@@ -20,8 +18,8 @@ export function Blogs() {
             </p>
           ) : (
             <>
-              <div className="max-w-6xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {blogs.map(blog => (
+              <div className="max-w-6xl mx-auto flex flex-col gap-6">
+                {blogs.map((blog) => (
                   <BlogCard key={blog.slug} {...blog} />
                 ))}
               </div>

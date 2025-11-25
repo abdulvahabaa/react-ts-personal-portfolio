@@ -1,13 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-const HASHNODE_API = 'https://gql.hashnode.com/';
-const USERNAME = 'deepakmodi'; // Hashnode username
+const HASHNODE_API = "https://gql.hashnode.com/";
+const USERNAME = "deepakmodi"; // Hashnode username
 
 interface Blog {
   title: string;
   brief: string;
   coverImage: string | null;
   slug: string;
+  publishedAt: string;
 }
 
 export function useBlogs() {
@@ -31,6 +32,7 @@ export function useBlogs() {
                           url
                         }
                         slug
+                        publishedAt
                       }
                     }
                   }
@@ -43,13 +45,13 @@ export function useBlogs() {
 
       try {
         const response = await fetch(HASHNODE_API, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query }),
         });
 
         const data = await response.json();
-        // console.log("Hashnode API Response:", data); // Debugging Line
+        console.log("Hashnode API Response:", data); // Debugging Line
 
         if (data?.data?.user?.publications?.edges?.length > 0) {
           // Extract posts from the first publication
@@ -60,16 +62,17 @@ export function useBlogs() {
             brief: post.node.brief,
             coverImage: post.node.coverImage ? post.node.coverImage.url : null, // Use cover image URL
             slug: post.node.slug,
+            publishedAt: post.node.publishedAt,
           }));
 
           setBlogs(formattedBlogs);
         } else {
-          console.error('No blogs found in API response');
+          console.error("No blogs found in API response");
         }
 
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching blogs:', error);
+        console.error("Error fetching blogs:", error);
         setLoading(false);
       }
     };

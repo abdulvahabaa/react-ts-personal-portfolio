@@ -41,7 +41,7 @@ function App() {
           <Leetcode />
           <Badges />
           <Experience />
-          <Certifications />
+          {/* <Certifications /> */}
           <Education />
           {/* <Blogs /> */}
           <Contact />
