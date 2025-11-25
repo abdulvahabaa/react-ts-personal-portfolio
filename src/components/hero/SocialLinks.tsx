@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from 'react-icons/fa6';
+import { SiLeetcode } from 'react-icons/si';
 
 const links = [
   {
@@ -37,6 +38,11 @@ const links = [
     href: 'mailto:abdulvahabaa.official@gmail.com',
     icon: <FaEnvelope className="w-6 h-6 text-[#D14836]" />,
     label: 'Gmail',
+  },
+  {
+    href: 'https://leetcode.com/u/abdulvahabaa/',
+    icon: <SiLeetcode className="w-6 h-6 text-[#FFA116]" />,
+    label: 'LeetCode',
   },
 ];
 

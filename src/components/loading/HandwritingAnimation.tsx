@@ -27,18 +27,18 @@ export default function HandwritingAnimation() {
           /* Responsive font sizing for SVG text */
           .handwriting-text {
             font-family: 'Dancing Script', cursive;
-            font-size: 90px;
+            font-size: 130px;
           }
 
           @media (min-width: 768px) {
             .handwriting-text {
-              font-size: 130px;
+              font-size: 150px;
             }
           }
 
           @media (min-width: 1024px) {
             .handwriting-text {
-              font-size: 160px;
+              font-size: 180px;
             }
           }
         `}
