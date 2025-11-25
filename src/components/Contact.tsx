@@ -1,9 +1,9 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 // import { ContactForm } from './ui/ContactForm';
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
-import {Phone} from 'lucide-react'
+import { Phone } from 'lucide-react';
 import ContactCards from './ui/ContactCard';
 
 export function Contact() {
@@ -85,7 +85,7 @@ export function Contact() {
             {/* Right Column: Contact Form */}
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
               {/* <ContactForm /> */}
-              <ContactCards/>
+              <ContactCards />
             </div>
           </div>
         </div>

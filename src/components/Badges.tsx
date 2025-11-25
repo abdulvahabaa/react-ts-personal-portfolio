@@ -6,8 +6,7 @@ const badges = [
     id: 'Certified-Ethical-Hacker',
     platform: 'EC-Council',
     title: 'Certified Ethical Hacker',
-    image:
-      '/assets/logos/CEH_2E345519D3F7.png',
+    image: '/assets/logos/CEH_2E345519D3F7.png',
     profile:
       'https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url',
   },

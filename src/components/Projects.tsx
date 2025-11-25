@@ -88,7 +88,6 @@ const projects = [
       techStacks.framer,
     ],
   },
-
 ];
 
 export function Projects() {

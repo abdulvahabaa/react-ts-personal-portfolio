@@ -109,7 +109,12 @@ class Line {
 
     const lastNode = this.nodes[this.nodes.length - 2];
     const veryLastNode = this.nodes[this.nodes.length - 1];
-    this.ctx.quadraticCurveTo(lastNode.x, lastNode.y, veryLastNode.x, veryLastNode.y);
+    this.ctx.quadraticCurveTo(
+      lastNode.x,
+      lastNode.y,
+      veryLastNode.x,
+      veryLastNode.y
+    );
     this.ctx.stroke();
     this.ctx.closePath();
   }
@@ -139,32 +144,33 @@ export function CustomCursor() {
     const pos = { x: 0, y: 0 };
     let lines: Line[] = [];
 
-
     // ====================================
     // CUSTOMIZATION SETTINGS
     // ====================================
     const E = {
-      friction: 0.5,      // How quickly the trails slow down (0-1, lower = slower)
-      trails: 20,         // Number of trail lines (more = denser effect)
-      size: 30,           // Number of points per trail (more = longer trails) - reduced for smaller size
-      dampening: 0.25,    // How much trails follow each other (0-1)
-      tension: 0.98,      // How tight the curves are (0-1, higher = tighter)
+      friction: 0.5, // How quickly the trails slow down (0-1, lower = slower)
+      trails: 20, // Number of trail lines (more = denser effect)
+      size: 30, // Number of points per trail (more = longer trails) - reduced for smaller size
+      dampening: 0.25, // How much trails follow each other (0-1)
+      tension: 0.98, // How tight the curves are (0-1, higher = tighter)
     };
 
     // ====================================
     // COLOR ANIMATION SETTINGS
     // ====================================
     const colorOscillator = new Oscillator({
-      phase: Math.random() * 2 * Math.PI,  // Random starting color
-      amplitude: 180,      // Color range (0-360, higher = more colors)
-      frequency: 0.008,    // Speed of color change (higher = faster)
-      offset: 180,         // Starting hue offset (0-360)
+      phase: Math.random() * 2 * Math.PI, // Random starting color
+      amplitude: 180, // Color range (0-360, higher = more colors)
+      frequency: 0.008, // Speed of color change (higher = faster)
+      offset: 180, // Starting hue offset (0-360)
     });
 
     const initLines = () => {
       lines = [];
       for (let i = 0; i < E.trails; i++) {
-        lines.push(new Line({ spring: 0.4 + (i / E.trails) * 0.025 }, pos, E, ctx));
+        lines.push(
+          new Line({ spring: 0.4 + (i / E.trails) * 0.025 }, pos, E, ctx)
+        );
       }
     };
 
@@ -189,7 +195,7 @@ export function CustomCursor() {
       // - Lightness: 0-100% (brightness)
       // - Opacity: 0-1 (transparency)
       ctx.strokeStyle = `hsla(${Math.round(colorOscillator.update())},65%,45%,0.4)`;
-      ctx.lineWidth = 1.5;  // Trail thickness in pixels
+      ctx.lineWidth = 1.5; // Trail thickness in pixels
 
       for (let i = 0; i < E.trails; i++) {
         lines[i].update();
