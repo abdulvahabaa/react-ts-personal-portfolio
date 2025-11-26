@@ -147,6 +147,43 @@ body {
   }
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+@keyframes magic-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 5px rgba(59, 130, 246, 0.5),
+      0 0 10px rgba(147, 51, 234, 0.5),
+      0 0 15px rgba(59, 130, 246, 0.3),
+      inset 0 0 10px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 10px rgba(59, 130, 246, 0.8),
+      0 0 20px rgba(147, 51, 234, 0.8),
+      0 0 30px rgba(59, 130, 246, 0.6),
+      inset 0 0 15px rgba(59, 130, 246, 0.4);
+  }
+}
+
 /* Animation utility classes */
 .animate-fade-in {
   animation: fade-in 1s ease-out forwards;
@@ -175,6 +212,18 @@ body {
 
 .animate-glow-pulse {
   animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1s ease-in-out infinite;
+}
+
+.animate-magic-glow {
+  animation: magic-glow 2s ease-in-out infinite;
 }
 
 /* Mobile optimizations */
