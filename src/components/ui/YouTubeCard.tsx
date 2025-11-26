@@ -27,10 +27,10 @@ export function YouTubeCard({
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'short', 
-      day: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
     });
   };
 
@@ -70,10 +70,11 @@ export function YouTubeCard({
               {title}
             </h3>
             <p className="mt-3 lg:text-base text-sm text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-3">
-              {description || 'Watch this video to learn more about tech tutorials and vlogs!'}
+              {description ||
+                'Watch this video to learn more about tech tutorials and vlogs!'}
             </p>
           </div>
-          
+
           {/* Metadata */}
           <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
             <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
@@ -98,4 +99,3 @@ export function YouTubeCard({
     </a>
   );
 }
-

@@ -17,10 +17,6 @@ import {
   SiAppwrite,
   SiHtml5,
   SiCss3,
-  SiJavascript,
-  SiBootstrap,
-  SiRedis,
-  SiDocker,
   SiExpress,
 } from 'react-icons/si';
 

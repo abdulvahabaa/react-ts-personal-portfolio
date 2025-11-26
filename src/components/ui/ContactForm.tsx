@@ -46,7 +46,7 @@ export function ContactForm() {
         );
         setStatus('error');
       }
-    } catch (error) {
+    } catch {
       setErrorMessage('An unexpected error occurred. Please try again.');
       setStatus('error');
     }
