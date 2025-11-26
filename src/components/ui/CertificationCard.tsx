@@ -1,4 +1,5 @@
-import { Award } from 'lucide-react';
+import React from 'react';
+import { Award, ExternalLink } from 'lucide-react';
 
 interface CertificationCardProps {
   title: string;
@@ -12,6 +13,7 @@ export function CertificationCard({
   title,
   issuer,
   date,
+  link,
   image,
 }: CertificationCardProps) {
   return (
@@ -34,7 +36,15 @@ export function CertificationCard({
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-sm text-gray-300 mb-1">{issuer}</p>
         <p className="text-sm text-gray-400 mb-4">{date}</p>
-        {/* Verify button removed for Achievements section */}
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-sm font-medium hover:bg-blue-600 px-4 py-2 rounded-lg border border-blue-600 hover:border-blue-600 transition-transform duration-300 transform hover:scale-105"
+        >
+          <span>Verify</span>
+          <ExternalLink className="w-4 h-4" />
+        </a>
       </div>
     </div>
   );

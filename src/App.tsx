@@ -18,6 +18,8 @@ import { ScrollToTop } from './components/ui/ScrollToTop';
 import { Analytics } from '@vercel/analytics/react';
 import { LoadingScreen } from './components/loading/LoadingScreen';
 import { useLoading } from './hooks/useLoading';
+import { YouTubeVideos } from './components/YouTubeVideos';
+import { GithubStarsButton } from './components/ui/GithubStarsButton';
 
 function App() {
   const isLoading = useLoading();
@@ -39,11 +41,13 @@ function App() {
           <Leetcode />
           <Badges />
           <Experience />
-          <Certifications />
+          {/* <Certifications /> */}
           <Education />
+          <YouTubeVideos />
           <Contact />
           <Footer />
           <ScrollToTop />
+          <GithubStarsButton />
           <Analytics />
         </div>
       )}

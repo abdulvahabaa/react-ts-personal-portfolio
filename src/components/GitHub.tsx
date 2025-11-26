@@ -31,8 +31,7 @@ const SPECIFIC_REPOS: Repo[] = [
     stars: 4,
     forks: 0,
     language: 'Node.js, TypeScript',
-    html_url:
-      'https://github.com/abdulvahabaa/Node-Mongoose-JWT-APIs-TS',
+    html_url: 'https://github.com/abdulvahabaa/Node-Mongoose-JWT-APIs-TS',
   },
   {
     name: 'react-ts-personal-portfolio',

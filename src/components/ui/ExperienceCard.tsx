@@ -17,8 +17,13 @@ export function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <div className="relative group pl-6 sm:pl-10">
-      {/* Timeline Dot */}
-      <div className="absolute -left-4 top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-gray-200 dark:border-gray-800"></div>
+      {/* Timeline Dot with Glow Effect */}
+      <div
+        className="absolute -left-4 top-4 w-8 h-8 rounded-full border-4 border-gray-200 dark:border-gray-800 animate-heartbeat-spin animate-glow-pulse z-10"
+        style={{
+          background: 'radial-gradient(circle, #3b82f6 0%, #2563eb 100%)',
+        }}
+      ></div>
 
       {/* Experience Card */}
       <div className="relative bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">

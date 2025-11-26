@@ -68,7 +68,7 @@ export function LeetCodeDataExtractor({
       } else {
         alert('No valid data found. Please check the format.');
       }
-    } catch (error) {
+    } catch {
       alert('Error processing data. Please check the format.');
     }
   };
