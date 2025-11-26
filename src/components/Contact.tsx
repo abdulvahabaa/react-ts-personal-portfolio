@@ -2,9 +2,7 @@ import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 // import { ContactForm } from './ui/ContactForm';
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa6';
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
-import { Phone } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import ContactCards from './ui/ContactCard';
 
@@ -17,7 +15,6 @@ export function Contact() {
             Get In Touch
           </SectionTitle>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
             {/* Left Column: Contact Info */}
             <div className="relative group bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl p-5 sm:p-6 md:p-8 lg:p-10 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl active:shadow-[0_25px_60px_rgba(0,0,0,0.15)] dark:active:shadow-[0_25px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)] transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50 overflow-hidden animate-fade-in active:scale-[0.98]">
@@ -117,17 +114,6 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Right Column: Contact Cards */}
-            <div className="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl p-5 sm:p-6 md:p-8 lg:p-10 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl active:shadow-[0_25px_60px_rgba(0,0,0,0.15)] dark:active:shadow-[0_25px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)] transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50 overflow-hidden animate-fade-in active:scale-[0.98]">
-              {/* Background Gradient Effect - Visible on mobile */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-blue-500/5 to-purple-500/5 dark:from-purple-400/5 dark:via-blue-400/5 dark:to-purple-400/5 opacity-20 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
-              
-              {/* Glowing Border Effect - Visible on mobile */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-xl sm:rounded-2xl opacity-10 md:opacity-0 md:group-hover:opacity-20 blur-sm transition-opacity duration-500" />
-
-              <div className="relative">
-                <ContactCards />
-              </div>
             {/* Right Column: Contact Cards */}
             <div className="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl p-5 sm:p-6 md:p-8 lg:p-10 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl active:shadow-[0_25px_60px_rgba(0,0,0,0.15)] dark:active:shadow-[0_25px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)] transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50 overflow-hidden animate-fade-in active:scale-[0.98]">
               {/* Background Gradient Effect - Visible on mobile */}

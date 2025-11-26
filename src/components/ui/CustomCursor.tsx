@@ -123,131 +123,6 @@ class Line {
 // ====================================
 // MAIN COMPONENT
 // ====================================
-import React, { useEffect, useState, useRef } from 'react';
-
-// ====================================
-// HELPER CLASSES (Outside component)
-// ====================================
-
-class Oscillator {
-  phase: number;
-  offset: number;
-  frequency: number;
-  amplitude: number;
-
-  constructor(config: {
-    phase?: number;
-    offset?: number;
-    frequency?: number;
-    amplitude?: number;
-  }) {
-    this.phase = config.phase || 0;
-    this.offset = config.offset || 0;
-    this.frequency = config.frequency || 0.001;
-    this.amplitude = config.amplitude || 1;
-  }
-
-  update() {
-    this.phase += this.frequency;
-    return this.offset + Math.sin(this.phase) * this.amplitude;
-  }
-}
-
-class Node {
-  x: number = 0;
-  y: number = 0;
-  vy: number = 0;
-  vx: number = 0;
-}
-
-class Line {
-  spring: number;
-  friction: number;
-  nodes: Node[];
-  private pos: { x: number; y: number };
-  private E: {
-    friction: number;
-    size: number;
-    dampening: number;
-    tension: number;
-  };
-  private ctx: CanvasRenderingContext2D;
-
-  constructor(
-    config: { spring: number },
-    pos: { x: number; y: number },
-    E: { friction: number; size: number; dampening: number; tension: number },
-    ctx: CanvasRenderingContext2D
-  ) {
-    this.pos = pos;
-    this.E = E;
-    this.ctx = ctx;
-    this.spring = config.spring + 0.1 * Math.random() - 0.02;
-    this.friction = E.friction + 0.01 * Math.random() - 0.002;
-    this.nodes = [];
-    for (let i = 0; i < E.size; i++) {
-      const node = new Node();
-      node.x = pos.x;
-      node.y = pos.y;
-      this.nodes.push(node);
-    }
-  }
-
-  update() {
-    let spring = this.spring;
-    const firstNode = this.nodes[0];
-    firstNode.vx += (this.pos.x - firstNode.x) * spring;
-    firstNode.vy += (this.pos.y - firstNode.y) * spring;
-
-    for (let i = 0; i < this.nodes.length; i++) {
-      const node = this.nodes[i];
-      if (i > 0) {
-        const prev = this.nodes[i - 1];
-        node.vx += (prev.x - node.x) * spring;
-        node.vy += (prev.y - node.y) * spring;
-        node.vx += prev.vx * this.E.dampening;
-        node.vy += prev.vy * this.E.dampening;
-      }
-      node.vx *= this.friction;
-      node.vy *= this.friction;
-      node.x += node.vx;
-      node.y += node.vy;
-      spring *= this.E.tension;
-    }
-  }
-
-  draw() {
-    if (!this.ctx) return;
-
-    let x = this.nodes[0].x;
-    let y = this.nodes[0].y;
-    this.ctx.beginPath();
-    this.ctx.moveTo(x, y);
-
-    for (let i = 1; i < this.nodes.length - 2; i++) {
-      const node = this.nodes[i];
-      const next = this.nodes[i + 1];
-      x = 0.5 * (node.x + next.x);
-      y = 0.5 * (node.y + next.y);
-      this.ctx.quadraticCurveTo(node.x, node.y, x, y);
-    }
-
-    const lastNode = this.nodes[this.nodes.length - 2];
-    const veryLastNode = this.nodes[this.nodes.length - 1];
-    this.ctx.quadraticCurveTo(
-      lastNode.x,
-      lastNode.y,
-      veryLastNode.x,
-      veryLastNode.y
-    );
-    this.ctx.stroke();
-    this.ctx.closePath();
-  }
-}
-
-// ====================================
-// MAIN COMPONENT
-// ====================================
 
 export function CustomCursor() {
   const isTouchDevice =
@@ -255,8 +130,6 @@ export function CustomCursor() {
     window.matchMedia('(pointer: coarse)').matches;
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [showCursor] = useState(!isTouchDevice);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const [showCursor] = useState(!isTouchDevice);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -343,19 +216,7 @@ export function CustomCursor() {
 
     resizeCanvas();
     initLines();
-    resizeCanvas();
-    initLines();
     document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mousemove', syncPosition);
-    window.addEventListener('resize', resizeCanvas);
-    render();
-
-    return () => {
-      running = false;
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mousemove', syncPosition);
-      window.removeEventListener('resize', resizeCanvas);
-    };
     document.addEventListener('mousemove', syncPosition);
     window.addEventListener('resize', resizeCanvas);
     render();
@@ -372,20 +233,6 @@ export function CustomCursor() {
 
   return (
     <>
-      {/* Canvas for colorful trailing effect */}
-      <canvas
-        ref={canvasRef}
-        className="fixed top-0 left-0 pointer-events-none z-[9999]"
-        style={{ width: '100%', height: '100%' }}
-      />
-
-      {/* Blue backlight glow effect - CUSTOMIZATION:
-          - Adjust 'left/top' offset to change glow position relative to cursor
-          - Modify 'width/height' to change glow size
-          - Change rgba values in gradient to change glow color
-          - Adjust 'opacity' to make glow stronger/weaker
-          - Modify 'blur' value to make glow softer/sharper
-      */}
       {/* Canvas for colorful trailing effect */}
       <canvas
         ref={canvasRef}

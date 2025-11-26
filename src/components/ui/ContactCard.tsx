@@ -33,12 +33,10 @@ export default function ContactCards() {
             Get In Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm md:text-base">
-          <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm md:text-base">
             Choose your preferred way to contact me
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 sm:gap-6">
         <div className="flex flex-col gap-4 sm:gap-6">
           {/* Email Card */}
           <div
@@ -78,11 +76,8 @@ export default function ContactCards() {
                 Email Me
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">
-              <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">
                 Send me an email directly
               </p>
-
-              {/* Magic Copy Button */}
 
               {/* Magic Copy Button */}
               <button
@@ -149,11 +144,8 @@ export default function ContactCards() {
                 WhatsApp
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">
-              <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">
                 Chat with me instantly
               </p>
-
-              {/* Enhanced WhatsApp Button */}
 
               {/* Enhanced WhatsApp Button */}
               <button
