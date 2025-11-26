@@ -149,8 +149,8 @@ export function CustomCursor() {
     // ====================================
     const E = {
       friction: 0.5, // How quickly the trails slow down (0-1, lower = slower)
-      trails: 20, // Number of trail lines (more = denser effect)
-      size: 30, // Number of points per trail (more = longer trails) - reduced for smaller size
+      trails: 16, // Number of trail lines (more = denser effect)
+      size: 24, // Number of points per trail (more = longer trails) - reduced for smaller size
       dampening: 0.25, // How much trails follow each other (0-1)
       tension: 0.98, // How tight the curves are (0-1, higher = tighter)
     };
@@ -194,8 +194,8 @@ export function CustomCursor() {
       // - Saturation: 0-100% (color intensity)
       // - Lightness: 0-100% (brightness)
       // - Opacity: 0-1 (transparency)
-      ctx.strokeStyle = `hsla(${Math.round(colorOscillator.update())},65%,45%,0.4)`;
-      ctx.lineWidth = 1.5; // Trail thickness in pixels
+      ctx.strokeStyle = `hsla(${Math.round(colorOscillator.update())},65%,38%,0.32)`;
+      ctx.lineWidth = 1.2; // Trail thickness in pixels
 
       for (let i = 0; i < E.trails; i++) {
         lines[i].update();
@@ -248,16 +248,16 @@ export function CustomCursor() {
           - Modify 'blur' value to make glow softer/sharper
       */}
       <div
-        className="fixed pointer-events-none opacity-30 dark:opacity-30 transition-all duration-300 ease-out z-[9998]"
+        className="fixed pointer-events-none opacity-22 dark:opacity-22 transition-all duration-300 ease-out z-[9998]"
         style={{
-          left: position.x - 150,
-          top: position.y - 150,
-          width: '300px',
-          height: '300px',
+          left: position.x - 110,
+          top: position.y - 110,
+          width: '220px',
+          height: '220px',
           background:
-            'radial-gradient(circle, rgba(29, 78, 216, 0.6) 0%, rgba(29, 78, 216, 0.5) 25%, rgba(29, 78, 216, 0.3) 50%, rgba(29, 78, 216, 0.15) 75%, transparent 100%)',
+            'radial-gradient(circle, rgba(29, 78, 216, 0.45) 0%, rgba(29, 78, 216, 0.38) 25%, rgba(29, 78, 216, 0.22) 50%, rgba(29, 78, 216, 0.12) 75%, transparent 100%)',
           borderRadius: '50%',
-          filter: 'blur(40px)',
+          filter: 'blur(35px)',
           transform: 'scale(1.0)',
         }}
       />
