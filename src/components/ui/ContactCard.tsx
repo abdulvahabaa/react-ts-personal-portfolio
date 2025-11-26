@@ -28,7 +28,7 @@ export default function ContactCards() {
     <div className="w-full">
       <div className="w-full">
         <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 dark:from-blue-400 dark:via-purple-400 dark:to-blue-400 bg-clip-text text-transparent animate-gradient mb-2">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 dark:from-blue-400 dark:via-purple-400 dark:to-blue-400 bg-clip-text text-transparent animate-gradient mb-2">
             Get In Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm md:text-base">
@@ -43,10 +43,10 @@ export default function ContactCards() {
             style={{ animationDelay: '0.1s' }}
           >
             {/* Animated Background Gradient - Always visible on mobile */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-blue-500/10 dark:from-blue-400/10 dark:via-purple-400/10 dark:to-blue-400/10 opacity-30 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 via-purple-500/10 to-blue-500/10 dark:from-blue-400/10 dark:via-purple-400/10 dark:to-blue-400/10 opacity-30 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
 
             {/* Glowing Light Effect - Visible on mobile */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 rounded-xl sm:rounded-2xl opacity-10 md:opacity-0 md:group-hover:opacity-20 blur-xl transition-opacity duration-500 animate-glow-pulse" />
+            <div className="absolute -inset-1 bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 rounded-xl sm:rounded-2xl opacity-10 md:opacity-0 md:group-hover:opacity-20 blur-xl transition-opacity duration-500 animate-glow-pulse" />
 
             {/* Floating Particles Effect - Always visible on mobile */}
             <div
@@ -66,7 +66,7 @@ export default function ContactCards() {
               {/* Icon with Glow Effect */}
               <div className="relative mb-3 sm:mb-4">
                 <div className="absolute inset-0 bg-blue-500/30 dark:bg-blue-400/30 rounded-full blur-xl animate-pulse" />
-                <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500 rounded-full p-3 sm:p-4 transform transition-all duration-300 shadow-lg">
+                <div className="relative bg-linear-to-br from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500 rounded-full p-3 sm:p-4 transform transition-all duration-300 shadow-lg">
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
               </div>
@@ -84,7 +84,7 @@ export default function ContactCards() {
                 className="relative w-full group/btn overflow-hidden transition-transform duration-150"
               >
                 {/* Shimmer Effect */}
-                <div className="absolute inset-0 -translate-x-full group-active/btn:translate-x-full md:group-hover/btn:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                <div className="absolute inset-0 -translate-x-full group-active/btn:translate-x-full md:group-hover/btn:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/30 to-transparent" />
 
                 {/* Button Content */}
                 <div className="relative flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl border-2 border-blue-600 dark:border-blue-400 bg-white/50 dark:bg-gray-700/50 backdrop-blur-sm group-active/btn:border-transparent group-active/btn:text-white text-blue-600 dark:text-blue-400 text-sm sm:text-base font-semibold transition-all duration-300 transform shadow-lg group-active/btn:shadow-2xl">
@@ -115,10 +115,10 @@ export default function ContactCards() {
             style={{ animationDelay: '0.2s' }}
           >
             {/* Animated Background Gradient - Always visible on mobile */}
-            <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-emerald-500/10 to-green-500/10 dark:from-green-400/10 dark:via-emerald-400/10 dark:to-green-400/10 opacity-30 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-linear-to-br from-green-500/10 via-emerald-500/10 to-green-500/10 dark:from-green-400/10 dark:via-emerald-400/10 dark:to-green-400/10 opacity-30 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
 
             {/* Glowing Light Effect - Visible on mobile */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-green-600 via-emerald-600 to-green-600 rounded-xl sm:rounded-2xl opacity-10 md:opacity-0 md:group-hover:opacity-20 blur-xl transition-opacity duration-500" />
+            <div className="absolute -inset-1 bg-linear-to-r from-green-600 via-emerald-600 to-green-600 rounded-xl sm:rounded-2xl opacity-10 md:opacity-0 md:group-hover:opacity-20 blur-xl transition-opacity duration-500" />
 
             {/* Floating Particles Effect - Always visible on mobile */}
             <div
@@ -134,7 +134,7 @@ export default function ContactCards() {
               {/* Icon with Glow Effect */}
               <div className="relative mb-3 sm:mb-4">
                 <div className="absolute inset-0 bg-green-500/30 dark:bg-green-400/30 rounded-full blur-xl animate-pulse" />
-                <div className="relative bg-gradient-to-br from-green-500 to-emerald-600 dark:from-green-400 dark:to-emerald-500 rounded-full p-3 sm:p-4 transform transition-all duration-300 shadow-lg">
+                <div className="relative bg-linear-to-br from-green-500 to-emerald-600 dark:from-green-400 dark:to-emerald-500 rounded-full p-3 sm:p-4 transform transition-all duration-300 shadow-lg">
                   <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
               </div>
@@ -152,10 +152,10 @@ export default function ContactCards() {
                 className="relative w-full group/btn overflow-hidden transition-transform duration-150"
               >
                 {/* Button Background with Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-green-600 via-emerald-600 to-green-600 dark:from-green-500 dark:via-emerald-500 dark:to-green-500 rounded-lg sm:rounded-xl" />
+                <div className="absolute inset-0 bg-linear-to-r from-green-600 via-emerald-600 to-green-600 dark:from-green-500 dark:via-emerald-500 dark:to-green-500 rounded-lg sm:rounded-xl" />
 
                 {/* Shimmer Effect */}
-                <div className="absolute inset-0 -translate-x-full group-active/btn:translate-x-full md:group-hover/btn:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                <div className="absolute inset-0 -translate-x-full group-active/btn:translate-x-full md:group-hover/btn:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/30 to-transparent" />
 
                 {/* Button Content */}
                 <div className="relative flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-300 transform shadow-lg group-active/btn:shadow-2xl md:group-hover/btn:shadow-2xl">

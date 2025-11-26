@@ -5,8 +5,8 @@ import './index.css';
 
 // Apply initial theme before render to prevent flash
 const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+// Default to dark theme if no saved preference
+const isDark = savedTheme ? savedTheme === 'dark' : true;
 
 if (isDark) {
   document.documentElement.classList.add('dark');
