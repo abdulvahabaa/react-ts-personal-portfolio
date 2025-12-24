@@ -70,10 +70,17 @@ export function Experience() {
           <SectionTitle subtitle="Where engineering, teaching, and real-world problem-solving come together.">
             Experience
           </SectionTitle>
-          <div className="relative border-l-2 border-blue-600 dark:border-blue-500 max-w-5xl mx-auto space-y-10">
-            {experiences.map((exp, index) => (
-              <ExperienceCard key={index} {...exp} />
-            ))}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Enhanced Timeline Line */}
+            <div className="absolute left-0 sm:left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-blue-400 to-blue-500 dark:from-blue-400 dark:via-blue-500 dark:to-blue-400 opacity-30">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500 to-transparent animate-shimmer-line opacity-50"></div>
+            </div>
+
+            <div className="space-y-12 sm:space-y-16">
+              {experiences.map((exp, index) => (
+                <ExperienceCard key={index} {...exp} index={index} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

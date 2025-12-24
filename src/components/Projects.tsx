@@ -44,7 +44,7 @@ const projects = [
     description:
       'My portfolio website, showcasing my professional background and more. Clean, responsive, and shows off my work while keeping things simple and professional.',
     image: '/assets/img/portfolio.png',
-    link: 'https://abdulvahabaaa.in/',
+    link: 'https://www.abdulvahabaaa.in/',
     github: 'https://github.com/abdulvahabaa/react-ts-personal-portfolio',
     techStack: [
       { icon: SiHtml5, name: 'HTML', color: '#e34c26' },
@@ -59,8 +59,8 @@ const projects = [
     description:
       'Production-grade REST API built with Node.js, TypeScript, Express, MongoDB, Redis and Docker. Includes Jest, Supertest, test Coverage and Docker Compose.',
     image: '/assets/img/Backend API.png',
-    link: 'https://tumour-spotter-ai.lovable.app',
-    github: 'https://github.com/dineshit27/tumour-spotter-ai',
+    link: '',
+    github: 'https://github.com/abdulvahabaa/Node-Mongoose-JWT-APIs-TS',
     techStack: [
       techStacks.node,
       techStacks.typescript,

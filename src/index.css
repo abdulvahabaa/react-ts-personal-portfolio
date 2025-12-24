@@ -157,7 +157,8 @@ body {
 }
 
 @keyframes sparkle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
     transform: scale(0) rotate(0deg);
   }
@@ -168,7 +169,8 @@ body {
 }
 
 @keyframes magic-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow:
       0 0 5px rgba(59, 130, 246, 0.5),
       0 0 10px rgba(147, 51, 234, 0.5),
@@ -181,6 +183,43 @@ body {
       0 0 20px rgba(147, 51, 234, 0.8),
       0 0 30px rgba(59, 130, 246, 0.6),
       inset 0 0 15px rgba(59, 130, 246, 0.4);
+  }
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateX(30px) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes shimmer-line {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-expand {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
   }
 }
 
@@ -224,6 +263,18 @@ body {
 
 .animate-magic-glow {
   animation: magic-glow 2s ease-in-out infinite;
+}
+
+.animate-card-enter {
+  animation: card-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-shimmer-line {
+  animation: shimmer-line 3s ease-in-out infinite;
+}
+
+.animate-glow-expand {
+  animation: glow-expand 2s ease-in-out infinite;
 }
 
 /* Mobile optimizations */

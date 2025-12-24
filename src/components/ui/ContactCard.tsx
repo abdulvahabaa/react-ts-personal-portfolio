@@ -96,9 +96,7 @@ export default function ContactCards() {
                     </>
                   ) : (
                     <>
-                      <Copy
-                        className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300"
-                      />
+                      <Copy className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300" />
                       <span>Copy Email</span>
                     </>
                   )}
