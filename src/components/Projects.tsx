@@ -18,6 +18,8 @@ import {
   SiHtml5,
   SiCss3,
   SiExpress,
+  SiRedis,
+  SiDocker,
 } from 'react-icons/si';
 
 // Define reusable tech stack icons & colors
@@ -59,14 +61,15 @@ const projects = [
     description:
       'Production-grade REST API built with Node.js, TypeScript, Express, MongoDB, Redis and Docker. Includes Jest, Supertest, test Coverage and Docker Compose.',
     image: '/assets/img/Backend API.png',
-    link: 'https://tumour-spotter-ai.lovable.app',
-    github: 'https://github.com/dineshit27/tumour-spotter-ai',
+    link: '',
+    github: 'https://github.com/abdulvahabaa/Node-Mongoose-JWT-APIs-TS',
     techStack: [
       techStacks.node,
+      { icon: SiExpress, name: 'Express', color: '#000' },
       techStacks.typescript,
       techStacks.mongodb,
-      { icon: SiExpress, name: 'Express', color: '#000' },
-      { icon: SiCss3, name: 'CSS', color: '#264de4' },
+      {icon: SiRedis, name: 'Redis', color: '#dc382d' },
+      { icon: SiDocker, name: 'Docker', color: '#2496ed' },
     ],
   },
   {
