@@ -68,7 +68,7 @@ const projects = [
       { icon: SiExpress, name: 'Express', color: '#000' },
       techStacks.typescript,
       techStacks.mongodb,
-      {icon: SiRedis, name: 'Redis', color: '#dc382d' },
+      { icon: SiRedis, name: 'Redis', color: '#dc382d' },
       { icon: SiDocker, name: 'Docker', color: '#2496ed' },
     ],
   },

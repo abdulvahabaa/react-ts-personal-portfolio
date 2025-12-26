@@ -157,7 +157,8 @@ body {
 }
 
 @keyframes sparkle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
     transform: scale(0) rotate(0deg);
   }
@@ -168,7 +169,8 @@ body {
 }
 
 @keyframes magic-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow:
       0 0 5px rgba(59, 130, 246, 0.5),
       0 0 10px rgba(147, 51, 234, 0.5),
