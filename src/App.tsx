@@ -4,6 +4,7 @@ import { About } from './components/About';
 import { Services } from './components/Services';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
+import { Gallery } from './components/Gallery';
 import { Achievements } from './components/Achievements';
 import { GitHub } from './components/GitHub';
 import { Leetcode } from './components/Leetcode';
@@ -37,6 +38,7 @@ function App() {
           <Skills />
           {/* <Achievements /> */}
           <Projects />
+          <Gallery />
           <GitHub />
           <Leetcode />
           <Badges />
