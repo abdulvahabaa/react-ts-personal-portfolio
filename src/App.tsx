@@ -5,12 +5,10 @@ import { Services } from './components/Services';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Gallery } from './components/Gallery';
-import { Achievements } from './components/Achievements';
 import { GitHub } from './components/GitHub';
 import { Leetcode } from './components/Leetcode';
 import { Badges } from './components/Badges';
 import { Experience } from './components/Experience';
-import { Certifications } from './components/Certifications';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -21,12 +19,16 @@ import { LoadingScreen } from './components/loading/LoadingScreen';
 import { useLoading } from './hooks/useLoading';
 import { YouTubeVideos } from './components/YouTubeVideos';
 import { GithubStarsButton } from './components/ui/GithubStarsButton';
+import { SEO } from './components/SEO';
+import { StructuredData } from './components/StructuredData';
 
 function App() {
   const isLoading = useLoading();
 
   return (
     <>
+      <SEO />
+      <StructuredData />
       <LoadingScreen isLoading={isLoading} />
       {!isLoading && (
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-opacity duration-500 opacity-100">

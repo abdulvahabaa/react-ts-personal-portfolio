@@ -35,7 +35,9 @@ export function Gallery() {
                 image={item.image}
                 title={item.title}
                 description={item.description}
-                onView={() => handleView(item.image, item.title, item.description)}
+                onView={() =>
+                  handleView(item.image, item.title, item.description)
+                }
                 index={index}
               />
             ))}
@@ -56,4 +58,3 @@ export function Gallery() {
     </SectionBackground>
   );
 }
-

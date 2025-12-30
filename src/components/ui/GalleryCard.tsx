@@ -24,12 +24,12 @@ export function GalleryCard({
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-50px' }}
-      transition={{ 
-        type: "spring",
+      transition={{
+        type: 'spring',
         stiffness: 100,
         damping: 15,
         delay: index * 0.1,
-        duration: 0.6
+        duration: 0.6,
       }}
       whileHover={{ y: -5, scale: 1.02 }}
       className="group relative rounded-2xl overflow-visible"
@@ -41,7 +41,8 @@ export function GalleryCard({
         <motion.div
           className="absolute inset-0 rounded-2xl"
           style={{
-            background: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6)',
+            background:
+              'linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6)',
             backgroundSize: '400% 400%',
           }}
           animate={{
@@ -57,10 +58,10 @@ export function GalleryCard({
       </div>
 
       {/* Image Container - Horizontal Card - Bigger */}
-      <motion.div 
+      <motion.div
         className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-white dark:bg-gray-800 shadow-lg group-hover:shadow-2xl"
-        whileHover={{ shadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        whileHover={{ shadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
       >
         {/* Image - Clear and visible, fits inside card */}
         <motion.img
@@ -69,57 +70,57 @@ export function GalleryCard({
           className="w-full h-full object-contain brightness-100"
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.05, brightness: 1.1 }}
-          transition={{ 
-            type: "spring",
+          transition={{
+            type: 'spring',
             stiffness: 300,
             damping: 20,
-            duration: 0.4
+            duration: 0.4,
           }}
         />
 
         {/* Overlay with Details - Shows on Hover */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ 
+          animate={{
             opacity: isHovered ? 1 : 0,
           }}
-          transition={{ 
+          transition={{
             duration: 0.4,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
           className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50 dark:from-black/95 dark:via-black/80 dark:to-black/60 flex flex-col justify-end items-center p-4 sm:p-6"
         >
           {/* Title and Description - Center Aligned, Smaller */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
-            animate={{ 
+            animate={{
               opacity: isHovered ? 1 : 0,
-              y: isHovered ? 0 : 10
+              y: isHovered ? 0 : 10,
             }}
-            transition={{ 
-              delay: 0.1, 
+            transition={{
+              delay: 0.1,
               duration: 0.4,
-              ease: "easeOut"
+              ease: 'easeOut',
             }}
             className="text-white text-center"
           >
-            <motion.h3 
+            <motion.h3
               className="text-base sm:text-lg font-semibold mb-2 drop-shadow-lg"
               initial={{ opacity: 0, y: 5 }}
-              animate={{ 
+              animate={{
                 opacity: isHovered ? 1 : 0,
-                y: isHovered ? 0 : 5
+                y: isHovered ? 0 : 5,
               }}
               transition={{ delay: 0.15, duration: 0.3 }}
             >
               {title}
             </motion.h3>
-            <motion.p 
+            <motion.p
               className="text-xs sm:text-sm text-gray-200 mb-3 line-clamp-2 leading-relaxed px-2"
               initial={{ opacity: 0, y: 5 }}
-              animate={{ 
+              animate={{
                 opacity: isHovered ? 1 : 0,
-                y: isHovered ? 0 : 5
+                y: isHovered ? 0 : 5,
               }}
               transition={{ delay: 0.2, duration: 0.3 }}
             >
@@ -131,21 +132,21 @@ export function GalleryCard({
           <motion.button
             onClick={onView}
             initial={{ opacity: 0, scale: 0.8, y: 10 }}
-            animate={{ 
+            animate={{
               opacity: isHovered ? 1 : 0,
               scale: isHovered ? 1 : 0.8,
-              y: isHovered ? 0 : 10
+              y: isHovered ? 0 : 10,
             }}
-            whileHover={{ 
+            whileHover={{
               scale: 1.1,
-              boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.5)"
+              boxShadow: '0 10px 25px -5px rgba(59, 130, 246, 0.5)',
             }}
             whileTap={{ scale: 0.95 }}
-            transition={{ 
+            transition={{
               delay: 0.25,
-              type: "spring",
+              type: 'spring',
               stiffness: 300,
-              damping: 20
+              damping: 20,
             }}
             className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium shadow-lg mx-auto"
           >
@@ -157,4 +158,3 @@ export function GalleryCard({
     </motion.div>
   );
 }
-

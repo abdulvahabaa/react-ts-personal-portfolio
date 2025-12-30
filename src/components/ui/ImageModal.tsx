@@ -49,7 +49,7 @@ export function ImageModal({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
           onClick={onClose}
         >
@@ -71,31 +71,31 @@ export function ImageModal({
             initial={{ scale: 0.7, opacity: 0, y: 50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.7, opacity: 0, y: 50 }}
-            transition={{ 
-              type: "spring",
+            transition={{
+              type: 'spring',
               stiffness: 300,
               damping: 30,
-              duration: 0.5
+              duration: 0.5,
             }}
             className="relative max-w-3xl sm:max-w-4xl lg:max-w-2xl xl:max-w-3xl max-h-[90vh] w-full mx-4 px-4 sm:px-0"
             onClick={e => e.stopPropagation()}
           >
             {/* Image Container - Only Image with Animation */}
-            <motion.div 
+            <motion.div
               className="bg-transparent rounded-lg overflow-hidden"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ 
+              transition={{
                 delay: 0.15,
-                type: "spring",
+                type: 'spring',
                 stiffness: 200,
-                damping: 25
+                damping: 25,
               }}
             >
-              <motion.div 
+              <motion.div
                 className="relative flex items-center justify-center"
-                initial={{ filter: "blur(10px)" }}
-                animate={{ filter: "blur(0px)" }}
+                initial={{ filter: 'blur(10px)' }}
+                animate={{ filter: 'blur(0px)' }}
                 transition={{ delay: 0.2, duration: 0.4 }}
               >
                 <motion.img
@@ -103,11 +103,11 @@ export function ImageModal({
                   alt={title}
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  transition={{ 
+                  transition={{
                     delay: 0.25,
-                    type: "spring",
+                    type: 'spring',
                     stiffness: 150,
-                    damping: 20
+                    damping: 20,
                   }}
                   className="w-full h-auto max-h-[90vh] object-contain rounded-lg shadow-2xl"
                 />
@@ -119,4 +119,3 @@ export function ImageModal({
     </AnimatePresence>
   );
 }
-
