@@ -1,8 +1,9 @@
-import { Briefcase } from 'lucide-react';
+import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
 interface ExperienceCardProps {
   title: string;
   company: string;
+  type: string;
   period: string;
   description: string;
   skills: string[];
@@ -11,6 +12,7 @@ interface ExperienceCardProps {
 export function ExperienceCard({
   title,
   company,
+  type,
   period,
   description,
   skills,
@@ -33,16 +35,27 @@ export function ExperienceCard({
             <div className="p-3 sm:p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
               <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
-            <div>
+            <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 {title}
               </h3>
               <p className="text-base text-blue-600 dark:text-blue-400">
                 {company}
               </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                {period}
-              </p>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-3">
+                {/* Period */}
+                <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+                  <Calendar className="w-4 h-4" />
+                  <span className="text-sm">{period}</span>
+                </div>
+
+                {/* Job Type */}
+                <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+                  <MapPin className="w-4 h-4" />
+                  <span className="text-sm">{type}</span>
+                </div>
+              </div>
             </div>
           </div>
 

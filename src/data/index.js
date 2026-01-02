@@ -11,8 +11,7 @@ export const galleryData = [
     id: 2,
     image: '/assets/gallery/Gtec Trainer award.jpeg',
     title: 'G-Tec Best Trainer Award',
-    description:
-      'G-Tec Best Trainer Award at G-Tec Computer Education, Irinjalakuda',
+    description: 'G-Tec Best Trainer Award at G-Tec Education, Irinjalakuda',
   },
   {
     id: 3,
@@ -52,26 +51,30 @@ export const galleryData = [
 export const experiences = [
   {
     title: 'Full Stack Developer',
-    company: 'iCover TN India',
+    company: 'iCover Insure, USA',
+    type: 'Remote',
     period: 'Jan 2026 – Present',
-    description: `Developed and maintained the company's official website, improving performance and usability.
-    Built a student task management application to streamline assignment submissions and reduce manual workload by 40%.`,
+    description: `Developed and maintained the company's website's, improving performance and usability.
+    Implemented new features and optimized existing functionalities, resulting in a 25% increase in performance.`,
     skills: [
+      'Angular.js',
       'React.js',
       'Next.js',
       'Node.js',
       'Express.js',
       'MongoDB',
+      'DocumentDB',
       'TypeScript',
       'Redis',
       'Docker',
       'AWS',
-      'Git & GitHub',
+      'Bitbucket & Git',
     ],
   },
   {
     title: 'Full Stack Developer & Trainer',
     company: 'G-Tec Education, Irinjalakuda',
+    type: 'On-site',
     period: 'Jul 2025 – Dec 2025',
     description: `Conduct hands-on training sessions in full-stack development for 360+ engineering students. 
     Develop and maintain the institute’s official website, improving performance and usability. 
@@ -91,6 +94,7 @@ export const experiences = [
   {
     title: 'Freelance Web Developer',
     company: 'Codyinger, Thrissur',
+    type: 'Remote',
     period: 'Nov 2024 – Dec 2025',
     description: `Delivered 7+ full-stack projects including business websites and modern web applications with 78% client satisfaction. 
     Built scalable solutions with cloud integration using modern frameworks and backend technologies. 
@@ -110,6 +114,7 @@ export const experiences = [
   {
     title: 'Junior Software Engineer',
     company: 'Estro Tech Robotics and Innovations Pvt. Ltd, Thrissur',
+    type: 'On-site',
     period: 'Aug 2023 – Aug 2024',
     description: `Developed and optimized backend services using Node.js, Express.js, and TypeScript. 
     Improved testing efficiency using Playwright and Jest, achieving 90% test coverage. 
@@ -129,7 +134,6 @@ export const experiences = [
 ];
 
 // Education data
-
 export const education = [
   {
     degree: 'Bachelor of Computer Applications (BCA)',
