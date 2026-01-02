@@ -9,10 +9,10 @@ export function StructuredData() {
       name: 'Abdul Vahab A A',
       url: 'https://abdulvahabaa.in',
       image: 'https://abdulvahabaa.in/assets/profile.png',
-      jobTitle: 'Full Stack Developer & Technical Trainer',
+      jobTitle: 'Full Stack Developer',
       worksFor: {
         '@type': 'Organization',
-        name: 'G-Tec Computer Education',
+        name: 'iCover Insure',
       },
       address: {
         '@type': 'PostalAddress',
@@ -24,12 +24,15 @@ export function StructuredData() {
         'https://github.com/abdulvahabaa',
         // Add your social media profiles here
         'https://linkedin.com/in/abdulvahabaa',
-        // 'https://twitter.com/abdulvahabaa',
+        'https://x.com/abdulvahabaa',
+        'https://leetcode.com/u/abdulvahabaa/',
+        'https://twitter.com/abdulvahabaa',
       ],
       knowsAbout: [
         'Full Stack Development',
         'MERN Stack',
         'React.js',
+        'Next.js',
         'Node.js',
         'TypeScript',
         'MongoDB',
@@ -45,7 +48,7 @@ export function StructuredData() {
       '@type': 'ProfessionalService',
       name: 'Abdul Vahab A A - Full Stack Development Services',
       description:
-        'Full Stack MERN Developer and Technical Trainer specializing in React, Node.js, TypeScript, MongoDB, and PostgreSQL.',
+        'Full Stack MERN Developer and Technical Trainer specializing in React, Next.js, Node.js, TypeScript, MongoDB, and PostgreSQL.',
       provider: {
         '@type': 'Person',
         name: 'Abdul Vahab A A',

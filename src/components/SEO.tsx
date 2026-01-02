@@ -10,7 +10,7 @@ interface SEOProps {
 
 export function SEO({
   title = 'Abdul Vahab A A - Full Stack Developer & Technical Trainer | Portfolio',
-  description = 'Full Stack MERN Developer and Technical Trainer from Thrissur, Kerala. Specializing in React, Node.js, TypeScript, MongoDB, and PostgreSQL.',
+  description = 'Full Stack MERN Developer and Technical Trainer from Thrissur, Kerala. Specializing in React, Next.js, Node.js, TypeScript, MongoDB, and PostgreSQL.',
   image = 'https://abdulvahabaa.in/assets/profile.png',
   url = 'https://abdulvahabaa.in',
   type = 'website',
