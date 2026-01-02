@@ -4,21 +4,22 @@
   "description": "My personal developer portfolio built with React and TypeScript. Features a component-driven architecture, optimized performance, and modern UI design principles.",
   "main": "index.js",
   "type": "module",
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix",
-  "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-  "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-  "preview": "vite preview"
-},
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/react-slick": "^0.23.13",
     "@vercel/analytics": "^1.5.0",
     "framer-motion": "^12.23.24",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.553.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
