@@ -48,7 +48,7 @@ export function Navbar() {
     // { href: '#leetcode', label: 'Leetcode' },
     { href: '#badges', label: 'Badges' },
     { href: '#experience', label: 'Experience' },
-    { href: '#certifications', label: 'Certifications' },
+    // { href: '#certifications', label: 'Certifications' },
     { href: '#education', label: 'Education' },
     { href: '#youtube-videos', label: 'Videos' },
   ];
