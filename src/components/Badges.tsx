@@ -124,7 +124,7 @@ export function Badges() {
                 {/* Badge Image */}
                 <img
                   src={badge.image}
-                  alt={badge.platform}
+                  alt={`${badge.title} badge from ${badge.platform}`}
                   className="w-30 h-30 rounded-md transition-transform duration-300 group-hover:scale-110"
                 />
 

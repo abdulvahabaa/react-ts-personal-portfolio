@@ -43,6 +43,7 @@ export function Navbar() {
     { href: '#services', label: 'Services' },
     { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
+    { href: '#gallery', label: 'Gallery' },
     { href: '#github', label: 'GitHub' },
     // { href: '#leetcode', label: 'Leetcode' },
     { href: '#badges', label: 'Badges' },
