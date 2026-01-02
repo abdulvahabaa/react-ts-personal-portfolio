@@ -3,7 +3,7 @@ import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { GalleryCard } from './ui/GalleryCard';
 import { ImageModal } from './ui/ImageModal';
-import { galleryData } from '../data/index.js';
+import { galleryData } from '../data/index';
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<{

@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Mail, Copy, Check, Sparkles } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
+import Lottie from 'lottie-react';
+import confettiData from '../../data/confetti.json';
 
 export default function ContactCards() {
   const [copied, setCopied] = useState(false);
   const [isHoveringEmail, setIsHoveringEmail] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [confettiKey, setConfettiKey] = useState(0);
+  const confettiRef = useRef<any>(null);
   const email = 'abdulvahabaa.official@gmail.com';
   const whatsappNumber = '919747733770';
   const whatsappMessage = "Hi! I'd like to get in touch with you.";
@@ -13,7 +18,15 @@ export default function ContactCards() {
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+
+      // Trigger confetti animation by changing key to force remount
+      setConfettiKey(prev => prev + 1);
+      setShowConfetti(true);
+
+      setTimeout(() => {
+        setCopied(false);
+        setShowConfetti(false);
+      }, 2000);
     } catch (err) {
       console.error('Failed to copy email:', err);
     }
@@ -26,7 +39,21 @@ export default function ContactCards() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
+      {/* Confetti Animation */}
+      {showConfetti && (
+        <div className="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center">
+          <Lottie
+            key={confettiKey}
+            lottieRef={confettiRef}
+            animationData={confettiData}
+            loop={false}
+            autoplay={true}
+            style={{ width: '100vw', height: '100vh' }}
+          />
+        </div>
+      )}
+
       <div className="w-full">
         <div className="text-center mb-6 md:mb-8">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 dark:from-blue-400 dark:via-purple-400 dark:to-blue-400 bg-clip-text text-transparent animate-gradient mb-2">

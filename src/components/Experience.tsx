@@ -1,7 +1,7 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { ExperienceCard } from './ui/ExperienceCard';
-import { experiences } from '../data/index.js';
+import { experiences } from '../data/index';
 
 export function Experience() {
   return (

@@ -1,8 +1,7 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { EducationCard } from './ui/EducationCard';
-import { education } from '../data/index.js';
-
+import { education } from '../data/index';
 
 export function Education() {
   return (

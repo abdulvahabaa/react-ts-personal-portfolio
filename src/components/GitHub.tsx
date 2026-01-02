@@ -28,7 +28,7 @@ const SPECIFIC_REPOS: Repo[] = [
     name: 'Node-Mongoose-JWT-APIs-TS',
     description:
       'Production-grade REST API built with Node.js, TypeScript, Express, MongoDB, Redis and Docker. Includes Jest, Supertest, test Coverage and Docker Compose.',
-    stars: 4,
+    stars: 12,
     forks: 0,
     language: 'Node.js, TypeScript',
     html_url: 'https://github.com/abdulvahabaa/Node-Mongoose-JWT-APIs-TS',
@@ -37,7 +37,7 @@ const SPECIFIC_REPOS: Repo[] = [
     name: 'react-ts-personal-portfolio',
     description:
       'My personal developer portfolio built with React and TypeScript. Features a component-driven architecture, optimized performance, and modern UI design principles.',
-    stars: 9,
+    stars: 76,
     forks: 1,
     language: 'React.js, TypeScript',
     html_url: 'https://github.com/abdulvahabaa/react-ts-personal-portfolio',
@@ -46,7 +46,7 @@ const SPECIFIC_REPOS: Repo[] = [
     name: 'modern-portfolio',
     description:
       'This is a modern developer portfolio. Designed with a clean UI/UX, smooth animations, and dynamic content. it is fully responsive and optimized for performance.',
-    stars: 10,
+    stars: 12,
     forks: 1,
     language: 'Next.js, TypeScript',
     html_url: 'https://github.com/abdulvahabaa/modern-portfolio',
