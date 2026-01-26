@@ -74,7 +74,7 @@ const skills = [
     url: 'https://angular.io/',
   },
   {
-    name: 'NX',
+    name: 'NX Monorepo',
     icon: SiNx,
     color: '#143055',
     url: 'https://nx.dev/',
@@ -157,7 +157,12 @@ const skills = [
   // Version Control
   { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
   { name: 'GitHub', icon: SiGithub, color: '# ', url: 'https://github.com/' },
-  { name: 'Bitbucket', icon: SiBitbucket, color: '#0052cc', url: 'https://bitbucket.org/' },
+  {
+    name: 'Bitbucket',
+    icon: SiBitbucket,
+    color: '#0052cc',
+    url: 'https://bitbucket.org/',
+  },
   // Development Tools
   {
     name: 'VS Code',
