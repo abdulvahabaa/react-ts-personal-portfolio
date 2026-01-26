@@ -9,16 +9,13 @@ import {
   SiMongodb,
   SiGit,
   SiGithub,
-  SiVercel,
   SiFigma,
   SiTailwindcss,
   SiTypescript,
   SiNextdotjs,
   SiExpress,
-  SiGraphql,
   SiPostgresql,
   SiPrisma,
-  SiDjango,
   SiPython,
   SiDocker,
   SiRedis,
@@ -27,11 +24,17 @@ import {
   SiAdobeillustrator,
   SiAdobexd,
   SiAdobepremierepro,
+  SiAngular,
+  SiKubernetes,
+  SiNx,
+  SiNestjs,
+  SiBitbucket,
 } from 'react-icons/si';
 import { FaNodeJs, FaAws } from 'react-icons/fa6';
-import { VscVscode, VscTerminalPowershell } from 'react-icons/vsc';
+import { VscVscode } from 'react-icons/vsc';
 
 const skills = [
+  // Frontend Fundamentals
   {
     name: 'HTML',
     icon: SiHtml5,
@@ -56,6 +59,7 @@ const skills = [
     color: '#3178c6',
     url: 'https://www.typescriptlang.org/',
   },
+  // Frontend Frameworks
   { name: 'React', icon: SiReact, color: '#61dafb', url: 'https://react.dev/' },
   {
     name: 'Next.js',
@@ -64,11 +68,24 @@ const skills = [
     url: 'https://nextjs.org/',
   },
   {
+    name: 'Angular',
+    icon: SiAngular,
+    color: '#dd0031',
+    url: 'https://angular.io/',
+  },
+  {
+    name: 'NX Monorepo',
+    icon: SiNx,
+    color: '#143055',
+    url: 'https://nx.dev/',
+  },
+  {
     name: 'Tailwind CSS',
     icon: SiTailwindcss,
     color: '#06b6d4',
     url: 'https://tailwindcss.com/',
   },
+  // Backend Technologies
   {
     name: 'Node.js',
     icon: FaNodeJs,
@@ -82,23 +99,18 @@ const skills = [
     url: 'https://expressjs.com/',
   },
   {
+    name: 'Nest.js',
+    icon: SiNestjs,
+    color: '#e0234e',
+    url: 'https://nestjs.com/',
+  },
+  {
     name: 'Python',
     icon: SiPython,
     color: '#3776ab',
     url: 'https://www.python.org/',
   },
-  {
-    name: 'Django',
-    icon: SiDjango,
-    color: '#092e20',
-    url: 'https://www.djangoproject.com/',
-  },
-  {
-    name: 'GraphQL',
-    icon: SiGraphql,
-    color: '#e535ab',
-    url: 'https://graphql.org/',
-  },
+  // Databases & ORMs
   {
     name: 'MongoDB',
     icon: SiMongodb,
@@ -123,8 +135,7 @@ const skills = [
     color: '#dc382d',
     url: 'https://redis.io/',
   },
-  { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
-  { name: 'GitHub', icon: SiGithub, color: '# ', url: 'https://github.com/' },
+  // DevOps & Cloud
   {
     name: 'Docker',
     icon: SiDocker,
@@ -132,12 +143,27 @@ const skills = [
     url: 'https://www.docker.com/',
   },
   {
+    name: 'Kubernetes',
+    icon: SiKubernetes,
+    color: '#326ce5',
+    url: 'https://kubernetes.io/',
+  },
+  {
     name: 'AWS',
     icon: FaAws,
     color: '#ff9900',
     url: 'https://aws.amazon.com/',
   },
-  { name: 'Vercel', icon: SiVercel, color: '#', url: 'https://vercel.com/' },
+  // Version Control
+  { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
+  { name: 'GitHub', icon: SiGithub, color: '# ', url: 'https://github.com/' },
+  {
+    name: 'Bitbucket',
+    icon: SiBitbucket,
+    color: '#0052cc',
+    url: 'https://bitbucket.org/',
+  },
+  // Development Tools
   {
     name: 'VS Code',
     icon: VscVscode,
@@ -150,12 +176,7 @@ const skills = [
     color: '#ff6c37',
     url: 'https://www.postman.com/',
   },
-  {
-    name: 'PowerShell',
-    icon: VscTerminalPowershell,
-    color: '#5391FE',
-    url: 'https://docs.microsoft.com/en-us/powershell/',
-  },
+  // Design Tools
   {
     name: 'Figma',
     icon: SiFigma,
