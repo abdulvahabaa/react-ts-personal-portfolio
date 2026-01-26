@@ -1,15 +1,14 @@
 import { useState, useRef } from 'react';
-import { Mail, Copy, Check, Sparkles } from 'lucide-react';
+import { Mail, Copy, Check } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
 import Lottie from 'lottie-react';
 import confettiData from '../../data/confetti.json';
 
 export default function ContactCards() {
   const [copied, setCopied] = useState(false);
-  const [isHoveringEmail, setIsHoveringEmail] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiKey, setConfettiKey] = useState(0);
-  const confettiRef = useRef<any>(null);
+  const confettiRef = useRef(null);
   const email = 'abdulvahabaa.official@gmail.com';
   const whatsappNumber = '919747733770';
   const whatsappMessage = "Hi! I'd like to get in touch with you.";
@@ -42,14 +41,17 @@ export default function ContactCards() {
     <div className="w-full relative">
       {/* Confetti Animation */}
       {showConfetti && (
-        <div className="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center">
+        <div
+          className="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center"
+          style={{ touchAction: 'auto' }}
+        >
           <Lottie
             key={confettiKey}
             lottieRef={confettiRef}
             animationData={confettiData}
             loop={false}
             autoplay={true}
-            style={{ width: '100vw', height: '100vh' }}
+            style={{ width: '100vw', height: '100vh', pointerEvents: 'none' }}
           />
         </div>
       )}

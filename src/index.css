@@ -229,12 +229,30 @@ body {
 }
 
 /* Mobile optimizations */
-html,
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
-  overscroll-behavior-y: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
 }
 
 img {
