@@ -27,6 +27,10 @@ import {
   SiAdobeillustrator,
   SiAdobexd,
   SiAdobepremierepro,
+  SiAngular,
+  SiKubernetes,
+  SiNx,
+  SiNestjs,
 } from 'react-icons/si';
 import { FaNodeJs, FaAws } from 'react-icons/fa6';
 import { VscVscode, VscTerminalPowershell } from 'react-icons/vsc';
@@ -82,6 +86,24 @@ const skills = [
     url: 'https://expressjs.com/',
   },
   {
+    name: 'Nest.js',
+    icon: SiNestjs,
+    color: '#e0234e',
+    url: 'https://nestjs.com/',
+  },
+  {
+    name: 'Angular',
+    icon: SiAngular,
+    color: '#dd0031',
+    url: 'https://angular.io/',
+  },
+  {
+    name: 'NX',
+    icon: SiNx,
+    color: '#143055',
+    url: 'https://nx.dev/',
+  },
+  {
     name: 'Python',
     icon: SiPython,
     color: '#3776ab',
@@ -130,6 +152,12 @@ const skills = [
     icon: SiDocker,
     color: '#2496ed',
     url: 'https://www.docker.com/',
+  },
+  {
+    name: 'Kubernetes',
+    icon: SiKubernetes,
+    color: '#326ce5',
+    url: 'https://kubernetes.io/',
   },
   {
     name: 'AWS',
