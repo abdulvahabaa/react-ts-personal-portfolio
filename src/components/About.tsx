@@ -8,7 +8,7 @@ const aboutSections = [
     icon: User2,
     title: 'Who I Am',
     description: [
-      'Full Stack MERN Developer with hands-on experience in scalable web applications.',
+      'Full Stack Developer with hands-on experience in scalable web applications.',
       'Passionate about clean architecture and modern JavaScript technologies.',
       'Technical trainer focusing on simplifying complex concepts.',
     ],

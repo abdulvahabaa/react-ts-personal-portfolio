@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -24,6 +25,18 @@ import { StructuredData } from './components/StructuredData';
 
 function App() {
   const isLoading = useLoading();
+
+  // Ensure scroll is enabled after loading
+  useEffect(() => {
+    if (!isLoading) {
+      // Force enable scroll after a short delay to ensure LoadingScreen cleanup
+      const timer = setTimeout(() => {
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
 
   return (
     <>
