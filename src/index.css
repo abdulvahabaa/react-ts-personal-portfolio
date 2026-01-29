@@ -186,6 +186,43 @@ body {
   }
 }
 
+/* Skill card icon glow – slow breath in/out, then gap; constant on hover */
+@keyframes skill-glow-breathe {
+  0%,
+  38% {
+    opacity: 0.08;
+  }
+  45% {
+    opacity: 0.15;
+  }
+  52% {
+    opacity: 0.25;
+  }
+  58% {
+    opacity: 0.38;
+  }
+  65% {
+    opacity: 0.25;
+  }
+  72% {
+    opacity: 0.15;
+  }
+  78%,
+  100% {
+    opacity: 0.08;
+  }
+}
+
+.skill-card-glow-breathe::before {
+  animation: skill-glow-breathe 8s ease-in-out infinite;
+  animation-delay: var(--breathe-delay, 0s);
+}
+
+.skill-card-glow-breathe:hover::before {
+  animation-play-state: paused;
+  opacity: 0.5;
+}
+
 /* Animation utility classes */
 .animate-fade-in {
   animation: fade-in 1s ease-out forwards;

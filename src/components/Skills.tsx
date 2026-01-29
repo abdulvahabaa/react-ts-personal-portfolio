@@ -64,7 +64,7 @@ const skills = [
   {
     name: 'Next.js',
     icon: SiNextdotjs,
-    color: '#',
+    color: '#ffffff',
     url: 'https://nextjs.org/',
   },
   {
@@ -76,7 +76,7 @@ const skills = [
   {
     name: 'NX Monorepo',
     icon: SiNx,
-    color: '#143055',
+    color: '#ffffff',
     url: 'https://nx.dev/',
   },
   {
@@ -156,11 +156,16 @@ const skills = [
   },
   // Version Control
   { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
-  { name: 'GitHub', icon: SiGithub, color: '# ', url: 'https://github.com/' },
+  {
+    name: 'GitHub',
+    icon: SiGithub,
+    color: '#ffffff ',
+    url: 'https://github.com/',
+  },
   {
     name: 'Bitbucket',
     icon: SiBitbucket,
-    color: '#0052cc',
+    color: '#26890c',
     url: 'https://bitbucket.org/',
   },
   // Development Tools
@@ -219,13 +224,14 @@ export function Skills() {
           </SectionTitle>
 
           <div className="max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6">
-            {skills.map(tech => (
+            {skills.map((tech, index) => (
               <SkillCard
                 key={tech.name}
                 name={tech.name}
                 icon={tech.icon}
                 color={tech.color}
                 url={tech.url}
+                breatheDelay={index}
               />
             ))}
           </div>
