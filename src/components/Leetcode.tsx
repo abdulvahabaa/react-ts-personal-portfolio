@@ -6,7 +6,7 @@ export function Leetcode() {
   return (
     <SectionBackground>
       <section id="leetcode">
-        <div className="container mx-auto max-w-6xl px-8">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="Coding isn't just practice — it's how I sharpen problem-solving daily.">
             Leetcode Progress
           </SectionTitle>

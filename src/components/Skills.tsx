@@ -213,7 +213,7 @@ export function Skills() {
   return (
     <SectionBackground>
       <section id="skills">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="A modern tech stack designed for impact, efficiency, and scale.">
             Skills
           </SectionTitle>
