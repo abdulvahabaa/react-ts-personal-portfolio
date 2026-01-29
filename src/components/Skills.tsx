@@ -64,7 +64,7 @@ const skills = [
   {
     name: 'Next.js',
     icon: SiNextdotjs,
-    color: '#',
+    color: '#ffffff',
     url: 'https://nextjs.org/',
   },
   {
@@ -76,7 +76,7 @@ const skills = [
   {
     name: 'NX Monorepo',
     icon: SiNx,
-    color: '#143055',
+    color: '#ffffff',
     url: 'https://nx.dev/',
   },
   {
@@ -156,11 +156,11 @@ const skills = [
   },
   // Version Control
   { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
-  { name: 'GitHub', icon: SiGithub, color: '# ', url: 'https://github.com/' },
+  { name: 'GitHub', icon: SiGithub, color: '#ffffff ', url: 'https://github.com/' },
   {
     name: 'Bitbucket',
     icon: SiBitbucket,
-    color: '#0052cc',
+    color: '#26890c',
     url: 'https://bitbucket.org/',
   },
   // Development Tools
