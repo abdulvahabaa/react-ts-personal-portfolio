@@ -7,17 +7,31 @@ interface SkillCardProps {
   icon: LucideIcon | IconType;
   color?: string;
   url?: string;
+  /** Stagger delay (e.g. index) so each card breathes out of phase – hover = constant light. */
+  breatheDelay?: number;
 }
 
-export function SkillCard({ name, icon: Icon, color, url }: SkillCardProps) {
+export function SkillCard({
+  name,
+  icon: Icon,
+  color,
+  url,
+  breatheDelay = 0,
+}: SkillCardProps) {
+  const delaySeconds = (breatheDelay * 7.2) % 48;
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex flex-col items-center p-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-2xl 
-        before:absolute before:inset-0 before:rounded-lg before:bg-linear-to-br before:from-transparent before:to-(--glow-color,rgba(255,255,255,0)) before:opacity-0 before:blur-lg before:transition-all before:duration-500 hover:before:opacity-50"
-      style={{ '--glow-color': color } as React.CSSProperties}
+      className="skill-card-glow-breathe group relative flex flex-col items-center p-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-2xl 
+        before:absolute before:inset-0 before:rounded-lg before:bg-linear-to-br before:from-transparent before:to-(--glow-color,rgba(255,255,255,0)) before:blur-lg before:transition-opacity before:duration-300"
+      style={
+        {
+          '--glow-color': color,
+          '--breathe-delay': `${delaySeconds}s`,
+        } as React.CSSProperties
+      }
     >
       {/* Icon with Background (use dark bg when icon color is white for visibility) */}
       <div
