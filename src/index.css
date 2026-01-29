@@ -186,20 +186,26 @@ body {
   }
 }
 
-/* Skill card icon glow – one breath (slower in/out), then gap; constant on hover */
+/* Skill card icon glow – slow breath in/out, then gap; constant on hover */
 @keyframes skill-glow-breathe {
   0%,
-  50% {
+  38% {
     opacity: 0.08;
   }
-  58% {
-    opacity: 0.2;
+  45% {
+    opacity: 0.15;
   }
-  65% {
+  52% {
+    opacity: 0.25;
+  }
+  58% {
     opacity: 0.38;
   }
+  65% {
+    opacity: 0.25;
+  }
   72% {
-    opacity: 0.2;
+    opacity: 0.15;
   }
   78%,
   100% {
@@ -208,7 +214,7 @@ body {
 }
 
 .skill-card-glow-breathe::before {
-  animation: skill-glow-breathe 5s ease-in-out infinite;
+  animation: skill-glow-breathe 8s ease-in-out infinite;
   animation-delay: var(--breathe-delay, 0s);
 }
 
