@@ -39,7 +39,7 @@ export function Footer() {
 
   return (
     <footer className="relative bg-linear-to-br from-gray-50 via-slate-100/80 to-blue-50/60 dark:from-black dark:via-gray-950/80 dark:to-slate-950/60 border-t border-gray-200 dark:border-gray-800">
-      <div className="container mx-auto px-6 py-8 relative">
+      <div className="container mx-auto max-w-6xl px-6 sm:px-8 py-8 relative">
         <div className="flex flex-col items-center gap-6">
           {/* Navigation Links */}
           <nav className="flex flex-wrap gap-4 justify-center">

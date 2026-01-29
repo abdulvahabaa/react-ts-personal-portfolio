@@ -7,7 +7,7 @@ export function Experience() {
   return (
     <SectionBackground>
       <section id="experience">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="Where engineering, teaching, and real-world problem-solving come together.">
             Experience
           </SectionTitle>

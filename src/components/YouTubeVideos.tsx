@@ -10,7 +10,7 @@ export function YouTubeVideos() {
   return (
     <SectionBackground>
       <section id="youtube-videos">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="Check out my latest tech tutorials and vlogs! Learn something new with each video.">
             YouTube Videos
           </SectionTitle>

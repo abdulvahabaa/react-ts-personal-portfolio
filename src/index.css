@@ -228,7 +228,7 @@ body {
   animation: magic-glow 2s ease-in-out infinite;
 }
 
-/* Mobile optimizations */
+/* Mobile optimizations + consistent layout (Mac vs Windows scrollbar) */
 html {
   overflow-x: hidden;
   overflow-y: auto;
@@ -236,6 +236,8 @@ html {
   height: auto;
   min-height: 100%;
   -webkit-overflow-scrolling: touch;
+  /* Reserve space for scrollbar so content width is same on Mac/Windows */
+  scrollbar-gutter: stable;
 }
 
 body {

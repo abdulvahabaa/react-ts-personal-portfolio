@@ -67,7 +67,7 @@ export function GitHub() {
   return (
     <SectionBackground>
       <section id="github">
-        <div className="container mx-auto max-w-6xl px-8">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="Code that lives, breathes, and contributes — open source and beyond.">
             GitHub Contributions
           </SectionTitle>

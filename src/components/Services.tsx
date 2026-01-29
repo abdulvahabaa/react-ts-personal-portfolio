@@ -33,7 +33,7 @@ export function Services() {
   return (
     <SectionBackground>
       <section id="services">
-        <div className="container mx-auto px-6 mt-16">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8 mt-16">
           <SectionTitle subtitle="What I Offering to my clients">
             Services
           </SectionTitle>

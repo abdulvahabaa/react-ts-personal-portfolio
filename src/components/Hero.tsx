@@ -27,8 +27,8 @@ export function Hero() {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-400/30 dark:bg-purple-600/30 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
-      <div className="container mx-auto px-10 py-16 relative z-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="container mx-auto max-w-6xl px-6 sm:px-8 py-16 relative z-10">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Column - Content */}
           <div className="flex flex-col items-center justify-center text-center space-y-4 order-2 md:order-1">
             <div className="space-y-2">

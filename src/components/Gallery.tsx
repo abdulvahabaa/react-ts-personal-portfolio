@@ -23,7 +23,7 @@ export function Gallery() {
   return (
     <SectionBackground>
       <section id="gallery">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="Memorable moments, awards, class pictures, and life experiences.">
             Gallery
           </SectionTitle>

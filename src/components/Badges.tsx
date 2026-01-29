@@ -104,7 +104,7 @@ export function Badges() {
   return (
     <SectionBackground>
       <section id="badges">
-        <div className="container mx-auto max-w-6xl px-8">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="Milestones that reflect the journey of continuous growth and mastery.">
             Coding Badges
           </SectionTitle>

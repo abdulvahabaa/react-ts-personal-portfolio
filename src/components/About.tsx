@@ -50,7 +50,7 @@ export function About() {
   return (
     <SectionBackground>
       <section id="about">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="Passionate developer building innovative solutions and solving real-world problems.">
             About Me
           </SectionTitle>

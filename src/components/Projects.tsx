@@ -93,7 +93,7 @@ export function Projects() {
   return (
     <SectionBackground>
       <section id="projects">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="Every project, a product. Every product, a solution with a story.">
             Projects
           </SectionTitle>

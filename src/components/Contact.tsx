@@ -10,7 +10,7 @@ export function Contact() {
   return (
     <SectionBackground>
       <section id="contact">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <SectionTitle subtitle="Let's collaborate on your next big idea — I'm just a message away.">
             Get In Touch
           </SectionTitle>
