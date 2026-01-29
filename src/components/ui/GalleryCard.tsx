@@ -1,8 +1,6 @@
 import { Eye } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useState, useRef, useEffect, type RefObject } from 'react';
-
-const MOBILE_AUTO_SHOW_DELAY_MS = 2500;
+import { useState } from 'react';
 
 interface GalleryCardProps {
   image: string;
@@ -10,33 +8,6 @@ interface GalleryCardProps {
   description: string;
   onView: () => void;
   index: number;
-}
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia('(hover: none)');
-    setIsMobile(mq.matches);
-    const handler = () => setIsMobile(mq.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
-  }, []);
-  return isMobile;
-}
-
-function useInView(ref: RefObject<HTMLElement | null>, margin = '-50px') {
-  const [isInView, setIsInView] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => setIsInView(e.isIntersecting),
-      { rootMargin: margin, threshold: 0 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [ref, margin]);
-  return isInView;
 }
 
 export function GalleryCard({
@@ -47,28 +18,9 @@ export function GalleryCard({
   index,
 }: GalleryCardProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const [autoShowOverlay, setAutoShowOverlay] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(cardRef);
-  const isMobile = useIsMobile();
-
-  useEffect(() => {
-    if (!isMobile) return;
-    if (isInView) {
-      const t = setTimeout(
-        () => setAutoShowOverlay(true),
-        MOBILE_AUTO_SHOW_DELAY_MS
-      );
-      return () => clearTimeout(t);
-    }
-    setAutoShowOverlay(false);
-  }, [isMobile, isInView]);
-
-  const showOverlay = isMobile ? autoShowOverlay : isHovered;
 
   return (
     <motion.div
-      ref={cardRef}
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-50px' }}
@@ -81,15 +33,11 @@ export function GalleryCard({
       }}
       whileHover={{ y: -5, scale: 1.02 }}
       className="group relative rounded-2xl overflow-visible"
-      onMouseEnter={() => !isMobile && setIsHovered(true)}
-      onMouseLeave={() => !isMobile && setIsHovered(false)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {/* Moving Border Effect */}
-      <div
-        className={`absolute -inset-0.5 rounded-2xl transition-opacity duration-500 ${
-          showOverlay ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-        }`}
-      >
+      <div className="absolute -inset-0.5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
         <motion.div
           className="absolute inset-0 rounded-2xl"
           style={{
@@ -130,11 +78,11 @@ export function GalleryCard({
           }}
         />
 
-        {/* Overlay with Details - Shows on Hover (desktop) or auto after delay (mobile) */}
+        {/* Overlay with Details - Shows on Hover */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
-            opacity: showOverlay ? 1 : 0,
+            opacity: isHovered ? 1 : 0,
           }}
           transition={{
             duration: 0.4,
@@ -146,8 +94,8 @@ export function GalleryCard({
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{
-              opacity: showOverlay ? 1 : 0,
-              y: showOverlay ? 0 : 10,
+              opacity: isHovered ? 1 : 0,
+              y: isHovered ? 0 : 10,
             }}
             transition={{
               delay: 0.1,
@@ -160,8 +108,8 @@ export function GalleryCard({
               className="text-base sm:text-lg font-semibold mb-2 drop-shadow-lg"
               initial={{ opacity: 0, y: 5 }}
               animate={{
-                opacity: showOverlay ? 1 : 0,
-                y: showOverlay ? 0 : 5,
+                opacity: isHovered ? 1 : 0,
+                y: isHovered ? 0 : 5,
               }}
               transition={{ delay: 0.15, duration: 0.3 }}
             >
@@ -171,8 +119,8 @@ export function GalleryCard({
               className="text-xs sm:text-sm text-gray-200 mb-3 line-clamp-2 leading-relaxed px-2"
               initial={{ opacity: 0, y: 5 }}
               animate={{
-                opacity: showOverlay ? 1 : 0,
-                y: showOverlay ? 0 : 5,
+                opacity: isHovered ? 1 : 0,
+                y: isHovered ? 0 : 5,
               }}
               transition={{ delay: 0.2, duration: 0.3 }}
             >
@@ -185,9 +133,9 @@ export function GalleryCard({
             onClick={onView}
             initial={{ opacity: 0, scale: 0.8, y: 10 }}
             animate={{
-              opacity: showOverlay ? 1 : 0,
-              scale: showOverlay ? 1 : 0.8,
-              y: showOverlay ? 0 : 10,
+              opacity: isHovered ? 1 : 0,
+              scale: isHovered ? 1 : 0.8,
+              y: isHovered ? 0 : 10,
             }}
             whileHover={{
               scale: 1.1,
