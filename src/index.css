@@ -60,6 +60,44 @@ body {
   }
 }
 
+/* Green gradient overlay moving top to bottom (for hero profile) */
+@keyframes gradient-top-to-bottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* Featured-work style scan: gradient sweep top to bottom (no border) */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
+
+/* Horizontal scan line: moves from top to bottom, then repeats */
+@keyframes scan-line-down {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 88%;
+  }
+}
+
+.animate-scan-line {
+  animation: scan-line-down 4s linear infinite;
+}
+
 @keyframes floating {
   0%,
   100% {
@@ -194,6 +232,10 @@ body {
 .animate-gradient {
   background-size: 200% auto;
   animation: gradient 8s linear infinite;
+}
+
+.animate-gradient-top-to-bottom {
+  animation: gradient-top-to-bottom 4s ease-in-out infinite;
 }
 
 .animate-wave {
