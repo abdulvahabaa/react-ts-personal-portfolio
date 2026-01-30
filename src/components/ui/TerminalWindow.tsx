@@ -517,7 +517,6 @@ export function TerminalWindow() {
                     onChange={e => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
                     className="w-full border-none bg-transparent font-mono text-sm text-gray-200 outline-none caret-cyan-400 placeholder:text-cyan-400/40"
-                    autoFocus
                     autoComplete="off"
                     spellCheck={false}
                     placeholder={placeholderText}
