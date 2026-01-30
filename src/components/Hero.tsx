@@ -53,7 +53,7 @@ export function Hero() {
           </div>
 
           {/* Right Column - Profile Image */}
-          <div className="relative order-1 md:order-2">
+          <div className="relative order-1 md:order-2 flex justify-center">
             {/* Floating solid circular elements */}
             <div className="absolute w-24 h-24 bg-blue-600 top-0 left-0 rounded-full animate-floating" />
             <div className="absolute w-24 h-24 bg-purple-600 bottom-0 right-0 rounded-full animate-floating delay-150" />
@@ -61,11 +61,25 @@ export function Hero() {
             <div className="absolute w-20 h-20 bg-yellow-500 bottom-4 left-4 rounded-full animate-floating delay-450" />
 
             <div className="absolute inset-0 bg-linear-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
-            <img
-              src="/assets/profile.png"
-              alt="Abdul Vahab A A"
-              className="relative w-full max-w-lg mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
-            />
+
+            {/* Profile image – same scan overlay as featured work (no border) */}
+            <div className="relative w-full max-w-lg mx-auto rounded-full overflow-hidden shadow-2xl">
+              <img
+                src="/assets/profile.png"
+                alt="Abdul Vahab A A"
+                className="relative w-full h-auto block rounded-full transform hover:scale-105 transition-transform duration-500"
+              />
+              {/* Horizontal line: moves from top to bottom, repeats continuously */}
+              <div
+                className="absolute inset-0 rounded-full overflow-hidden pointer-events-none"
+                aria-hidden
+              >
+                <div
+                  className="absolute left-0 right-0 w-full h-[12%] top-0 bg-linear-to-b from-transparent via-cyan-500/12 to-transparent dark:via-cyan-400/15 animate-scan-line"
+                  style={{ willChange: 'top' }}
+                />
+              </div>
+            </div>
           </div>
         </div>
 

@@ -60,6 +60,44 @@ body {
   }
 }
 
+/* Green gradient overlay moving top to bottom (for hero profile) */
+@keyframes gradient-top-to-bottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* Featured-work style scan: gradient sweep top to bottom (no border) */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
+
+/* Horizontal scan line: moves from top to bottom, then repeats */
+@keyframes scan-line-down {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 88%;
+  }
+}
+
+.animate-scan-line {
+  animation: scan-line-down 4s linear infinite;
+}
+
 @keyframes floating {
   0%,
   100% {
@@ -196,6 +234,10 @@ body {
   animation: gradient 8s linear infinite;
 }
 
+.animate-gradient-top-to-bottom {
+  animation: gradient-top-to-bottom 4s ease-in-out infinite;
+}
+
 .animate-wave {
   animation: wave 2s ease-in-out infinite;
 }
@@ -264,4 +306,20 @@ img {
 .transition-transform,
 .transition-all {
   transform: translateZ(0);
+}
+
+/* About section – reference portfolio terminal / orbital styling */
+@keyframes cursor-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: cursor-blink 1s step-end infinite;
 }

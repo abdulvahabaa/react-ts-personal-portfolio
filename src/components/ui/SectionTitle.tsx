@@ -1,4 +1,8 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { useInView } from 'framer-motion';
+import { ShuffleText } from './ShuffleText';
 
 interface SectionTitleProps {
   children: React.ReactNode;
@@ -11,13 +15,19 @@ export function SectionTitle({
   subtitle,
   className = '',
 }: SectionTitleProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
+
+  // Convert children to string for ShuffleText
+  const titleText = typeof children === 'string' ? children : String(children);
+
   return (
-    <div className={`mb-10 relative ${className}`}>
+    <div ref={ref} className={`mb-10 relative ${className}`}>
       <div className="flex flex-col text-center items-center">
         {/* Main Title */}
         <h2 className="relative group">
           <span className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-800 via-gray-900 to-blue-800 dark:from-blue-500 dark:via-white dark:to-blue-500 bg-clip-text text-transparent leading-tight tracking-tight">
-            {children}
+            <ShuffleText text={titleText} isActive={isInView} speed={30} />
           </span>
         </h2>
         {/* Subtitle */}
