@@ -265,3 +265,19 @@ img {
 .transition-all {
   transform: translateZ(0);
 }
+
+/* About section – reference portfolio terminal / orbital styling */
+@keyframes cursor-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: cursor-blink 1s step-end infinite;
+}
