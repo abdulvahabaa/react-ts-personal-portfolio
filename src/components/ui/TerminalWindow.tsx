@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { Terminal, Cpu, Wifi, Disc } from 'lucide-react';
 
 const ASCII_ART = `
@@ -68,6 +68,7 @@ export function TerminalWindow() {
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { once: false, margin: '-30%' });
 
   const placeholderPrompts = [
     "type 'help' to get started",
@@ -161,6 +162,13 @@ export function TerminalWindow() {
       });
     }
   }, [history]);
+
+  // Auto-focus input when terminal is in view and boot is complete so cursor blinks without click
+  useEffect(() => {
+    if (isInView && !isBooting) {
+      inputRef.current?.focus();
+    }
+  }, [isInView, isBooting]);
 
   const handleContainerClick = () => inputRef.current?.focus();
 

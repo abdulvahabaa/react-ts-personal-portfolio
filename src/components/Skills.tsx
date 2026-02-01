@@ -156,7 +156,12 @@ const skills = [
   },
   // Version Control
   { name: 'Git', icon: SiGit, color: '#f34f29', url: 'https://git-scm.com/' },
-  { name: 'GitHub', icon: SiGithub, color: '#ffffff ', url: 'https://github.com/' },
+  {
+    name: 'GitHub',
+    icon: SiGithub,
+    color: '#ffffff ',
+    url: 'https://github.com/',
+  },
   {
     name: 'Bitbucket',
     icon: SiBitbucket,
