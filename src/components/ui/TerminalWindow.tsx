@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
-import { Terminal, Cpu, Wifi, Disc } from 'lucide-react';
+import { Terminal, Cpu, Wifi, Disc, Keyboard } from 'lucide-react';
 
 const ASCII_ART = `
  █████╗ ██████╗ ██████╗ ██╗   ██╗██╗
@@ -425,7 +425,7 @@ export function TerminalWindow() {
       <div
         ref={containerRef}
         onClick={handleContainerClick}
-        className="relative flex h-[280px] flex-col overflow-hidden rounded-lg border border-white/5 bg-[#0d0d0d]/95 shadow-2xl backdrop-blur-xl sm:h-[360px]"
+        className="relative flex h-[280px] cursor-text flex-col overflow-hidden rounded-lg border border-white/5 bg-[#0d0d0d]/95 shadow-2xl backdrop-blur-xl transition-shadow hover:border-cyan-500/20 sm:h-[360px]"
       >
         <div className="flex h-8 shrink-0 select-none items-center justify-between border-b border-white/5 bg-[#151515] px-4">
           <div className="flex items-center gap-2">
@@ -437,7 +437,11 @@ export function TerminalWindow() {
             <Terminal className="h-3 w-3" />
             <span>abdulvahab:~/welcome</span>
           </div>
-          <div className="w-10" />
+          <span className="flex shrink-0 items-center gap-1.5 rounded-md border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[9px] font-medium tracking-wide text-cyan-400 sm:text-[10px]">
+            <Keyboard className="h-3 w-3 shrink-0" />
+            <span className="hidden sm:inline">Interactive Terminal</span>
+            <span className="sm:hidden">Type here</span>
+          </span>
         </div>
         <div
           ref={scrollRef}
