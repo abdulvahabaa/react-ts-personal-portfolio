@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { Mail, Copy, Check } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
 import Lottie from 'lottie-react';
-import confettiData from '../../data/confetti.json';
+import { confettiData } from '../../data';
 
 export default function ContactCards() {
   const [copied, setCopied] = useState(false);
