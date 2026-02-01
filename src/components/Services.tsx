@@ -15,7 +15,7 @@ const services = [
     icon: MonitorPlay,
     title: 'Web Development Training',
     description:
-      'Providing MERN and Django tutoring, YouTube lessons, and professional training at G-TECH',
+      'Providing MERN, MEAN, Nest.js, Angular, and Django tutoring, YouTube lessons, and professional training at G-TECH',
     color: 'bg-purple-500',
     image: '/assets/training.png',
   },

@@ -8,8 +8,8 @@ import { ActionButtons } from './hero/ActionButtons';
 export function Hero() {
   const roles = [
     'Full Stack Developer',
-    'Node.js Backend Engineer',
-    'Next.js & React.js Developer',
+    'Node.js & Nest.js Backend Developer',
+    'Angular & React.js Frontend Developer',
     'Technical Trainer',
     'Digital Content Creator',
   ];

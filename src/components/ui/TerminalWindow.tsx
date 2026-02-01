@@ -253,7 +253,7 @@ export function TerminalWindow() {
             </span>
             <span className="text-gray-300">
               <Typewriter
-                text="Full Stack MERN Developer & Technical Trainer"
+                text="Full Stack Developer (MERN, MEAN, Nest.js) & Technical Trainer"
                 delay={50}
                 speed={5}
               />

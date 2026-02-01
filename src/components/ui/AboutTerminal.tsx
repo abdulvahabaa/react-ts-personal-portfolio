@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const DEFAULT_ABOUT_TEXT =
-  "Hey there! I'm Abdul Vahab, a Full Stack MERN Developer and Technical Trainer. I specialize in building scalable web applications using React.js, Next.js, Node.js, TypeScript, MongoDB, and PostgreSQL. With experience delivering projects for clients worldwide and training over 350+ students in modern development practices, I focus on creating efficient, user-centric digital products. I am committed to solving real-world problems through technology and continuously improving my skills to deliver impactful solutions.";
+  "Hey there! I'm Abdul Vahab, a Full Stack Developer and Technical Trainer. I work with MERN and MEAN stacks, building scalable web applications using React.js, Angular, Next.js, Node.js, Nest.js, TypeScript, MongoDB, and PostgreSQL. With experience delivering projects for clients worldwide and training over 350+ students in modern development practices, I focus on creating efficient, user-centric digital products. I am committed to solving real-world problems through technology and continuously improving my skills to deliver impactful solutions.";
 
 const COMMAND_DELAY_MS = 400;
 
