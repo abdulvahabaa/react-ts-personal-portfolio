@@ -18,7 +18,9 @@ export default function ContactCards() {
   const [copied, setCopied] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiKey, setConfettiKey] = useState(0);
-  const [confettiPlayer, setConfettiPlayer] = useState<ConfettiPlayer | null>(null);
+  const [confettiPlayer, setConfettiPlayer] = useState<ConfettiPlayer | null>(
+    null
+  );
   const confettiRef = useRef(null);
   const email = 'abdulvahabaa.official@gmail.com';
   const whatsappNumber = '919747733770';
@@ -31,10 +33,11 @@ export default function ContactCards() {
       setConfettiKey(prev => prev + 1);
 
       if (!confettiPlayer) {
-        const [{ default: Lottie }, { default: confettiData }] = await Promise.all([
-          import('lottie-react'),
-          import('../../data/confetti.json'),
-        ]);
+        const [{ default: Lottie }, { default: confettiData }] =
+          await Promise.all([
+            import('lottie-react'),
+            import('../../data/confetti.json'),
+          ]);
         setConfettiPlayer({ Lottie, data: confettiData });
       }
       setShowConfetti(true);
@@ -57,24 +60,30 @@ export default function ContactCards() {
   return (
     <div className="w-full relative">
       {/* Confetti Animation - Lottie + data loaded on demand when user copies email */}
-      {showConfetti && confettiPlayer && (() => {
-        const Lottie = confettiPlayer.Lottie;
-        return (
-          <div
-            className="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center"
-            style={{ touchAction: 'auto' }}
-          >
-            <Lottie
-              key={confettiKey}
-              lottieRef={confettiRef}
-              animationData={confettiPlayer.data}
-              loop={false}
-              autoplay={true}
-              style={{ width: '100vw', height: '100vh', pointerEvents: 'none' }}
-            />
-          </div>
-        );
-      })()}
+      {showConfetti &&
+        confettiPlayer &&
+        (() => {
+          const Lottie = confettiPlayer.Lottie;
+          return (
+            <div
+              className="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center"
+              style={{ touchAction: 'auto' }}
+            >
+              <Lottie
+                key={confettiKey}
+                lottieRef={confettiRef}
+                animationData={confettiPlayer.data}
+                loop={false}
+                autoplay={true}
+                style={{
+                  width: '100vw',
+                  height: '100vh',
+                  pointerEvents: 'none',
+                }}
+              />
+            </div>
+          );
+        })()}
 
       <div className="w-full">
         <div className="text-center mb-6 md:mb-8">

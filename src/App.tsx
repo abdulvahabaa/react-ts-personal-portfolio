@@ -12,11 +12,15 @@ import { Experience } from './components/Experience';
 import { Education } from './components/Education';
 import { Footer } from './components/Footer';
 
-const GitHub = lazy(() => import('./components/GitHub').then(m => ({ default: m.GitHub })));
+const GitHub = lazy(() =>
+  import('./components/GitHub').then(m => ({ default: m.GitHub }))
+);
 const YouTubeVideos = lazy(() =>
   import('./components/YouTubeVideos').then(m => ({ default: m.YouTubeVideos }))
 );
-const Contact = lazy(() => import('./components/Contact').then(m => ({ default: m.Contact })));
+const Contact = lazy(() =>
+  import('./components/Contact').then(m => ({ default: m.Contact }))
+);
 import { CustomCursor } from './components/ui/CustomCursor';
 import { ScrollToTop } from './components/ui/ScrollToTop';
 import { Analytics } from '@vercel/analytics/react';
