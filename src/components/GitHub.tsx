@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import GitHubCalendar from 'react-github-calendar';
+import { GitHubCalendar } from 'react-github-calendar';
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { FaGithub } from 'react-icons/fa6';
