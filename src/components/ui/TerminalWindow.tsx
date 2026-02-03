@@ -71,10 +71,10 @@ export function TerminalWindow() {
   const isInView = useInView(containerRef, { once: false, margin: '-30%' });
 
   const placeholderPrompts = [
-    "type 'help' to get started",
-    "try 'whoami' to know more",
-    "check 'status' or 'focus'",
-    "run 'thought' for insight",
+    "try me! type 'help' →",
+    "whoami • status • focus",
+    "click here & explore",
+    "type a command ↓",
   ];
 
   const getLocalTime = (date: Date = new Date()) => {
@@ -492,15 +492,15 @@ export function TerminalWindow() {
                 animate={{ opacity: 1 }}
                 className="group relative flex items-center gap-2 pb-1 pt-2"
               >
-                <motion.div
-                  animate={{ opacity: [0.3, 0.6, 0.3] }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
-                  className="absolute -inset-x-2 inset-y-0 -z-10 rounded bg-cyan-500/5"
-                />
+                  <motion.div
+                    animate={{ opacity: [0.3, 0.6, 0.3] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                    className="absolute -inset-x-2 inset-y-0 -z-10 rounded bg-cyan-500/5"
+                  />
                 <motion.span
                   animate={{ x: [0, 3, 0] }}
                   transition={{

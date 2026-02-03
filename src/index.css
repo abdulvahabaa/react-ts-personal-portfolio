@@ -108,6 +108,63 @@ body {
   }
 }
 
+/* Bounce-down: arrow hint for interactive elements */
+@keyframes bounce-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+.animate-bounce-down {
+  animation: bounce-down 1s ease-in-out infinite;
+}
+
+/* Text shimmer for terminal hint */
+@keyframes text-shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+.animate-text-shimmer {
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    90deg,
+    #0891b2 0%,
+    #22d3ee 25%,
+    #67e8f9 50%,
+    #22d3ee 75%,
+    #0891b2 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-shimmer 2.5s linear infinite;
+}
+
+/* Soft glow pulse for hint card */
+@keyframes hint-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(34, 211, 238, 0.15),
+      0 0 40px rgba(34, 211, 238, 0.08);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(34, 211, 238, 0.25),
+      0 0 60px rgba(34, 211, 238, 0.12);
+  }
+}
+.animate-hint-glow {
+  animation: hint-glow 2.5s ease-in-out infinite;
+}
+
 @keyframes wave {
   0% {
     transform: rotate(0deg);

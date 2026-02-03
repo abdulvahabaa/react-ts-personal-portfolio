@@ -2,7 +2,8 @@
 
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { User2, Code2, Lightbulb } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { User2, Code2, Lightbulb, ChevronDown } from 'lucide-react';
 import { GoGoal } from 'react-icons/go';
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
@@ -100,14 +101,47 @@ export function About() {
             About Me
           </SectionTitle>
 
-          {/* 2x2 grid: terminal | cat bio / whoami | whatido */}
+          {/* Try me hint - separate div above the grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="mb-8 flex items-center justify-center gap-2 md:justify-start"
+          >
+            <motion.span
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.4 }}
+              className="text-base font-bold animate-text-shimmer"
+            >
+              Try me!
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.35, duration: 0.3 }}
+              className="text-sm text-gray-600 dark:text-gray-400"
+            >
+              click & type
+            </motion.span>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, type: 'spring', stiffness: 400, damping: 15 }}
+              className="flex shrink-0"
+            >
+              <ChevronDown className="h-5 w-5 text-cyan-400 animate-bounce-down" />
+            </motion.div>
+          </motion.div>
+
+          {/* Grid: terminal | cat bio */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-            {/* Top-left: Terminal DEV (hero-style interactive terminal) */}
+            {/* Left: Terminal */}
             <div className="flex min-h-[320px] justify-center md:justify-start sm:min-h-[360px]">
               <TerminalWindow />
             </div>
 
-            {/* Top-right: Cat bio (typing $ cat about.txt) */}
+            {/* Right: Cat bio */}
             <div className="flex min-h-[320px] items-stretch sm:min-h-[360px]">
               <AboutTerminal isInView={isInView} />
             </div>
