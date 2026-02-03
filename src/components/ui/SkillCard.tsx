@@ -24,8 +24,8 @@ export function SkillCard({ name, icon: Icon, color, url }: SkillCardProps) {
         className="p-3 rounded-full transition-all duration-300 group-hover:scale-110"
         style={{
           backgroundColor:
-            color?.toLowerCase() === '#ffffff' ||
-            color?.toLowerCase() === '#fff'
+            color?.trim().toLowerCase() === '#ffffff' ||
+            color?.trim().toLowerCase() === '#fff'
               ? '#143055'
               : `${color}1A`,
         }}

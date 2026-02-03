@@ -31,6 +31,9 @@ export function StructuredData() {
       knowsAbout: [
         'Full Stack Development',
         'MERN Stack',
+        'MEAN Stack',
+        'Nest.js',
+        'Angular',
         'React.js',
         'Next.js',
         'Node.js',
@@ -48,7 +51,7 @@ export function StructuredData() {
       '@type': 'ProfessionalService',
       name: 'Abdul Vahab A A - Full Stack Development Services',
       description:
-        'Full Stack MERN Developer and Technical Trainer specializing in React, Next.js, Node.js, TypeScript, MongoDB, and PostgreSQL.',
+        'Full Stack Developer (MERN, MEAN, Nest.js) and Technical Trainer specializing in React, Angular, Next.js, Node.js, Nest.js, TypeScript, MongoDB, and PostgreSQL.',
       provider: {
         '@type': 'Person',
         name: 'Abdul Vahab A A',

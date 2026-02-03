@@ -1,10 +1,13 @@
+import { lazy, Suspense } from 'react';
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
-// import { ContactForm } from './ui/ContactForm';
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
 import { Phone } from 'lucide-react';
-import ContactCards from './ui/ContactCard';
+
+const ContactCards = lazy(() =>
+  import('./ui/ContactCard').then(m => ({ default: m.default }))
+);
 
 export function Contact() {
   return (
@@ -123,7 +126,13 @@ export function Contact() {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-xl sm:rounded-2xl opacity-10 md:opacity-0 md:group-hover:opacity-20 blur-sm transition-opacity duration-500" />
 
               <div className="relative">
-                <ContactCards />
+                <Suspense
+                  fallback={
+                    <div className="min-h-[200px] animate-pulse rounded-lg bg-gray-200/50 dark:bg-gray-700/50" />
+                  }
+                >
+                  <ContactCards />
+                </Suspense>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -6,19 +6,26 @@ import { Services } from './components/Services';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Gallery } from './components/Gallery';
-import { GitHub } from './components/GitHub';
 import { Leetcode } from './components/Leetcode';
 import { Badges } from './components/Badges';
 import { Experience } from './components/Experience';
 import { Education } from './components/Education';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+
+const GitHub = lazy(() =>
+  import('./components/GitHub').then(m => ({ default: m.GitHub }))
+);
+const YouTubeVideos = lazy(() =>
+  import('./components/YouTubeVideos').then(m => ({ default: m.YouTubeVideos }))
+);
+const Contact = lazy(() =>
+  import('./components/Contact').then(m => ({ default: m.Contact }))
+);
 import { CustomCursor } from './components/ui/CustomCursor';
 import { ScrollToTop } from './components/ui/ScrollToTop';
 import { Analytics } from '@vercel/analytics/react';
 import { LoadingScreen } from './components/loading/LoadingScreen';
 import { useLoading } from './hooks/useLoading';
-import { YouTubeVideos } from './components/YouTubeVideos';
 import { GithubStarsButton } from './components/ui/GithubStarsButton';
 import { SEO } from './components/SEO';
 import { StructuredData } from './components/StructuredData';
@@ -54,14 +61,20 @@ function App() {
           {/* <Achievements /> */}
           <Projects />
           <Gallery />
-          <GitHub />
+          <Suspense fallback={<div className="min-h-[400px]" aria-hidden />}>
+            <GitHub />
+          </Suspense>
           <Leetcode />
           <Badges />
           <Experience />
           {/* <Certifications /> */}
           <Education />
-          <YouTubeVideos />
-          <Contact />
+          <Suspense fallback={<div className="min-h-[300px]" aria-hidden />}>
+            <YouTubeVideos />
+          </Suspense>
+          <Suspense fallback={<div className="min-h-[400px]" aria-hidden />}>
+            <Contact />
+          </Suspense>
           <Footer />
           <ScrollToTop />
           <GithubStarsButton />

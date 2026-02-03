@@ -20,22 +20,10 @@ function FooterLink({ href, children }: FooterLinkProps) {
   );
 }
 
+import { navLinks } from '../data';
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const links = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#github', label: 'GitHub' },
-    { href: '#leetcode', label: 'Leetcode' },
-    { href: '#badges', label: 'Badges' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#certifications', label: 'Certifications' },
-    { href: '#education', label: 'Education' },
-    { href: '#contact', label: 'Contact' },
-  ];
 
   return (
     <footer className="relative bg-linear-to-br from-gray-50 via-slate-100/80 to-blue-50/60 dark:from-black dark:via-gray-950/80 dark:to-slate-950/60 border-t border-gray-200 dark:border-gray-800">
@@ -43,7 +31,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-6">
           {/* Navigation Links */}
           <nav className="flex flex-wrap gap-4 justify-center">
-            {links.map(({ href, label }) => (
+            {navLinks.map(({ href, label }) => (
               <FooterLink key={href} href={href}>
                 {label}
               </FooterLink>

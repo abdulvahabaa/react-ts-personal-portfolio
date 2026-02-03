@@ -1,13 +1,26 @@
 import { useState, useRef } from 'react';
+import type { ComponentType } from 'react';
 import { Mail, Copy, Check } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
-import Lottie from 'lottie-react';
-import confettiData from '../../data/confetti.json';
+
+type ConfettiPlayer = {
+  Lottie: ComponentType<{
+    animationData: object;
+    loop?: boolean;
+    autoplay?: boolean;
+    lottieRef?: React.RefObject<null>;
+    style?: React.CSSProperties;
+  }>;
+  data: object;
+};
 
 export default function ContactCards() {
   const [copied, setCopied] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiKey, setConfettiKey] = useState(0);
+  const [confettiPlayer, setConfettiPlayer] = useState<ConfettiPlayer | null>(
+    null
+  );
   const confettiRef = useRef(null);
   const email = 'abdulvahabaa.official@gmail.com';
   const whatsappNumber = '919747733770';
@@ -17,9 +30,16 @@ export default function ContactCards() {
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);
-
-      // Trigger confetti animation by changing key to force remount
       setConfettiKey(prev => prev + 1);
+
+      if (!confettiPlayer) {
+        const [{ default: Lottie }, { default: confettiData }] =
+          await Promise.all([
+            import('lottie-react'),
+            import('../../data/confetti.json'),
+          ]);
+        setConfettiPlayer({ Lottie, data: confettiData });
+      }
       setShowConfetti(true);
 
       setTimeout(() => {
@@ -39,22 +59,31 @@ export default function ContactCards() {
 
   return (
     <div className="w-full relative">
-      {/* Confetti Animation */}
-      {showConfetti && (
-        <div
-          className="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center"
-          style={{ touchAction: 'auto' }}
-        >
-          <Lottie
-            key={confettiKey}
-            lottieRef={confettiRef}
-            animationData={confettiData}
-            loop={false}
-            autoplay={true}
-            style={{ width: '100vw', height: '100vh', pointerEvents: 'none' }}
-          />
-        </div>
-      )}
+      {/* Confetti Animation - Lottie + data loaded on demand when user copies email */}
+      {showConfetti &&
+        confettiPlayer &&
+        (() => {
+          const Lottie = confettiPlayer.Lottie;
+          return (
+            <div
+              className="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center"
+              style={{ touchAction: 'auto' }}
+            >
+              <Lottie
+                key={confettiKey}
+                lottieRef={confettiRef}
+                animationData={confettiPlayer.data}
+                loop={false}
+                autoplay={true}
+                style={{
+                  width: '100vw',
+                  height: '100vh',
+                  pointerEvents: 'none',
+                }}
+              />
+            </div>
+          );
+        })()}
 
       <div className="w-full">
         <div className="text-center mb-6 md:mb-8">

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Cpu, Wifi, Disc } from 'lucide-react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { Terminal, Cpu, Wifi, Disc, Keyboard } from 'lucide-react';
 
 const ASCII_ART = `
  █████╗ ██████╗ ██████╗ ██╗   ██╗██╗
@@ -68,12 +68,13 @@ export function TerminalWindow() {
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { once: false, margin: '-30%' });
 
   const placeholderPrompts = [
-    "type 'help' to get started",
-    "try 'whoami' to know more",
-    "check 'status' or 'focus'",
-    "run 'thought' for insight",
+    "try me! type 'help' →",
+    "whoami • status • focus",
+    "click here & explore",
+    "type a command ↓",
   ];
 
   const getLocalTime = (date: Date = new Date()) => {
@@ -159,8 +160,22 @@ export function TerminalWindow() {
         top: scrollRef.current.scrollHeight,
         behavior: 'smooth',
       });
+      const t = setTimeout(() => {
+        scrollRef.current?.scrollTo({
+          top: scrollRef.current.scrollHeight,
+          behavior: 'smooth',
+        });
+      }, 150);
+      return () => clearTimeout(t);
     }
   }, [history]);
+
+  // Auto-focus input when terminal is in view and boot is complete so cursor blinks without click
+  useEffect(() => {
+    if (isInView && !isBooting) {
+      inputRef.current?.focus();
+    }
+  }, [isInView, isBooting]);
 
   const handleContainerClick = () => inputRef.current?.focus();
 
@@ -245,7 +260,7 @@ export function TerminalWindow() {
             </span>
             <span className="text-gray-300">
               <Typewriter
-                text="Full Stack MERN Developer & Technical Trainer"
+                text="Full Stack Developer (MERN, MEAN, Nest.js) & Technical Trainer"
                 delay={50}
                 speed={5}
               />
@@ -258,6 +273,7 @@ export function TerminalWindow() {
               />
             </span>
           </div>,
+          '',
         ]);
         break;
       case 'status':
@@ -417,7 +433,7 @@ export function TerminalWindow() {
       <div
         ref={containerRef}
         onClick={handleContainerClick}
-        className="relative flex h-[280px] flex-col overflow-hidden rounded-lg border border-white/5 bg-[#0d0d0d]/95 shadow-2xl backdrop-blur-xl sm:h-[360px]"
+        className="relative flex h-[280px] cursor-text flex-col overflow-hidden rounded-lg border border-white/5 bg-[#0d0d0d]/95 shadow-2xl backdrop-blur-xl transition-shadow hover:border-cyan-500/20 sm:h-[360px]"
       >
         <div className="flex h-8 shrink-0 select-none items-center justify-between border-b border-white/5 bg-[#151515] px-4">
           <div className="flex items-center gap-2">
@@ -429,7 +445,11 @@ export function TerminalWindow() {
             <Terminal className="h-3 w-3" />
             <span>abdulvahab:~/welcome</span>
           </div>
-          <div className="w-10" />
+          <span className="flex shrink-0 items-center gap-1.5 rounded-md border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[9px] font-medium tracking-wide text-cyan-400 sm:text-[10px]">
+            <Keyboard className="h-3 w-3 shrink-0" />
+            <span className="hidden sm:inline">Interactive Terminal</span>
+            <span className="sm:hidden">Type here</span>
+          </span>
         </div>
         <div
           ref={scrollRef}
@@ -480,15 +500,15 @@ export function TerminalWindow() {
                 animate={{ opacity: 1 }}
                 className="group relative flex items-center gap-2 pb-1 pt-2"
               >
-                <motion.div
-                  animate={{ opacity: [0.3, 0.6, 0.3] }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
-                  className="absolute -inset-x-2 inset-y-0 -z-10 rounded bg-cyan-500/5"
-                />
+                  <motion.div
+                    animate={{ opacity: [0.3, 0.6, 0.3] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                    className="absolute -inset-x-2 inset-y-0 -z-10 rounded bg-cyan-500/5"
+                  />
                 <motion.span
                   animate={{ x: [0, 3, 0] }}
                   transition={{
