@@ -160,6 +160,13 @@ export function TerminalWindow() {
         top: scrollRef.current.scrollHeight,
         behavior: 'smooth',
       });
+      const t = setTimeout(() => {
+        scrollRef.current?.scrollTo({
+          top: scrollRef.current.scrollHeight,
+          behavior: 'smooth',
+        });
+      }, 150);
+      return () => clearTimeout(t);
     }
   }, [history]);
 
@@ -266,6 +273,7 @@ export function TerminalWindow() {
               />
             </span>
           </div>,
+          '',
         ]);
         break;
       case 'status':
