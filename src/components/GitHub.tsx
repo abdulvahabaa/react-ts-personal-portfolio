@@ -74,7 +74,7 @@ export function GitHub() {
 
           {/* Contribution Graph */}
           <div className="mb-10 flex flex-col items-center">
-            <div className="w-full p-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
+            <div className="w-full p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <GitHubCalendar
                 username="abdulvahabaa"
                 blockSize={14.6}
@@ -101,7 +101,7 @@ export function GitHub() {
                 href={repo.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-6 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
+                className="block p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
               >
                 <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">
                   {repo.name}
@@ -122,7 +122,7 @@ export function GitHub() {
 
           {/* GitHub Profile Widget */}
           {user && (
-            <div className="flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg p-6 shadow-lg">
+            <div className="flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               {/* Avatar & Name */}
               <div className="flex items-center space-x-4">
                 <img

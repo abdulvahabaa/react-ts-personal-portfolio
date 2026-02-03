@@ -148,7 +148,7 @@ export const skills: SkillItem[] = [
   {
     name: 'GitHub',
     icon: SiGithub,
-    color: '#ffffff ',
+    color: '#ffffff',
     url: 'https://github.com/',
   },
   {
