@@ -7,7 +7,7 @@ export function StructuredData() {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'Abdul Vahab A A',
-      url: 'https://abdulvahabaa.in',
+      url: 'https://abdulvahabaa.in/',
       image: 'https://abdulvahabaa.in/assets/profile.png',
       jobTitle: 'Full Stack Developer',
       worksFor: {
@@ -73,7 +73,7 @@ export function StructuredData() {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'Abdul Vahab A A Portfolio',
-      url: 'https://abdulvahabaa.in',
+      url: 'https://abdulvahabaa.in/',
       description:
         'Portfolio website of Abdul Vahab A A - Full Stack Developer and Technical Trainer',
       author: {
