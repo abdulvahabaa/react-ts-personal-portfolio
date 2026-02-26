@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <!-- Profile image for search/social; use square image (e.g. 512x512) for best results -->
+    <link
+      rel="apple-touch-icon"
+      href="https://abdulvahabaa.in/assets/profile.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
@@ -30,43 +35,48 @@
     <meta name="revisit-after" content="7 days" />
     <meta name="theme-color" content="#3b82f6" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://abdulvahabaa.in" />
+    <!-- Canonical URL (one URL for the whole site - single-page app) -->
+    <link rel="canonical" href="https://abdulvahabaa.in/" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph: Facebook, Instagram, LinkedIn, WhatsApp, Pinterest -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://abdulvahabaa.in" />
+    <meta property="og:url" content="https://abdulvahabaa.in/" />
     <meta
       property="og:title"
-      content="Abdul Vahab A A - Full Stack Developer & Technical Trainer | Portfolio"
+      content="Abdul Vahab A A | Full Stack Developer & Technical Trainer"
     />
     <meta
       property="og:description"
-      content="Full Stack Developer (MERN, MEAN, Nest.js) and Technical Trainer. Specializing in React, Angular, Next.js, Node.js, Nest.js, TypeScript, MongoDB, and PostgreSQL. View my portfolio, projects, and experience."
+      content="Full Stack Developer (MERN, MEAN, Nest.js) & Technical Trainer. React, Angular, Node.js, TypeScript, MongoDB. Portfolio, projects & experience from Kerala."
     />
     <meta
       property="og:image"
       content="https://abdulvahabaa.in/assets/profile.png"
     />
+    <meta
+      property="og:image:secure_url"
+      content="https://abdulvahabaa.in/assets/profile.png"
+    />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
       content="Abdul Vahab A A - Full Stack Developer Portfolio"
     />
-    <meta property="og:site_name" content="Abdul Vahab A A Portfolio" />
+    <meta property="og:site_name" content="Abdul Vahab A A" />
     <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter Card -->
+    <!-- Twitter Card: summary_large_image for best preview on Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://abdulvahabaa.in" />
+    <meta name="twitter:url" content="https://abdulvahabaa.in/" />
     <meta
       name="twitter:title"
-      content="Abdul Vahab A A - Full Stack Developer & Technical Trainer"
+      content="Abdul Vahab A A | Full Stack Developer & Technical Trainer"
     />
     <meta
       name="twitter:description"
-      content="Full Stack Developer (MERN, MEAN, Nest.js) and Technical Trainer. Specializing in React, Angular, Next.js, Node.js, Nest.js, TypeScript, MongoDB, and PostgreSQL."
+      content="Full Stack Developer (MERN, MEAN, Nest.js) & Technical Trainer. React, Angular, Node.js, TypeScript, MongoDB. Portfolio & projects from Kerala."
     />
     <meta
       name="twitter:image"
@@ -83,8 +93,38 @@
     <meta name="geo.position" content="10.5276;76.2144" />
     <meta name="ICBM" content="10.5276, 76.2144" />
 
-    <!-- Google Site Verification (Uncomment and add your verification code) -->
-    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> -->
+    <!-- Google Site Verification -->
+    <meta
+      name="google-site-verification"
+      content="liF-9LOd_IyS-gKmSxdEk_WOJq4Fww1-_3UETq3CGrg"
+    />
+
+    <!-- Person structured data: helps Google show your image when people search your name -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abdul Vahab A A",
+        "url": "https://abdulvahabaa.in/",
+        "image": "https://abdulvahabaa.in/assets/profile.png",
+        "jobTitle": "Full Stack Developer & Technical Trainer",
+        "description": "Full Stack Developer (MERN, MEAN, Nest.js) and Technical Trainer. Specializing in React, Angular, Node.js, TypeScript, MongoDB, and PostgreSQL.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Irinjalakuda, Thrissur",
+          "addressRegion": "Kerala",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://github.com/abdulvahabaa",
+          "https://linkedin.com/in/abdulvahabaa",
+          "https://dev.to/abdulvahabaa",
+          "https://x.com/abdulvahabaa",
+          "https://leetcode.com/u/abdulvahabaa/",
+          "https://twitter.com/abdulvahabaa"
+        ]
+      }
+    </script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />

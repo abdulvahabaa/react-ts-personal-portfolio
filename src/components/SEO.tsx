@@ -12,7 +12,7 @@ export function SEO({
   title = 'Abdul Vahab A A - Full Stack Developer & Technical Trainer | Portfolio',
   description = 'Full Stack Developer (MERN, MEAN, Nest.js) and Technical Trainer from Thrissur, Kerala. Specializing in React, Angular, Next.js, Node.js, Nest.js, TypeScript, MongoDB, and PostgreSQL.',
   image = 'https://abdulvahabaa.in/assets/profile.png',
-  url = 'https://abdulvahabaa.in',
+  url = 'https://abdulvahabaa.in/',
   type = 'website',
 }: SEOProps) {
   useEffect(() => {
