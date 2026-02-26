@@ -36,6 +36,11 @@ export const socialLinks: SocialLinkItem[] = [
     iconKey: 'linkedin',
   },
   {
+    href: 'https://dev.to/abdulvahabaa',
+    label: 'DEV Community',
+    iconKey: 'devto',
+  },
+  {
     href: 'https://www.youtube.com/@eldoradotechie',
     label: 'YouTube',
     iconKey: 'youtube',

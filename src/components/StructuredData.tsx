@@ -22,8 +22,8 @@ export function StructuredData() {
       },
       sameAs: [
         'https://github.com/abdulvahabaa',
-        // Add your social media profiles here
         'https://linkedin.com/in/abdulvahabaa',
+        'https://dev.to/abdulvahabaa',
         'https://x.com/abdulvahabaa',
         'https://leetcode.com/u/abdulvahabaa/',
         'https://twitter.com/abdulvahabaa',

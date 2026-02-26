@@ -66,10 +66,11 @@
 
 ### 4. **Update Structured Data**
 
-Edit `src/components/StructuredData.tsx` and add:
+Edit `src/components/StructuredData.tsx` and `index.html` (Person schema) and add:
 
 - Your LinkedIn profile URL
 - Your Twitter/X profile URL
+- Your DEV.to profile URL (https://dev.to/abdulvahabaa)
 - Any other social media profiles in the `sameAs` array
 
 ### 5. **Image Optimization**
@@ -108,8 +109,8 @@ Edit `src/components/StructuredData.tsx` and add:
   - LinkedIn
   - Twitter/X
   - GitHub profile
-  - Dev.to, Hashnode, Medium (if you write articles)
-- Add your website URL to your social media profiles
+  - DEV Community (dev.to/abdulvahabaa), Hashnode, Medium (if you write articles)
+- Add your website URL (https://abdulvahabaa.in) to your social media profiles, including your DEV.to profile
 
 ### 11. **Regular Updates**
 

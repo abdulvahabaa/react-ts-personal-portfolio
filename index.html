@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <!-- Profile image for search/social; use square image (e.g. 512x512) for best results -->
+    <link
+      rel="apple-touch-icon"
+      href="https://abdulvahabaa.in/assets/profile.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
@@ -93,6 +98,33 @@
       name="google-site-verification"
       content="liF-9LOd_IyS-gKmSxdEk_WOJq4Fww1-_3UETq3CGrg"
     />
+
+    <!-- Person structured data: helps Google show your image when people search your name -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abdul Vahab A A",
+        "url": "https://abdulvahabaa.in/",
+        "image": "https://abdulvahabaa.in/assets/profile.png",
+        "jobTitle": "Full Stack Developer & Technical Trainer",
+        "description": "Full Stack Developer (MERN, MEAN, Nest.js) and Technical Trainer. Specializing in React, Angular, Node.js, TypeScript, MongoDB, and PostgreSQL.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Irinjalakuda, Thrissur",
+          "addressRegion": "Kerala",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://github.com/abdulvahabaa",
+          "https://linkedin.com/in/abdulvahabaa",
+          "https://dev.to/abdulvahabaa",
+          "https://x.com/abdulvahabaa",
+          "https://leetcode.com/u/abdulvahabaa/",
+          "https://twitter.com/abdulvahabaa"
+        ]
+      }
+    </script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />

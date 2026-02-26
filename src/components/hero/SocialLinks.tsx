@@ -6,12 +6,13 @@ import {
   FaInstagram,
   FaYoutube,
 } from 'react-icons/fa6';
-import { SiLeetcode } from 'react-icons/si';
+import { SiLeetcode, SiDevdotto } from 'react-icons/si';
 import { socialLinks } from '../../data';
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <FaGithub className="w-6 h-6 text-gray-900 dark:text-white" />,
   linkedin: <FaLinkedin className="w-6 h-6 text-[#0077B5]" />,
+  devto: <SiDevdotto className="w-6 h-6 text-[#0A0A0A] dark:text-white" />,
   youtube: <FaYoutube className="w-6 h-6 text-[#FF0000]" />,
   instagram: <FaInstagram className="w-6 h-6 text-[#E4405F]" />,
   whatsapp: <FaWhatsapp className="w-6 h-6 text-[#25D366]" />,

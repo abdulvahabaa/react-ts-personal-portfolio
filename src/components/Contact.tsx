@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa6';
-import { SiLeetcode } from 'react-icons/si';
+import { SiLeetcode, SiDevdotto } from 'react-icons/si';
 import { Phone } from 'lucide-react';
 
 const ContactCards = lazy(() =>
@@ -85,6 +85,19 @@ export function Contact() {
                     </div>
                     <span className="text-base sm:text-base md:text-lg text-gray-700 dark:text-gray-300 group-active/link:text-orange-600 dark:group-active/link:text-orange-400 md:group-hover/link:text-orange-600 dark:md:group-hover/link:text-orange-400 transition-colors duration-300 font-medium">
                       leetcode.com/u/abdulvahabaa
+                    </span>
+                  </a>
+                  <a
+                    href="https://dev.to/abdulvahabaa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/link flex items-center gap-3 sm:gap-4 p-2.5 sm:p-3 rounded-lg sm:rounded-xl active:bg-gray-50 dark:active:bg-gray-800/50 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 transform active:translate-x-1 md:hover:translate-x-2 active:scale-[0.98]"
+                  >
+                    <div className="p-1.5 sm:p-2 bg-gray-100 dark:bg-gray-800/50 rounded-lg group-active/link:bg-gray-200 dark:group-active/link:bg-gray-700/50 md:group-hover/link:bg-gray-200 dark:md:group-hover/link:bg-gray-700/50 transition-colors duration-300">
+                      <SiDevdotto className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800 dark:text-gray-200" />
+                    </div>
+                    <span className="text-base sm:text-base md:text-lg text-gray-700 dark:text-gray-300 group-active/link:text-blue-600 dark:group-active/link:text-blue-400 md:group-hover/link:text-blue-600 dark:md:group-hover/link:text-blue-400 transition-colors duration-300 font-medium">
+                      dev.to/abdulvahabaa
                     </span>
                   </a>
                   <a
