@@ -1,7 +1,7 @@
 export const experiences = [
   {
     title: 'Full Stack Developer',
-    company: 'iCover Insure, USA',
+    company: 'iCover Insure, Chesterfield, Missouri, United States',
     type: 'Remote',
     period: 'Jan 2026 – Present',
     description: `Developed and maintained the company's website's, improving performance and usability.
@@ -24,7 +24,7 @@ export const experiences = [
   },
   {
     title: 'Full Stack Developer & Trainer',
-    company: 'G-Tec Education, Irinjalakuda',
+    company: 'G-Tec Education, Irinjalakuda, Kerala, India',
     type: 'On-site',
     period: 'Jul 2025 – Dec 2025',
     description: `Conduct hands-on training sessions in full-stack development for 360+ engineering students. 
@@ -44,7 +44,7 @@ export const experiences = [
   },
   {
     title: 'Freelance Web Developer',
-    company: 'Codyinger, Thrissur',
+    company: 'Codyinger, Thrissur, Kerala, India',
     type: 'Remote',
     period: 'Nov 2024 – Dec 2025',
     description: `Delivered 7+ full-stack projects including business websites and modern web applications with 78% client satisfaction. 
@@ -64,7 +64,7 @@ export const experiences = [
   },
   {
     title: 'Junior Software Engineer',
-    company: 'Estro Tech Robotics and Innovations Pvt. Ltd, Thrissur',
+    company: 'Estro Tech Robotics and Innovations Pvt. Ltd, Thrissur, Keala, India',
     type: 'On-site',
     period: 'Aug 2023 – Aug 2024',
     description: `Developed and optimized backend services using Node.js, Express.js, and TypeScript. 
